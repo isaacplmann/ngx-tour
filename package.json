@@ -1,8 +1,8 @@
 {
   "name": "ng2-tour",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Product tour library build in Angular (2+)",
-  "main": "build/tour.module.js",
+  "main": "build/src/app/lib/tour.module.js",
   "scripts": {
     "cleanup": "rimraf src/app/**/*.ngfactory.ts src/app/**/*.shim.ts",
     "explorer": "source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map",
