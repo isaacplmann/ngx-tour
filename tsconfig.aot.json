@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "outDir": "./build",
-    "rootDir": "./src/app",
+    "rootDir": ".",
     "typeRoots": [ "./node_modules/@types" ],
     "types": [
       "node"
@@ -22,7 +22,7 @@
   },
   "angularCompilerOptions": {
     "genDir": ".",
-    "entryModule": "src/app/modules/main.module.ts#MainModule",
+    "entryModule": "src/app/lib/tour.module.ts#TourModule",
     "debug": false
   },
   "compileOnSave": false,

@@ -3,6 +3,7 @@
 module.exports = {
   contentBase: './src',
   port: 9000,
+  publicPath: '/ng2-tour/',
   inline: true,
   historyApiFallback: true,
   stats: 'errors-only',

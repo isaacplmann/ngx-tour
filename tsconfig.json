@@ -1,6 +1,4 @@
 {
-  "compileOnSave": false,
-  "buildOnSave": false,
   "compilerOptions": {
     "target": "es5",
     "module": "es2015",
@@ -18,7 +16,6 @@
       "es2015"
     ]
   },
-  "files": [],
   "exclude": [
     "node_modules",
     "dist"

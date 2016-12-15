@@ -1,8 +1,8 @@
 {
-  "name": "angular2-aot-webpack",
-  "version": "1.0.0",
-  "description": "Angular 2 AOT (Ahead Of Time) offline compilation example with Webpack",
-  "main": "build/modules/main.module.js",
+  "name": "ng2-tour",
+  "version": "0.0.1",
+  "description": "Product tour library build in Angular (2+)",
+  "main": "build/tour.module.js",
   "scripts": {
     "cleanup": "rimraf src/app/**/*.ngfactory.ts src/app/**/*.shim.ts",
     "explorer": "source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map",
@@ -19,27 +19,32 @@
     "webpack-prod": "webpack --config webpack.prod.config.js"
   },
   "keywords": [
+    "angular",
     "angular2",
-    "aot",
-    "typescript"
+    "tour"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/angular2-aot-webpack.git"
+    "url": "git+https://github.com/isaacplmann/ng2-tour.git"
   },
   "author": {
-    "name": "blacksonic",
-    "email": "soos.gabor86@gmail.com"
+    "name": "isaacplmann",
+    "email": "isaacplmann@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.2.4",
     "@angular/compiler": "2.2.4",
     "@angular/core": "2.2.4",
+    "@angular/forms": "2.2.4",
     "@angular/platform-browser": "2.2.4",
     "@angular/platform-browser-dynamic": "2.2.4",
+    "@angular/router": "3.2.4",
+    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.14",
+    "@types/core-js": "^0.9.35",
+    "angular2-hotkeys": "^0.5.0",
     "core-js": "2.4.1",
-    "rxjs": "5.0.0-rc.4",
+    "rxjs": "^5.0.0-rc.4",
     "zone.js": "0.7.2"
   },
   "devDependencies": {
@@ -50,6 +55,7 @@
     "angular2-template-loader": "0.6.0",
     "awesome-typescript-loader": "2.2.4",
     "chokidar": "1.6.1",
+    "codelyzer": "^2.0.0-beta.3",
     "concurrently": "3.1.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.0",
@@ -58,9 +64,12 @@
     "http-server": "0.9.0",
     "raw-loader": "0.5.1",
     "rimraf": "2.5.4",
+    "sass-loader": "^4.1.0",
     "source-map-explorer": "1.3.3",
     "style-loader": "0.13.1",
     "to-string-loader": "1.1.5",
+    "tslint": "^4.0.2",
+    "tslint-microsoft-contrib": "^4.0.0",
     "typescript": "2.0.10",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.11"
