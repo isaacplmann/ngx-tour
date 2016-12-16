@@ -10,12 +10,11 @@ export interface IStepOption {
   anchorId?: string;
   title?: string;
   content?: string;
-  order?: number;
-  disabled?: boolean;
   route?: string | UrlSegment[];
   nextStep?: number | string;
   prevStep?: number | string;
   placement?: 'above' | 'below' | 'after' | 'before' | 'left' | 'right';
+  preventScrolling?: boolean;
 }
 
 @Injectable()
@@ -28,7 +27,6 @@ export class TourService {
   public end$: Subject<any> = new Subject();
   public pause$: Subject<IStepOption> = new Subject();
   public resume$: Subject<IStepOption> = new Subject();
-  public stepChange$: Subject<IStepOption> = new Subject();
   public anchorRegister$: Subject<string> = new Subject();
   public anchorUnregister$: Subject<string> = new Subject();
 
@@ -45,22 +43,26 @@ export class TourService {
   ), new Hotkey(
     'right',
     event => {
-      this.next();
+      if (this.hasNext(this.currentStep)) {
+        this.next();
+      }
       return true;
     },
   ), new Hotkey(
     'left',
     event => {
-      this.prev();
+      if (this.hasPrev(this.currentStep)) {
+        this.prev();
+      }
       return true;
     },
   )];
 
   constructor(private router: Router, private hotkeyService: HotkeysService) {}
 
-  public initialize(steps: IStepOption[]): void {
+  public initialize(steps: IStepOption[], stepDefaults?: IStepOption): void {
     if (steps && steps.length > 0) {
-      this.steps = steps;
+      this.steps = steps.map(step => Object.assign({}, stepDefaults, step));
       this.initialize$.next(steps);
     }
   }

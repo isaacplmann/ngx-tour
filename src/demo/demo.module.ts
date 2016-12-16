@@ -1,24 +1,24 @@
 import { TourNgBootstrapModule } from '../lib/tour.module';
-import { SecondChildComponent } from './second-child.component';
+import { OtherRouteComponent } from './other-route.component';
 import { HotkeyModule } from 'angular2-hotkeys';
 import { RouterModule } from '@angular/router';
-import { ChildComponent } from './child.component';
+import { DocsComponent } from './docs.component';
 import { DemoComponent } from './demo.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   bootstrap: [DemoComponent],
-  declarations: [DemoComponent, ChildComponent, SecondChildComponent],
+  declarations: [DemoComponent, DocsComponent, OtherRouteComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([{
-      component: ChildComponent,
+      component: DocsComponent,
       path: '',
       pathMatch: 'full',
     }, {
-      component: SecondChildComponent,
-      path: 'second',
+      component: OtherRouteComponent,
+      path: 'other',
     }]),
     TourNgBootstrapModule,
     HotkeyModule.forRoot(),

@@ -1,9 +1,11 @@
 import { TourService } from '../../tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
-import { Component, TemplateRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, TemplateRef, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: 'tour-step-template',
+  styles: ['body { max-height: 100vh; }'],
   template: `
     <template #tourStep let-step="step">
       <p class="tour-step-content">{{step?.content}}</p>

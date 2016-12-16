@@ -15,12 +15,14 @@ import {
 } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap/popover/popover';
 import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
+const scrollIntoViewIfNeeded = require('scroll-into-view-if-needed');
 
 @Directive({
   selector: '[tourAnchor]',
 })
 export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
+  private element: ElementRef;
 
   constructor(
     private tourService: TourService, private tourStepTemplate: TourStepTemplateService, _elementRef: ElementRef, _renderer: Renderer,
@@ -28,6 +30,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
     ngZone: NgZone,
   ) {
     super(_elementRef, _renderer, injector, componentFactoryResolver, viewContainerRef, config, ngZone);
+    this.element = _elementRef;
   }
 
   public ngOnInit(): void {
@@ -60,6 +63,9 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
         this.placement = 'top';
     }
     this.open({ step });
+    if (!step.preventScrolling) {
+      scrollIntoViewIfNeeded(this.element.nativeElement, true);
+    }
   }
 
   public hideTourStep(): void {

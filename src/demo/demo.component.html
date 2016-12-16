@@ -2,22 +2,8 @@
     <h1 class="project-name">Ng2 Tour</h1>
     <h2 class="project-tagline">Product tour using Angular (2+)</h2>
     <a href="https://github.com/isaacplmann/ng2-tour" class="btn btn-default">View on GitHub</a>
-    <a style="cursor: pointer" (click)="tourService.toggle()" class="btn btn-primary animated bounceInRight">Start Demo Tour</a>
+    <a style="cursor: pointer" (click)="tourService.toggle()" class="btn btn-primary" tourAnchor="start.tour">Start Demo Tour</a>
 </section>
 
-<h2>About</h2>
-<p>This is a product tour library built with Angular (2+).  It's inspired by <a href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
-<h2>Installation</h2>
-
-<ul>
-  <li><code>npm install ng2-tour</code></li>
-  <li>import TourNgBootstrapModule into your app module</li>
-</ul>
-
-<h3 style="text-align:center"><span tourAnchor="title">Demo</span></h3>
-<ul>
-  <li><a routerLink="">First</a></li>
-  <li><a routerLink="second">Second</a></li>
-</ul>
 <router-outlet></router-outlet>
 <tour-step-template></tour-step-template>
