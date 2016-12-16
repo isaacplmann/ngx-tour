@@ -1,6 +1,6 @@
 {
   "name": "ng2-tour",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Product tour library built in Angular (2+)",
   "main": "build/src/app/lib/tour.module.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
     "build": "npm run cleanup && npm run ngc && npm run webpack-prod",
     "deploy": "gh-pages -d dist",
-    "prepublish": "npm run cleanup && npm run ngc",
+    "prepublish": "npm run build && npm run deploy",
     "webpack": "webpack --config webpack.config.js",
     "webpack-aot": "webpack --config webpack.aot.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js"
@@ -34,25 +34,25 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "2.2.4",
-    "@angular/compiler": "2.2.4",
-    "@angular/core": "2.2.4",
-    "@angular/forms": "2.2.4",
-    "@angular/platform-browser": "2.2.4",
-    "@angular/platform-browser-dynamic": "2.2.4",
-    "@angular/router": "3.2.4",
+    "@angular/common": "^2.3.1",
+    "@angular/compiler": "^2.3.1",
+    "@angular/core": "^2.3.1",
+    "@angular/forms": "^2.3.1",
+    "@angular/platform-browser": "^2.3.1",
+    "@angular/platform-browser-dynamic": "^2.3.1",
+    "@angular/router": "^3.3.1",
     "@ng-bootstrap/ng-bootstrap": "file:./ng-bootstrap-ng-bootstrap-1.0.0-alpha.15.tgz",
     "@types/core-js": "^0.9.35",
     "angular2-hotkeys": "^0.5.0",
-    "core-js": "2.4.1",
+    "core-js": "^2.4.1",
     "rxjs": "^5.0.0-rc.4",
     "scroll-into-view-if-needed": "^1.0.6",
-    "zone.js": "0.7.2"
+    "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "2.2.4",
-    "@angular/platform-server": "2.2.4",
-    "@ngtools/webpack": "1.1.7",
+    "@angular/compiler-cli": "^2.3.1",
+    "@angular/platform-server": "^2.3.1",
+    "@ngtools/webpack": "^1.1.9",
     "@types/node": "6.0.48",
     "angular2-template-loader": "0.6.0",
     "awesome-typescript-loader": "2.2.4",
@@ -72,7 +72,7 @@
     "to-string-loader": "1.1.5",
     "tslint": "^4.0.2",
     "tslint-microsoft-contrib": "^4.0.0",
-    "typescript": "2.0.10",
+    "typescript": "^2.1.4",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.11"
   }
