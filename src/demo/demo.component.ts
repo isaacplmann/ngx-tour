@@ -13,27 +13,27 @@ export class DemoComponent {
       title: 'Test',
     }, {
       anchorId: 'first',
-      content: 'Other content',
+      content: 'first content',
       route: '',
       title: 'First',
     }, {
       anchorId: 'second',
-      content: 'Other content',
+      content: 'second content',
       route: 'second',
       title: 'Second',
     }, {
       anchorId: 'title',
-      content: 'Other content',
+      content: 'right content',
       placement: 'right',
       title: 'Right',
     }, {
       anchorId: 'title',
-      content: 'Other content',
+      content: 'below content',
       placement: 'below',
       title: 'Below',
     }, {
       anchorId: 'title',
-      content: 'Other content',
+      content: 'left content',
       placement: 'left',
       title: 'Left',
     }]);
