@@ -22,7 +22,7 @@
   },
   "angularCompilerOptions": {
     "genDir": ".",
-    "entryModule": "src/app/lib/tour.module.ts#TourModule",
+    "entryModule": "src/lib/tour.module.ts#TourModule",
     "debug": false
   },
   "compileOnSave": false,
@@ -31,7 +31,7 @@
     "dist",
     "**/*.ngfactory.ts",
     "**/*.shim.ts",
-    "src/app/bootstrap*.ts",
-    "src/app/polyfill.ts"
+    "src/demo/bootstrap*.ts",
+    "src/demo/polyfill.ts"
   ]
 }

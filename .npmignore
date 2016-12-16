@@ -3,3 +3,9 @@ dist
 typings
 .idea
 *.ngfactory.ts
+/src
+webpack*
+tsconfig.*
+tslint.json
+/bin
+demo

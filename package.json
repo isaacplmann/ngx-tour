@@ -1,10 +1,10 @@
 {
   "name": "ng2-tour",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Product tour library build in Angular (2+)",
   "main": "build/src/app/lib/tour.module.js",
   "scripts": {
-    "cleanup": "rimraf src/app/**/*.ngfactory.ts src/app/**/*.shim.ts",
+    "cleanup": "rimraf build dist src/app/**/*.ngfactory.ts src/app/**/*.shim.ts",
     "explorer": "source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map",
     "explorer-aot": "source-map-explorer ./dist/bootstrap.aot.bundle.js ./dist/bootstrap.aot.bundle.js.map",
     "ngc": "ngc -p ./tsconfig.aot.json",
@@ -12,8 +12,9 @@
     "start": "npm run cleanup && npm run ngc && concurrently -r \"webpack-dev-server\" \"node ./bin/ngc-watch.js\"",
     "start-plugin": "npm run cleanup && webpack-dev-server --config webpack.aot.config.js",
     "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
-    "build": "npm run ngc && npm run webpack-prod",
+    "build": "npm run cleanup && npm run ngc && npm run webpack-prod",
     "deploy": "gh-pages -d dist",
+    "prepublish": "npm run cleanup && npm run ngc",
     "webpack": "webpack --config webpack.config.js",
     "webpack-aot": "webpack --config webpack.aot.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js"
@@ -40,7 +41,7 @@
     "@angular/platform-browser": "2.2.4",
     "@angular/platform-browser-dynamic": "2.2.4",
     "@angular/router": "3.2.4",
-    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.14",
+    "@ng-bootstrap/ng-bootstrap": "file:./ng-bootstrap-ng-bootstrap-1.0.0-alpha.15.tgz",
     "@types/core-js": "^0.9.35",
     "angular2-hotkeys": "^0.5.0",
     "core-js": "2.4.1",

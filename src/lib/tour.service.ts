@@ -114,8 +114,16 @@ export class TourService {
     this.goToStep(this.loadStep(this.currentStep.nextStep || this.steps.indexOf(this.currentStep) + 1));
   }
 
+  public hasNext(step: IStepOption): boolean {
+    return step.nextStep !== undefined || this.steps.indexOf(step) < this.steps.length - 1;
+  }
+
   public prev(): void {
     this.goToStep(this.loadStep(this.currentStep.prevStep || this.steps.indexOf(this.currentStep) - 1));
+  }
+
+  public hasPrev(step: IStepOption): boolean {
+    return step.prevStep !== undefined || this.steps.indexOf(step) > 0;
   }
 
   public goto(stepId: number | string): void {

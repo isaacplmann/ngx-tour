@@ -1,4 +1,4 @@
-import { TourConsoleModule } from '../lib/tour.module';
+import { TourNgBootstrapModule } from '../lib/tour.module';
 import { SecondChildComponent } from './second-child.component';
 import { HotkeyModule } from 'angular2-hotkeys';
 import { RouterModule } from '@angular/router';
@@ -20,7 +20,7 @@ import { BrowserModule } from '@angular/platform-browser';
       component: SecondChildComponent,
       path: 'second',
     }]),
-    TourConsoleModule,
+    TourNgBootstrapModule,
     HotkeyModule.forRoot(),
   ],
 })

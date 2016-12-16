@@ -3,16 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'tour-demo',
-  template: `
-    <h1><span tourAnchor="title">Demo</span></h1>
-    <ul>
-      <li><a routerLink="">First</a></li>
-      <li><a routerLink="second">Second</a></li>
-    </ul>
-    <router-outlet></router-outlet>
-    <p><button (click)="tourService.toggle()">Tour</button></p>
-    <hotkeys-cheatsheet></hotkeys-cheatsheet>
-    `,
+  templateUrl: './demo.component.html',
 })
 export class DemoComponent {
   constructor(public tourService: TourService) {

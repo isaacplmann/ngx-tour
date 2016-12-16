@@ -1,3 +1,4 @@
+import { TourStepTemplateService } from './tour-step-template.service';
 import { TourAnchorDirective } from '../../tour-anchor.directive';
 import { IStepOption, TourService } from '../../tour.service';
 import {
@@ -22,8 +23,9 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
   @Input() public tourAnchor: string;
 
   constructor(
-    private tourService: TourService, _elementRef: ElementRef, _renderer: Renderer, injector: Injector,
-    componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef, config: NgbPopoverConfig, ngZone: NgZone,
+    private tourService: TourService, private tourStepTemplate: TourStepTemplateService, _elementRef: ElementRef, _renderer: Renderer,
+    injector: Injector, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef, config: NgbPopoverConfig,
+    ngZone: NgZone,
   ) {
     super(_elementRef, _renderer, injector, componentFactoryResolver, viewContainerRef, config, ngZone);
   }
@@ -37,7 +39,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
   }
 
   public showTourStep(step: IStepOption): void {
-    this.ngbPopover = step.content;
+    this.ngbPopover = this.tourStepTemplate.template;
     this.popoverTitle = step.title;
     switch (step.placement) {
       case 'above':
@@ -57,7 +59,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
       default:
         this.placement = 'top';
     }
-    this.open();
+    this.open({ step });
   }
 
   public hideTourStep(): void {
