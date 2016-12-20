@@ -4,6 +4,9 @@ import { IStepOption } from './tour.service';
 import { Injectable } from '@angular/core';
 import { Router, UrlSegment } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import { mergeStatic } from 'rxjs/operator/merge';
+import { map } from 'rxjs/operator/map';
 
 export interface IStepOption {
   stepId?: string;
@@ -15,6 +18,12 @@ export interface IStepOption {
   prevStep?: number | string;
   placement?: 'above' | 'below' | 'after' | 'before' | 'left' | 'right';
   preventScrolling?: boolean;
+}
+
+export enum TourState {
+  OFF,
+  ON,
+  PAUSED,
 }
 
 @Injectable()
@@ -29,11 +38,23 @@ export class TourService {
   public resume$: Subject<IStepOption> = new Subject();
   public anchorRegister$: Subject<string> = new Subject();
   public anchorUnregister$: Subject<string> = new Subject();
+  public events$: Observable<{name: string, value: any}> = mergeStatic(
+    map.bind(this.stepShow$)(value => ({name: 'stepShow', value})),
+    map.bind(this.stepHide$)(value => ({name: 'stepHide', value})),
+    map.bind(this.initialize$)(value => ({name: 'initialize', value})),
+    map.bind(this.start$)(value => ({name: 'start', value})),
+    map.bind(this.end$)(value => ({name: 'end', value})),
+    map.bind(this.pause$)(value => ({name: 'pause', value})),
+    map.bind(this.resume$)(value => ({name: 'resume', value})),
+    map.bind(this.anchorRegister$)(value => ({name: 'anchorRegister', value})),
+    map.bind(this.anchorUnregister$)(value => ({name: 'anchorUnregister', value})),
+  );
 
   public steps: IStepOption[];
   public currentStep: IStepOption;
 
   public anchors: { [anchorId: string]: TourAnchorDirective } = {};
+  private status: TourState = TourState.OFF;
   private hotkeys: Hotkey[] = [new Hotkey(
     'esc',
     event => {
@@ -64,6 +85,7 @@ export class TourService {
     if (steps && steps.length > 0) {
       this.steps = steps.map(step => Object.assign({}, stepDefaults, step));
       this.initialize$.next(steps);
+      this.status = TourState.OFF;
     }
   }
 
@@ -74,6 +96,7 @@ export class TourService {
   public startAt(stepId: number | string): void {
     this.goToStep(this.loadStep(stepId));
     this.start$.next();
+    this.status = TourState.ON;
     this.setHotkeys();
   }
 
@@ -81,18 +104,21 @@ export class TourService {
     this.hideStep(this.currentStep);
     this.currentStep = undefined;
     this.end$.next();
+    this.status = TourState.OFF;
     this.removeHotkeys();
   }
 
   public pause(): void {
     this.hideStep(this.currentStep);
     this.pause$.next();
+    this.status = TourState.PAUSED;
     this.setHotkeys();
   }
 
   public resume(): void {
     this.showStep(this.currentStep);
     this.resume$.next();
+    this.status = TourState.ON;
     this.removeHotkeys();
   }
 

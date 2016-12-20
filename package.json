@@ -2,7 +2,7 @@
   "name": "ng2-tour",
   "version": "0.1.1",
   "description": "Product tour library built in Angular (2+)",
-  "main": "build/src/app/lib/tour.module.js",
+  "main": "build/src/lib/tour.module.js",
   "scripts": {
     "cleanup": "rimraf build dist src/app/**/*.ngfactory.ts src/app/**/*.shim.ts",
     "explorer": "source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map",
@@ -13,8 +13,9 @@
     "start-plugin": "npm run cleanup && webpack-dev-server --config webpack.aot.config.js",
     "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
     "build": "npm run cleanup && npm run ngc && npm run webpack-prod",
-    "deploy": "gh-pages -d dist",
-    "prepublish": "npm run build && npm run deploy",
+    "deploy": "npm run deploy:npm && npm run deploy:demo",
+    "deploy:demo": "gh-pages -d dist",
+    "deploy:npm": "npm run cleanup && npm run ngc && npm publish",
     "webpack": "webpack --config webpack.config.js",
     "webpack-aot": "webpack --config webpack.aot.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js"
