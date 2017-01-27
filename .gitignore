@@ -3,5 +3,10 @@ build
 dist
 tmp
 .idea
+src/**/**/*.js
+src/**/**/**/*.js
+*.js.map
+*.d.ts
 *.ngfactory.ts
+*.ngsummary.json
 .DS_Store

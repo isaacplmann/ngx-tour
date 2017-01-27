@@ -38,16 +38,16 @@ export class TourService {
   public resume$: Subject<IStepOption> = new Subject();
   public anchorRegister$: Subject<string> = new Subject();
   public anchorUnregister$: Subject<string> = new Subject();
-  public events$: Observable<{name: string, value: any}> = mergeStatic(
-    map.bind(this.stepShow$)(value => ({name: 'stepShow', value})),
-    map.bind(this.stepHide$)(value => ({name: 'stepHide', value})),
-    map.bind(this.initialize$)(value => ({name: 'initialize', value})),
-    map.bind(this.start$)(value => ({name: 'start', value})),
-    map.bind(this.end$)(value => ({name: 'end', value})),
-    map.bind(this.pause$)(value => ({name: 'pause', value})),
-    map.bind(this.resume$)(value => ({name: 'resume', value})),
-    map.bind(this.anchorRegister$)(value => ({name: 'anchorRegister', value})),
-    map.bind(this.anchorUnregister$)(value => ({name: 'anchorUnregister', value})),
+  public events$: Observable<{ name: string, value: any }> = mergeStatic(
+    map.bind(this.stepShow$)(value => ({ name: 'stepShow', value })),
+    map.bind(this.stepHide$)(value => ({ name: 'stepHide', value })),
+    map.bind(this.initialize$)(value => ({ name: 'initialize', value })),
+    map.bind(this.start$)(value => ({ name: 'start', value })),
+    map.bind(this.end$)(value => ({ name: 'end', value })),
+    map.bind(this.pause$)(value => ({ name: 'pause', value })),
+    map.bind(this.resume$)(value => ({ name: 'resume', value })),
+    map.bind(this.anchorRegister$)(value => ({ name: 'anchorRegister', value })),
+    map.bind(this.anchorUnregister$)(value => ({ name: 'anchorUnregister', value })),
   );
 
   public steps: IStepOption[];
@@ -79,7 +79,7 @@ export class TourService {
     },
   )];
 
-  constructor(private router: Router, private hotkeyService: HotkeysService) {}
+  constructor(private router: Router, private hotkeyService: HotkeysService) { }
 
   public initialize(steps: IStepOption[], stepDefaults?: IStepOption): void {
     if (steps && steps.length > 0) {
@@ -188,20 +188,20 @@ export class TourService {
       return;
     }
     let navigatePromise: Promise<boolean> = new Promise(resolve => resolve(true));
-    if (step.route !== undefined && typeof(step.route) === 'string') {
+    if (step.route !== undefined && typeof (step.route) === 'string') {
       navigatePromise = this.router.navigateByUrl(step.route);
     } else if (step.route && Array.isArray(step.route)) {
       navigatePromise = this.router.navigate(step.route);
     }
     navigatePromise.then(navigated => {
-      if (navigated) {
+      if (navigated !== false) {
         this.setCurrentStep(step);
       }
     });
   }
 
   private loadStep(stepId: number | string): IStepOption {
-    if (typeof(stepId) === 'number') {
+    if (typeof (stepId) === 'number') {
       return this.steps[stepId];
     } else {
       return this.steps.find(step => step.stepId === stepId);

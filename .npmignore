@@ -2,7 +2,8 @@ node_modules
 dist
 typings
 .idea
-*.ngfactory.ts
+*.ts
+!*.d.ts
 /src
 webpack*
 tsconfig.*

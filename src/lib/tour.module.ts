@@ -13,4 +13,5 @@ import { HotkeyModule } from 'angular2-hotkeys';
   providers: [TourService],
 })
 export class TourModule {};
+
 export { TourConsoleModule, TourNgBootstrapModule };

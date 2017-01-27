@@ -42,6 +42,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
   }
 
   public showTourStep(step: IStepOption): void {
+    console.log(step);
     this.ngbPopover = this.tourStepTemplate.template;
     this.popoverTitle = step.title;
     switch (step.placement) {

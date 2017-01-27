@@ -23,13 +23,13 @@
   "angularCompilerOptions": {
     "genDir": ".",
     "entryModule": "src/lib/tour.module.ts#TourModule",
-    "debug": false
+    "debug": true
   },
   "compileOnSave": false,
   "exclude": [
     "node_modules",
     "dist",
-    "**/*.ngfactory.ts",
+    "**/*.d.ts",
     "**/*.shim.ts",
     "src/demo/bootstrap*.ts",
     "src/demo/polyfill.ts"

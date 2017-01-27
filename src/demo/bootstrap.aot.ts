@@ -1,4 +1,4 @@
-import { DemoModuleNgFactory } from './demo.module.ngfactory';
-import { platformBrowser } from '@angular/platform-browser';
+// import { DemoModuleNgFactory } from './demo.module.ngfactory';
+// import { platformBrowser } from '@angular/platform-browser';
 
-platformBrowser().bootstrapModuleFactory(DemoModuleNgFactory);
+// platformBrowser().bootstrapModuleFactory(DemoModuleNgFactory);
