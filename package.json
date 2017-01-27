@@ -14,7 +14,7 @@
     "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
     "build": "npm run cleanup && npm run ngc && npm run webpack-prod",
     "deploy": "npm run deploy:npm && npm run deploy:demo",
-    "deploy:demo": "gh-pages -d dist",
+    "deploy:demo": "npm run webpack-prod && gh-pages -d dist",
     "deploy:npm": "npm run cleanup && npm run ngc && npm publish",
     "webpack": "webpack --config webpack.config.js",
     "webpack-aot": "webpack --config webpack.aot.config.js",
