@@ -5,8 +5,10 @@ tmp
 .idea
 src/**/**/*.js
 src/**/**/**/*.js
+index.js
 *.js.map
 *.d.ts
 *.ngfactory.ts
+*.metadata.json
 *.ngsummary.json
 .DS_Store

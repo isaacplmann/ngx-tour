@@ -1,10 +1,10 @@
 {
   "name": "ng2-tour",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Product tour library built in Angular (2+)",
-  "main": "build/src/lib/tour.module.js",
+  "main": "index.js",
   "scripts": {
-    "cleanup": "rimraf build dist src/**/*.ngfactory.ts src/**/*.shim.ts",
+    "cleanup": "rimraf build dist src/**/*.ngfactory.ts src/**/*.shim.ts src/**/*.js src/**/*.js.map src/**/*.js src/**/*.d.ts src/**/*.ngsummary.json",
     "explorer": "source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map",
     "explorer-aot": "source-map-explorer ./dist/bootstrap.aot.bundle.js ./dist/bootstrap.aot.bundle.js.map",
     "ngc": "ngc -p ./tsconfig.aot.json",
@@ -34,22 +34,21 @@
     "email": "isaacplmann@gmail.com"
   },
   "license": "ISC",
-  "dependencies": {
+  "peerDependencies": {
     "@angular/common": "^2.4.5",
-    "@angular/compiler": "^2.4.5",
     "@angular/core": "^2.4.5",
-    "@angular/forms": "^2.4.5",
-    "@angular/platform-browser": "^2.4.5",
-    "@angular/platform-browser-dynamic": "^2.4.5",
     "@angular/router": "^3.4.5",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.19",
     "angular2-hotkeys": "^1.0.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.0.0-rc.4",
     "scroll-into-view-if-needed": "^1.0.6",
     "zone.js": "^0.7.6"
   },
+  "dependencies": {
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.19"
+  },
   "devDependencies": {
+    "@angular/compiler": "^2.4.5",
     "@angular/compiler-cli": "^2.4.5",
     "@angular/platform-server": "^2.4.5",
     "@ngtools/webpack": "^1.2.4",
@@ -73,8 +72,8 @@
     "to-string-loader": "1.1.5",
     "tslint": "^4.4.2",
     "tslint-microsoft-contrib": "^4.0.0",
-    "typescript": "^2.1.5",
-    "webpack": "2.1.0-beta.27",
+    "typescript": "2.0.10",
+    "webpack": "2.2.0",
     "webpack-dev-server": "2.1.0-beta.11"
   }
 }

@@ -20,7 +20,7 @@ import { BrowserModule } from '@angular/platform-browser';
       component: OtherRouteComponent,
       path: 'other',
     }]),
-    TourNgBootstrapModule,
+    TourNgBootstrapModule.forRoot(),
     HotkeyModule.forRoot(),
   ],
 })
