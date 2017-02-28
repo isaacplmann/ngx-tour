@@ -1,6 +1,5 @@
 import { TourNgBootstrapModule } from './../lib/plugin/ng-bootstrap/ng-bootstrap.module';
 import { OtherRouteComponent } from './other-route.component';
-import { HotkeyModule } from 'angular2-hotkeys';
 import { RouterModule } from '@angular/router';
 import { DocsComponent } from './docs.component';
 import { DemoComponent } from './demo.component';
@@ -21,7 +20,6 @@ import { BrowserModule } from '@angular/platform-browser';
       path: 'other',
     }]),
     TourNgBootstrapModule.forRoot(),
-    HotkeyModule.forRoot(),
   ],
 })
 export class DemoModule { }

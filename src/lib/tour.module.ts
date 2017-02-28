@@ -7,7 +7,7 @@ import { HotkeyModule } from 'angular2-hotkeys';
 
 @NgModule({
     declarations: [],
-    exports: [],
+    exports: [HotkeyModule],
     imports: [CommonModule, HotkeyModule, RouterModule],
 })
 export class TourModule {
@@ -16,6 +16,7 @@ export class TourModule {
             ngModule: TourModule,
             providers: [
                 TourService,
+                ...HotkeyModule.forRoot().providers,
             ],
         };
     }
