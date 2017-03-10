@@ -12,13 +12,13 @@ export { TourAnchorNgBootstrapDirective };
   declarations: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
   exports: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
   imports: [CommonModule, NgbPopoverModule.forRoot()],
-  providers: [TourStepTemplateService],
 })
 export class TourNgBootstrapModule {
   public static forRoot(): ModuleWithProviders {
     return {
       ngModule: TourNgBootstrapModule,
       providers: [
+        TourStepTemplateService,
         TourModule.forRoot().providers,
       ],
     };
