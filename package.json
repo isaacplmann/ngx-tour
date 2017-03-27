@@ -1,5 +1,5 @@
 {
-  "name": "ng2-tour",
+  "name": "ng2-tour-fix",
   "version": "0.1.5",
   "description": "Product tour library built in Angular (2+)",
   "main": "index.js",
@@ -27,7 +27,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaacplmann/ng2-tour.git"
+    "url": "git+https://github.com/ellesse/ng2-tour.git"
   },
   "author": {
     "name": "isaacplmann",
