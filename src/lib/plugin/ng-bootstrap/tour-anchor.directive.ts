@@ -45,6 +45,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
     console.log(step);
     this.ngbPopover = this.tourStepTemplate.template;
     this.popoverTitle = step.title;
+    this.container =  'body';
     switch (step.placement) {
       case 'above':
         this.placement = 'top';
