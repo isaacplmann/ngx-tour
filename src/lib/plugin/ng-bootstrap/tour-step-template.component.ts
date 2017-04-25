@@ -10,8 +10,8 @@ import { Component, TemplateRef, ViewChild, AfterViewInit, ViewEncapsulation } f
     <template #tourStep let-step="step">
       <p class="tour-step-content">{{step?.content}}</p>
       <div class="tour-step-navigation">
-        <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« Prev</button>
-        <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">Next »</button>
+        <button *ngIf="tourService.hasPrev(step)" class="btn btn-default" (click)="tourService.prev()">« Prev</button>
+        <button *ngIf="tourService.hasNext(step)" class="btn btn-primary" (click)="tourService.next()">Next »</button>
         <button class="btn btn-sm btn-default" (click)="tourService.end()">End</button>
       </div>
     </template>
