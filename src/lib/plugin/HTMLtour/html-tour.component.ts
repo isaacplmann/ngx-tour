@@ -6,7 +6,7 @@ import { Component, TemplateRef, ViewChild, AfterViewInit, ViewEncapsulation } f
   encapsulation: ViewEncapsulation.None,
   selector: "html-tour",
   styles: ['body { max-height: 100vh; }'],
-  template: "./html-tour.component.html",
+  templateUrl: "./html-tour.component.html",
 })
 export class TourStepTemplateComponent implements AfterViewInit {
   @ViewChild('tourStep', { read: TemplateRef }) public tourStepTemplate: TemplateRef<any>;
