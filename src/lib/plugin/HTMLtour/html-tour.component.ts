@@ -4,18 +4,9 @@ import { Component, TemplateRef, ViewChild, AfterViewInit, ViewEncapsulation } f
 
 @Component({
   encapsulation: ViewEncapsulation.None,
-  selector: 'tour-step-template',
+  selector: "html-tour",
   styles: ['body { max-height: 100vh; }'],
-  template: `
-    <template #tourStep let-step="step">
-      <p class="tour-step-content">{{step?.content}}</p>
-      <div class="tour-step-navigation">
-        <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« Prev</button>
-        <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">Next »</button>
-        <button class="btn btn-sm btn-default" (click)="tourService.end()">End</button>
-      </div>
-    </template>
-  `,
+  template: "./html-tour.component.html",
 })
 export class TourStepTemplateComponent implements AfterViewInit {
   @ViewChild('tourStep', { read: TemplateRef }) public tourStepTemplate: TemplateRef<any>;
