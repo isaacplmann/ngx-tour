@@ -27,13 +27,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaacplmann/ng2-tour.git"
+    "url": "git+https://github.com/zbrugman/ng2-tour.git"
   },
   "author": {
     "name": "isaacplmann",
     "email": "isaacplmann@gmail.com"
   },
-  "license": "ISC",
+  "contributors": [
+    {
+      "name": "zbrugman",
+      "email": "zach@repiq.com"
+    }
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^2.4.5",
     "@angular/core": "^2.4.5",
