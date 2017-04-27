@@ -1,0 +1,12 @@
+<ng-template #tourStep let-step="step" class="repiq-tour">
+    <p class="tour-step-content">{{step?.content}}</p>
+    <div class="row">
+        <div class="tour-step-navigation col-xs-12">
+            <button *ngIf="tourService.hasPrev(step)" class="btn btn-secondary float-xs-left" (click)="tourService.prev()"><i class="fa fa-fw fa-long-arrow-left" aria-hidden="true"></i> Prev</button>
+            <button *ngIf="tourService.hasNext(step)" class="btn  btn-primary float-xs-right" (click)="tourService.next()">Next <i class="fa fa-fw fa-long-arrow-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="col-xs-12">
+            <span class="mt-1 mb-1 small secondary d-block text-xs-center" (click)="tourService.end()">Seen this already? <a href>Do not show this again</a></span>
+        </div>
+    </div>
+</ng-template>

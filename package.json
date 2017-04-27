@@ -1,7 +1,7 @@
 {
-  "name": "ng2-tour",
-  "version": "0.1.5",
-  "description": "Product tour library built in Angular (2+)",
+  "name": "ng2-tour-html",
+  "version": "0.2.0",
+  "description": "Product tour library for Angular 2+",
   "main": "index.js",
   "scripts": {
     "cleanup": "rimraf build dist src/**/*.ngfactory.ts src/**/*.shim.ts src/**/*.js src/**/*.js.map src/**/*.js src/**/*.d.ts src/**/*.ngsummary.json",
@@ -27,13 +27,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaacplmann/ng2-tour.git"
+    "url": "git+https://github.com/zbrugman/ng2-tour.git"
   },
   "author": {
     "name": "isaacplmann",
     "email": "isaacplmann@gmail.com"
   },
-  "license": "ISC",
+  "contributors": [
+    {
+      "name": "zbrugman",
+      "email": "zach@repiq.com"
+    }
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^2.4.5",
     "@angular/core": "^2.4.5",

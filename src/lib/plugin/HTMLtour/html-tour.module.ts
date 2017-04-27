@@ -1,5 +1,5 @@
-import { TourStepTemplateComponent } from './tour-step-template.component';
-import { TourStepTemplateService } from './tour-step-template.service';
+import { TourStepTemplateComponent } from './html-tour.component';
+import { TourStepTemplateService } from './html-tour.service';
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { TourModule } from '../../tour.module';
@@ -13,10 +13,10 @@ export { TourAnchorNgBootstrapDirective };
   exports: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
   imports: [CommonModule, NgbPopoverModule.forRoot()],
 })
-export class TourNgBootstrapModule {
+export class TourHTMLModule {
   public static forRoot(): ModuleWithProviders {
     return {
-      ngModule: TourNgBootstrapModule,
+      ngModule: TourHTMLModule,
       providers: [
         TourStepTemplateService,
         TourModule.forRoot().providers,

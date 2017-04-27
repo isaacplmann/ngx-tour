@@ -1,4 +1,4 @@
-import { TourStepTemplateService } from './tour-step-template.service';
+import { TourStepTemplateService } from './html-tour.service';
 import { TourAnchorDirective } from '../../tour-anchor.directive';
 import { IStepOption, TourService } from '../../tour.service';
 import {

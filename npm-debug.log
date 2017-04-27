@@ -1,0 +1,176 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@4.0.5
+3 info using node@v7.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/zachbrugman/Documents/Development/ng2-tour HTML',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/zachbrugman/.npm/ng2-tour/0.1.5/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/zachbrugman/.npm correctMkdir not in flight; initializing
+10 info lifecycle ng2-tour@0.1.5~prepublish: ng2-tour@0.1.5
+11 silly lifecycle ng2-tour@0.1.5~prepublish: no script for prepublish, continuing
+12 info lifecycle ng2-tour@0.1.5~prepare: ng2-tour@0.1.5
+13 silly lifecycle ng2-tour@0.1.5~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/zachbrugman/.npm/ng2-tour/0.1.5/package.tgz',
+14 verbose tar pack   '/Users/zachbrugman/Documents/Development/ng2-tour HTML' ]
+15 verbose tarball /Users/zachbrugman/.npm/ng2-tour/0.1.5/package.tgz
+16 verbose folder /Users/zachbrugman/Documents/Development/ng2-tour HTML
+17 verbose addLocalTarball adding from inside cache /Users/zachbrugman/.npm/ng2-tour/0.1.5/package.tgz
+18 verbose correctMkdir /Users/zachbrugman/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd ng2-tour@0.1.5
+20 verbose afterAdd /Users/zachbrugman/.npm/ng2-tour/0.1.5/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/zachbrugman/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/zachbrugman/.npm/ng2-tour/0.1.5/package/package.json written
+23 silly publish { name: 'ng2-tour',
+23 silly publish   version: '0.1.5',
+23 silly publish   description: 'Product tour library for Angular 2+',
+23 silly publish   main: 'index.js',
+23 silly publish   scripts:
+23 silly publish    { cleanup: 'rimraf build dist src/**/*.ngfactory.ts src/**/*.shim.ts src/**/*.js src/**/*.js.map src/**/*.js src/**/*.d.ts src/**/*.ngsummary.json',
+23 silly publish      explorer: 'source-map-explorer ./dist/bootstrap.bundle.js ./dist/bootstrap.bundle.js.map',
+23 silly publish      'explorer-aot': 'source-map-explorer ./dist/bootstrap.aot.bundle.js ./dist/bootstrap.aot.bundle.js.map',
+23 silly publish      ngc: 'ngc -p ./tsconfig.aot.json',
+23 silly publish      serve: 'live-server --open=dist --mount=/ng2-tour:dist --port=9000',
+23 silly publish      start: 'npm run cleanup && npm run ngc && concurrently -r "webpack-dev-server" "node ./bin/ngc-watch.js"',
+23 silly publish      'start-plugin': 'npm run cleanup && webpack-dev-server --config webpack.aot.config.js',
+23 silly publish      'start-prod': 'npm run ngc && npm run webpack-prod && npm run serve',
+23 silly publish      build: 'npm run cleanup && npm run ngc && npm run webpack-prod',
+23 silly publish      deploy: 'npm run deploy:npm && npm run deploy:demo',
+23 silly publish      'deploy:demo': 'npm run webpack-prod && gh-pages -d dist',
+23 silly publish      'deploy:npm': 'npm run cleanup && npm run ngc && npm publish',
+23 silly publish      webpack: 'webpack --config webpack.config.js',
+23 silly publish      'webpack-aot': 'webpack --config webpack.aot.config.js',
+23 silly publish      'webpack-prod': 'webpack --config webpack.prod.config.js' },
+23 silly publish   keywords: [ 'angular', 'angular2', 'tour' ],
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/zbrugman/ng2-tour.git' },
+23 silly publish   author: { name: 'isaacplmann', email: 'isaacplmann@gmail.com' },
+23 silly publish   contributors: [ { name: 'zbrugman', email: 'zach@repiq.com' } ],
+23 silly publish   license: 'MIT',
+23 silly publish   peerDependencies:
+23 silly publish    { '@angular/common': '^2.4.5',
+23 silly publish      '@angular/core': '^2.4.5',
+23 silly publish      '@angular/router': '^3.4.5',
+23 silly publish      'angular2-hotkeys': '1.x.x',
+23 silly publish      'core-js': '^2.4.1',
+23 silly publish      rxjs: '^5.0.0-rc.4',
+23 silly publish      'scroll-into-view-if-needed': '^1.0.6',
+23 silly publish      'zone.js': '^0.7.6' },
+23 silly publish   dependencies: { '@ng-bootstrap/ng-bootstrap': '^1.0.0-alpha.19' },
+23 silly publish   devDependencies:
+23 silly publish    { '@angular/common': '^2.4.5',
+23 silly publish      '@angular/core': '^2.4.5',
+23 silly publish      '@angular/compiler': '^2.4.5',
+23 silly publish      '@angular/compiler-cli': '^2.4.5',
+23 silly publish      '@angular/forms': '^2.4.5',
+23 silly publish      '@angular/platform-server': '^2.4.5',
+23 silly publish      '@angular/platform-browser': '^2.4.5',
+23 silly publish      '@angular/platform-browser-dynamic': '^2.4.5',
+23 silly publish      '@angular/router': '^3.4.5',
+23 silly publish      '@ngtools/webpack': '^1.2.4',
+23 silly publish      '@types/core-js': '^0.9.35',
+23 silly publish      '@types/node': '6.0.48',
+23 silly publish      'angular2-hotkeys': '1.x.x',
+23 silly publish      'angular2-template-loader': '0.6.0',
+23 silly publish      'awesome-typescript-loader': '^3.0.0-beta.18',
+23 silly publish      chokidar: '1.6.1',
+23 silly publish      codelyzer: '^2.0.0-beta.4',
+23 silly publish      concurrently: '3.1.0',
+23 silly publish      'copy-webpack-plugin': '4.0.1',
+23 silly publish      'core-js': '^2.4.1',
+23 silly publish      'css-loader': '0.26.0',
+23 silly publish      'extract-text-webpack-plugin': '2.0.0-beta.4',
+23 silly publish      'gh-pages': '0.12.0',
+23 silly publish      'live-server': '^1.2.0',
+23 silly publish      'raw-loader': '0.5.1',
+23 silly publish      rimraf: '2.5.4',
+23 silly publish      rxjs: '^5.0.0-rc.4',
+23 silly publish      'sass-loader': '^4.1.0',
+23 silly publish      'scroll-into-view-if-needed': '^1.0.6',
+23 silly publish      'source-map-explorer': '1.3.3',
+23 silly publish      'style-loader': '0.13.1',
+23 silly publish      'to-string-loader': '1.1.5',
+23 silly publish      tslint: '^4.4.2',
+23 silly publish      'tslint-microsoft-contrib': '^4.0.0',
+23 silly publish      typescript: '2.0.10',
+23 silly publish      webpack: '2.2.0',
+23 silly publish      'webpack-dev-server': '2.1.0-beta.11',
+23 silly publish      'zone.js': '^0.7.6' },
+23 silly publish   readme: '# Ng2 Tour\n[![Dependency Status](https://david-dm.org/isaacplmann/ng2-tour.svg)](https://david-dm.org/isaacplmann/ng2-tour)\n[![devDependency Status](https://david-dm.org/isaacplmann/ng2-tour/dev-status.svg)](https://david-dm.org/isaacplmann/ng2-tour?type=dev)\n\nCheck out the [documentation/demo page](https://isaacplmann.github.io/ng2-tour).\n\nThis is a product tour library built with Angular (2+).  It\'s inspired by [angular-ui-tour](http://benmarch.github.io/angular-ui-tour).\n',
+23 silly publish   readmeFilename: 'readme.md',
+23 silly publish   gitHead: 'e67fd7182443b73bfafe116fe457a6fc867d0442',
+23 silly publish   bugs: { url: 'https://github.com/zbrugman/ng2-tour/issues' },
+23 silly publish   homepage: 'https://github.com/zbrugman/ng2-tour#readme',
+23 silly publish   _id: 'ng2-tour@0.1.5',
+23 silly publish   _shasum: 'b490a4ef17336d5bdfa122ce374e1f146bc7de0a',
+23 silly publish   _from: '.' }
+24 info lifecycle ng2-tour@0.1.5~prepublishOnly: ng2-tour@0.1.5
+25 silly lifecycle ng2-tour@0.1.5~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name ng2-tour
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'ng2-tour',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'ng2-tour',
+30 silly mapToRegistry   name: 'ng2-tour',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/ng2-tour
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/zachbrugman/.npm/ng2-tour/0.1.5/package.tgz
+34 verbose request uri https://registry.npmjs.org/ng2-tour
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 12:24:43 PM
+37 verbose request using bearer token for auth
+38 verbose request id 136ca7adfde69a85
+39 http request PUT https://registry.npmjs.org/ng2-tour
+40 http 403 https://registry.npmjs.org/ng2-tour
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '102',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Thu, 27 Apr 2017 17:24:44 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-msp9227-MSP',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1493313884.864182,VS0,VE711',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/zachbrugman/.npm/registry.npmjs.org/ng2-tour on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: you do not have permission to publish "ng2-tour". Are you logged in as the correct user? : ng2-tour
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid ng2-tour
+47 verbose cwd /Users/zachbrugman/Documents/Development/ng2-tour HTML
+48 error Darwin 16.5.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v7.2.1
+51 error npm  v4.0.5
+52 error code E403
+53 error you do not have permission to publish "ng2-tour". Are you logged in as the correct user? : ng2-tour
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]

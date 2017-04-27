@@ -1,4 +1,4 @@
-import { TourNgBootstrapModule } from './../lib/plugin/ng-bootstrap/ng-bootstrap.module';
+import { TourHTMLModule } from './../lib/plugin/HTMLtour/html-tour.module';
 import { OtherRouteComponent } from './other-route.component';
 import { RouterModule } from '@angular/router';
 import { DocsComponent } from './docs.component';
@@ -19,7 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
       component: OtherRouteComponent,
       path: 'other',
     }]),
-    TourNgBootstrapModule.forRoot(),
+    TourHTMLModule.forRoot(),
   ],
 })
 export class DemoModule { }
