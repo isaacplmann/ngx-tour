@@ -1,6 +1,6 @@
 {
   "name": "ng2-tour",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Product tour library built in Angular (2+)",
   "main": "index.js",
   "scripts": {
