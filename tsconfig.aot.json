@@ -8,10 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "types": ["node"],
-    "lib": [
-      "dom",
-      "es2015"
-    ]
+     "lib": ["es6", "dom"]
   },
   "angularCompilerOptions": {
     "genDir": ".",
