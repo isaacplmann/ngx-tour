@@ -7,14 +7,14 @@ import { Component, TemplateRef, ViewChild, AfterViewInit, ViewEncapsulation } f
   selector: 'tour-step-template',
   styles: ['body { max-height: 100vh; }'],
   template: `
-    <template #tourStep let-step="step">
+    <ng-template #tourStep let-step="step">
       <p class="tour-step-content">{{step?.content}}</p>
       <div class="tour-step-navigation">
         <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« Prev</button>
         <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">Next »</button>
         <button class="btn btn-sm btn-default" (click)="tourService.end()">End</button>
       </div>
-    </template>
+    </ng-template>
   `,
 })
 export class TourStepTemplateComponent implements AfterViewInit {

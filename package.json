@@ -1,6 +1,6 @@
 {
   "name": "ng4-tour",
-  "version": "0.0.5",
+  "version": "0.0.52",
   "description": "Product tour library built in Angular (4), fork of isaacplmann.",
   "main": "index.js",
   "scripts": {
