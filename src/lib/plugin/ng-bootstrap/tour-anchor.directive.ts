@@ -15,8 +15,9 @@ import {
 } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap/popover/popover';
 import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
-//const scrollIntoViewIfNeeded = require('scroll-into-view-if-needed');
-//import { scrollIntoViewIfNeeded } from 'scroll-into-view-if-needed';
+
+const scrollIntoViewIfNeeded = require('scroll-into-view-if-needed').default || require('scroll-into-view-if-needed');
+
 @Directive({
   selector: '[tourAnchor]',
 })
@@ -42,9 +43,9 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
   }
 
   public showTourStep(step: IStepOption): void {
-    console.log(step);
     this.ngbPopover = this.tourStepTemplate.template;
     this.popoverTitle = step.title;
+    this.container =  'body';
     switch (step.placement) {
       case 'above':
         this.placement = 'top';
@@ -65,7 +66,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
     }
     this.open({ step });
     if (!step.preventScrolling) {
-      //scrollIntoViewIfNeeded(this.element.nativeElement, true);
+      scrollIntoViewIfNeeded(this.element.nativeElement, true);
     }
   }
 
