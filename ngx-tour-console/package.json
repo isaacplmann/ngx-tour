@@ -1,0 +1,10 @@
+{
+  "name": "ngx-tour-console",
+  "version": "1.0.0",
+  "repository": "https://github.com/isaacplmann/ngx-tour.git",
+  "author": "Isaac Mann <isaacplmann@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ngx-tour-core": "^1.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "src": "ngx-tour-console",
+  "dest": "dist/ngx-tour-console",
+  "workingDirectory": ".ng_build",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+    "externals": {
+      "rxjs/observable/fromEvent": "Rx.Observable.fromEvent",
+      "rxjs/operator/do": "Rx.Observable.do",
+      "rxjs/operator/filter": "Rx.Observable.filter",
+      "rxjs/operator/let": "Rx.Observable.let",
+      "rxjs/operator/map": "Rx.Observable.map",
+      "rxjs/operator/merge": "Rx.Observable.merge"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<a href="https://github.com/isaacplmann/ng2-tour" class="btn btn-default">View on GitHub</a>
+<a style="cursor: pointer" (click)="tourService.toggle()" class="btn btn-primary" tourAnchor="start.tour">Start Demo Tour</a>
+<a style="cursor: pointer" (click)="tourService.prev()" class="btn btn-default">Prev</a>
+<a style="cursor: pointer" (click)="tourService.next()" class="btn btn-default">Next</a>
+
+<router-outlet></router-outlet>
+<tour-hotkey-listener></tour-hotkey-listener>

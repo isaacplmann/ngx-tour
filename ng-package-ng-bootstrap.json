@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "src": "ngx-tour-ng-bootstrap",
+  "dest": "dist/ngx-tour-ng-bootstrap",
+  "workingDirectory": ".ng_build",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+    "externals": {
+      "rxjs/operator/map": "Rx.Observable.map",
+      "rxjs/operator/filter": "Rx.Observable.filter",
+      "rxjs/operator/do": "Rx.Observable.do",
+      "rxjs/operator/let": "Rx.Observable.let",
+      "rxjs/observable/fromEvent": "Rx.Observable.fromEvent",
+      "rxjs/observable/forkJoin": "Rx.Observable.forkJoin",
+      "rxjs/observable/merge": "Rx.Observable.merge",
+      "rxjs/observable/throw": "Rx.Observable.throw",
+      "rxjs/observable/of": "Rx.Observable.of",
+      "rxjs/operator/merge": "Rx.Observable.merge",
+      "rxjs/operator/auditTime": "Rx.Observable.auditTime",
+      "rxjs/operator/catch": "Rx.Observable.catch",
+      "rxjs/operator/debounceTime": "Rx.Observable.debounceTime",
+      "rxjs/operator/share": "Rx.Observable.share",
+      "rxjs/operator/switchMap": "Rx.Observable.switchMap",
+      "rxjs/operator/startWith": "Rx.Observable.startWith",
+      "rxjs/operator/takeUntil": "Rx.Observable.takeUntil",
+      "rxjs/operator/first": "Rx.Observable.first",
+      "rxjs/operator/finally": "Rx.Observable.finally",
+      "withinviewport": "withinviewport"
+    }
+  }
+}
