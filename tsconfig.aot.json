@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": ["node"],
+     "lib": ["es6", "dom"]
+  },
+  "angularCompilerOptions": {
+    "genDir": ".",
+    "skipTemplateCodegen": true
+  },
+  "compileOnSave": false,
+  "files": [
+    "index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.d.ts",
+    "**/*.shim.ts",
+    "src/demo/bootstrap*.ts",
+    "src/demo/polyfill.ts"
+  ]
+}
