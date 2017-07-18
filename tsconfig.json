@@ -1,27 +1,26 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
+    "sourceMap": true,
+    "declaration": false,
     "moduleResolution": "node",
-    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "typeRoots": [ "./node_modules/@types" ],
-    "types": [
-      "node"
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
     "lib": [
-      "dom",
-      "es2015"
-    ]
+      "es2016",
+      "dom"
+    ],
+    "paths": {
+      "ngx-tour": [ "dist/ngx-tour" ]
+    }
   },
   "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true
-  }
+    ".ng_build"
+  ]
 }
