@@ -52,7 +52,7 @@ export class TourService {
     map.bind(this.anchorUnregister$)(value => ({ name: 'anchorUnregister', value })),
   );
 
-  public steps: IStepOption[];
+  public steps: IStepOption[] = [];
   public currentStep: IStepOption;
 
   public anchors: { [anchorId: string]: TourAnchorDirective } = {};
@@ -187,10 +187,6 @@ export class TourService {
   }
 
   private loadStep(stepId: number | string): IStepOption {
-    if (!this.steps) {
-      console.warn('No steps defined - did you call TourService.initialize()?');
-      return undefined;
-    }
     if (typeof (stepId) === 'number') {
       return this.steps[stepId];
     } else {
@@ -212,7 +208,7 @@ export class TourService {
   }
 
   private showStep(step: IStepOption): void {
-    const anchor = this.anchors[step.anchorId];
+    const anchor = this.anchors[step && step.anchorId];
     if (!anchor) {
       this.end();
       return;
@@ -222,7 +218,7 @@ export class TourService {
   }
 
   private hideStep(step: IStepOption): void {
-    const anchor = this.anchors[step.anchorId];
+    const anchor = this.anchors[step && step.anchorId];
     if (!anchor) {
       return;
     }
