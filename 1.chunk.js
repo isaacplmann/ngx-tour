@@ -61,10 +61,13 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_rxjs_observable_forkJoin__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_withinviewport__ = __webpack_require__("../../../../../dist/ngx-tour-md-menu/node_modules/withinviewport/withinviewport.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_withinviewport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_withinviewport__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TourService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TourMdMenuModule; });
 /* unused harmony export TourAnchorMdMenuDirective */
 /* unused harmony export TourStepTemplateComponent */
+/* unused harmony export TourModule */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TourService; });
+/* unused harmony export TourState */
+/* unused harmony export TourHotkeyListenerComponent */
 /* unused harmony export ɵa */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -131,6 +134,7 @@ var TourService = (function () {
         this.anchorRegister$ = new __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__["Subject"]();
         this.anchorUnregister$ = new __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__["Subject"]();
         this.events$ = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_merge__["mergeStatic"])(__WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.stepShow$)(function (value) { return ({ name: 'stepShow', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.stepHide$)(function (value) { return ({ name: 'stepHide', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.initialize$)(function (value) { return ({ name: 'initialize', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.start$)(function (value) { return ({ name: 'start', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.end$)(function (value) { return ({ name: 'end', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.pause$)(function (value) { return ({ name: 'pause', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.resume$)(function (value) { return ({ name: 'resume', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.anchorRegister$)(function (value) { return ({ name: 'anchorRegister', value: value }); }), __WEBPACK_IMPORTED_MODULE_5_rxjs_operator_map__["map"].bind(this.anchorUnregister$)(function (value) { return ({ name: 'anchorUnregister', value: value }); }));
+        this.steps = [];
         this.anchors = {};
         this.status = TourState.OFF;
     }
@@ -314,10 +318,6 @@ var TourService = (function () {
      * @return {?}
      */
     TourService.prototype.loadStep = function (stepId) {
-        if (!this.steps) {
-            console.warn('No steps defined - did you call TourService.initialize()?');
-            return undefined;
-        }
         if (typeof (stepId) === 'number') {
             return this.steps[stepId];
         }
@@ -347,7 +347,7 @@ var TourService = (function () {
      * @return {?}
      */
     TourService.prototype.showStep = function (step) {
-        var /** @type {?} */ anchor = this.anchors[step.anchorId];
+        var /** @type {?} */ anchor = this.anchors[step && step.anchorId];
         if (!anchor) {
             this.end();
             return;
@@ -360,7 +360,7 @@ var TourService = (function () {
      * @return {?}
      */
     TourService.prototype.hideStep = function (step) {
-        var /** @type {?} */ anchor = this.anchors[step.anchorId];
+        var /** @type {?} */ anchor = this.anchors[step && step.anchorId];
         if (!anchor) {
             return;
         }
@@ -25692,10 +25692,6 @@ var MdMenuComponent = (function () {
         });
         this.tourService.start();
     }
-    MdMenuComponent.prototype.nextStep = function () {
-        debugger;
-        this.tourService.next();
-    };
     return MdMenuComponent;
 }());
 MdMenuComponent = __decorate([
