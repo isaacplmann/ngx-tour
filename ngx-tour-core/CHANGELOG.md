@@ -1,5 +1,5 @@
 <a name="1.0.1"></a>
-# [1.0.1](https://github.com/isaacplmann/ngx-contextmenu) (2017-07-19)
+# [1.0.1](https://github.com/isaacplmann/ngx-tour) (2017-07-19)
 
 
 ### Bug fixes
@@ -8,7 +8,7 @@
 
 
 <a name="1.0.0"></a>
-# [1.0.0](https://github.com/isaacplmann/ngx-contextmenu) (2017-07-18)
+# [1.0.0](https://github.com/isaacplmann/ngx-tour) (2017-07-18)
 
 
 ### BREAKING CHANGES

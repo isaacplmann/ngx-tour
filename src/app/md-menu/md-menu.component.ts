@@ -80,9 +80,4 @@ export class MdMenuComponent {
     });
     this.tourService.start();
   }
-
-  nextStep() {
-    debugger;
-    this.tourService.next();
-  }
 }
