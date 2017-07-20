@@ -5,7 +5,6 @@ import { Component, TemplateRef, ViewChild, AfterContentInit, ViewEncapsulation,
 @Component({
   encapsulation: ViewEncapsulation.None,
   selector: 'tour-step-template',
-  styles: ['body { max-height: 100vh; }'],
   template: `
     <ng-template #tourStep let-step="step">
       <p class="tour-step-content">{{step?.content}}</p>

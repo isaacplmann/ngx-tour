@@ -1,3 +1,12 @@
+<a name="1.0.3"></a>
+# [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-07-20)
+
+
+### Bug fixes
+
+* Remove max-height style
+
+
 <a name="1.0.2"></a>
 # [1.0.2](https://github.com/isaacplmann/ngx-tour) (2017-07-19)
 
