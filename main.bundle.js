@@ -60,31 +60,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var DemoModule = (function () {
     function DemoModule() {
     }
+    DemoModule = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__demo_component__["a" /* DemoComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_4__demo_component__["a" /* DemoComponent */]],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([{
+                        loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
+                        path: 'ng-bootstrap',
+                    }, {
+                        loadChildren: './console/console.module#ConsoleModule',
+                        path: 'console',
+                    }, {
+                        loadChildren: './md-menu/md-menu.module#MdMenuModule',
+                        path: 'md-menu',
+                    }, {
+                        redirectTo: 'md-menu',
+                        path: '**',
+                    }]),
+            ],
+        })
+    ], DemoModule);
     return DemoModule;
 }());
-DemoModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__demo_component__["a" /* DemoComponent */]],
-        declarations: [__WEBPACK_IMPORTED_MODULE_4__demo_component__["a" /* DemoComponent */]],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([{
-                    loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
-                    path: 'ng-bootstrap',
-                }, {
-                    loadChildren: './console/console.module#ConsoleModule',
-                    path: 'console',
-                }, {
-                    loadChildren: './md-menu/md-menu.module#MdMenuModule',
-                    path: 'md-menu',
-                }, {
-                    redirectTo: 'md-menu',
-                    path: '**',
-                }]),
-        ],
-    })
-], DemoModule);
 
 //# sourceMappingURL=app.module.js.map
 
@@ -113,14 +113,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var DemoComponent = (function () {
     function DemoComponent() {
     }
+    DemoComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */])({
+            selector: 'app-root',
+            template: __webpack_require__("../../../../../src/app/demo.component.html"),
+        })
+    ], DemoComponent);
     return DemoComponent;
 }());
-DemoComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */])({
-        selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/demo.component.html"),
-    })
-], DemoComponent);
 
 //# sourceMappingURL=demo.component.js.map
 
@@ -135,7 +135,6 @@ DemoComponent = __decorate([
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
