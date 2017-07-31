@@ -1,3 +1,12 @@
+<a name="1.0.3"></a>
+# [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-07-31)
+
+
+### Bug fixes
+
+* Fix aot build
+
+
 <a name="1.0.2"></a>
 # [1.0.2](https://github.com/isaacplmann/ngx-tour) (2017-07-19)
 

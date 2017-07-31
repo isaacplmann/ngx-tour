@@ -12,7 +12,9 @@ export { TourAnchorMdMenuDirective, TourStepTemplateComponent, TourService };
 @NgModule({
   declarations: [TourAnchorMdMenuDirective, TourStepTemplateComponent],
   exports: [TourAnchorMdMenuDirective, TourStepTemplateComponent, TourModule],
-  imports: [CommonModule, TourModule, MdMenuModule, MdCardModule, MdButtonModule, MdIconModule],
+  imports: [CommonModule, TourModule,
+    MdMenuModule, MdCardModule, MdButtonModule, MdIconModule
+  ],
 })
 export class TourMdMenuModule {
   public static forRoot(): ModuleWithProviders {

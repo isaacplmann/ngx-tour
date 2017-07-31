@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, TemplateRef, ContentChild, Input } from '@angular/core';
+import { AfterViewInit, Component, ContentChild, Input, TemplateRef, ViewChild } from '@angular/core';
 import { MdMenu } from '@angular/material';
 import { IStepOption, TourHotkeyListenerComponent, TourService } from 'ngx-tour-core';
 
@@ -34,6 +34,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterViewInit {
   @ViewChild(MdMenu) public tourStep: MdMenu;
+  // public tourStep: any;
 
   @Input()
   @ContentChild(TemplateRef)

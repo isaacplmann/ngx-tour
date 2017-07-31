@@ -12,11 +12,12 @@
   },
   "angularCompilerOptions": {
     "genDir": ".",
-    "skipTemplateCodegen": true
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true
   },
   "compileOnSave": false,
   "files": [
-    "index.ts"
+    "src/public_api.ts"
   ],
   "exclude": [
     "node_modules",
