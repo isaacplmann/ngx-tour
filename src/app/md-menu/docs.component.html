@@ -1,10 +1,11 @@
 <h2>About</h2>
 <p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
+<p><code>TourMdMenuModule</code> is an implementation of the tour ui that uses <a href="http://material.angular.io">Angular Material</a> MdMenu to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
-  <li><code>npm install ng2-tour</code></li>
-  <li>import <code>TourNgBootstrapModule</code> into your app module</li>
+  <li><code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code></li>
+  <li>import <code>TourMdMenuModule</code> into your app module</li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
@@ -107,14 +108,11 @@ this.tourService.initialize([{{ '{' }}
       <td>The step index or stepId of the previous step.  If undefined, the previous step in the steps array is used.</td>
     </tr>
     <tr>
-      <td>placement</td>
-      <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>
-      <td><span tourAnchor="config.placement.default">'top'</span></td>
+      <td><del>placement</del></td>
+      <td>N/A</td>
+      <td>N/A</td>
       <td>
-        (* Ignored by <code>TourMdMenuModule</code>)
-        Where the tour step should placed with respect to the anchor.
-        'before' and 'after' are synonyms for 'left' and 'right' respectively.
-        When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.
+        Ignored by <code>TourMdMenuModule</code>
       </td>
     </tr>
     <tr>
@@ -134,7 +132,6 @@ this.tourService.initialize([{{ '{' }}
 <pre>
 this.tourService.initialize(steps, {{ '{' }}
   route: '',
-  placement: 'left',
   preventScrolling: true,
 });
 </pre>

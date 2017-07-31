@@ -1,15 +1,15 @@
 <h2>About</h2>
 <p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
+<p><code>TourConsoleModule</code> is a minimal implementation of the tour ui that uses only the browser's console to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
-  <li><code>npm install ng2-tour</code></li>
-  <li>import <code>TourNgBootstrapModule</code> into your app module</li>
+  <li><code>npm install ngx-tour-console</code></li>
+  <li>import <code>TourConsoleModule</code> into your app module</li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
 <ol>
-  <li>Add <code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code> to your root app component</li>
   <li>
     Define anchor points for the tour steps by adding the <code>tourAnchor</code> directive throughout your app.
     <pre><code>&lt;div tourAnchor="some.anchor.id"&gt;...&lt;/div&gt;</code></pre>
