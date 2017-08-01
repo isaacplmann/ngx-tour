@@ -5,7 +5,10 @@
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
   <li><code>npm install ngx-tour-ng-bootstrap @ng-bootstrap/ng-bootstrap</code></li>
-  <li>import <code>TourNgBootstrapModule</code> into your app module</li>
+  <li>Import <code>TourNgBootstrapModule.forRoot()</code> into your app module</li>
+  <li>Make sure <code>RouterModule</code> is imported in your app module</li>
+  <li>Include bootstrap css somehow - i.e. in your <code>index.html</code> add this line:<br>
+      <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;</code></li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>

@@ -1,3 +1,12 @@
+<a name="1.0.4"></a>
+# [1.0.4](https://github.com/isaacplmann/ngx-tour) (2017-08-01)
+
+
+### Bug fixes
+
+* Export TourService
+
+
 <a name="1.0.3"></a>
 # [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-07-20)
 
