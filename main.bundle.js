@@ -75,9 +75,9 @@ var DemoModule = (function () {
                         path: 'console',
                     }, {
                         loadChildren: './md-menu/md-menu.module#MdMenuModule',
-                        path: 'md-menu',
+                        path: '',
                     }, {
-                        redirectTo: 'md-menu',
+                        redirectTo: '',
                         path: '**',
                     }]),
             ],
@@ -93,7 +93,7 @@ var DemoModule = (function () {
 /***/ "../../../../../src/app/demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"page-header\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"md-menu\">MdMenu</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"ng-bootstrap\">NgBootstrap</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"console\">Console</a></li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<section class=\"page-header\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"\">MdMenu</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"ng-bootstrap\">NgBootstrap</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"console\">Console</a></li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
