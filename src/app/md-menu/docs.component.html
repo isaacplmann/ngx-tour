@@ -210,3 +210,33 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
     </tr>
   </tbody>
 </table>
+
+<h2 tourAnchor="template">Custom template</h2>
+<p>
+  You can also customize the tour step template by providing an <code>&lt;ng-template let-step="step" &gt;</code> inside the <code>&lt;tour-step-template&gt;</code>
+</p>
+<p>
+  The default template is equivalent to this:
+</p>
+<pre><code>&lt;tour-step-template&gt;
+  &lt;ng-template let-step="step"&gt;
+    &lt;md-card (click)="$event.stopPropagation()"&gt;
+      &lt;md-card-title&gt;
+        {{ '{{' }}step?.title}}
+      &lt;/md-card-title&gt;
+      &lt;md-card-content&gt;
+        {{ '{{' }}step?.content}}
+      &lt;/md-card-content&gt;
+      &lt;md-card-actions&gt;
+        &lt;button md-icon-button [disabled]="!tourService.hasPrev(step)" (click)="tourService.prev()"&gt;
+          &lt;md-icon&gt;chevron_left&lt;/md-icon&gt;
+        &lt;/button&gt;
+        &lt;button md-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()"&gt;
+          &lt;md-icon&gt;chevron_right&lt;/md-icon&gt;
+        &lt;/button&gt;
+        &lt;button md-button (click)="tourService.end()"&gt;End&lt;/button&gt;
+      &lt;/md-card-actions&gt;
+    &lt;/md-card&gt;
+  &lt;/ng-template&gt;
+&lt;/tour-step-template&gt;
+</code></pre>

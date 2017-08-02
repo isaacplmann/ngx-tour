@@ -19,9 +19,9 @@ import { DemoComponent } from './demo.component';
       path: 'console',
     }, {
       loadChildren: './md-menu/md-menu.module#MdMenuModule',
-      path: 'md-menu',
+      path: '',
     }, {
-      redirectTo: 'md-menu',
+      redirectTo: '',
       path: '**',
     }]),
   ],

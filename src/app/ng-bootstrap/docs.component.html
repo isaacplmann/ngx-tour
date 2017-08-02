@@ -115,7 +115,6 @@ this.tourService.initialize([{{ '{' }}
       <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
-        (* Ignored by <code>TourMdMenuModule</code>)
         Where the tour step should placed with respect to the anchor.
         'before' and 'after' are synonyms for 'left' and 'right' respectively.
         When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.
@@ -217,3 +216,22 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
     </tr>
   </tbody>
 </table>
+
+<h2 tourAnchor="template">Custom template</h2>
+<p>
+  You can also customize the tour step template by providing an <code>&lt;ng-template let-step="step" &gt;</code> inside the <code>&lt;tour-step-template&gt;</code>
+</p>
+<p>
+  The default template is equivalent to this:
+</p>
+<pre><code>&lt;tour-step-template&gt;
+  &lt;ng-template let-step="step"&gt;
+    &lt;p class="tour-step-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
+    &lt;div class="tour-step-navigation"&gt;
+      &lt;button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()"&gt;« Prev&lt;/button&gt;
+      &lt;button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()"&gt;Next »&lt;/button&gt;
+      &lt;button class="btn btn-sm btn-default" (click)="tourService.end()"&gt;End&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/ng-template&gt;
+&lt;/tour-step-template&gt;
+</code></pre>
