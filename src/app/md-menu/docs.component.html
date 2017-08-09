@@ -5,7 +5,9 @@
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
   <li><code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code></li>
-  <li>import <code>TourMdMenuModule</code> into your app module</li>
+  <li>import <code>TourMdMenuModule.forRoot()</code> into your app module</li>
+  <li>Make sure <code>RouterModule</code> is imported in your app module</li>
+  <li>Make sure Angular Material is <a href="https://material.angular.io/guide/getting-started">installed correctly</a></li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
@@ -29,6 +31,7 @@ this.tourService.initialize([{{ '{' }}
 }]);</pre>
   </li>
   <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
+  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu">demo source code</a> for an example.</li>
 </ol>
 
 <h2>TourService</h2>
