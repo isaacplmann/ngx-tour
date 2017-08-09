@@ -1,13 +1,13 @@
 {
   "name": "ngx-tour-core",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^4.3.0",
-    "@angular/core": "^4.3.0",
-    "@angular/router": "^4.3.0",
+    "@angular/common": "^4.2.5",
+    "@angular/core": "^4.2.5",
+    "@angular/router": "^4.2.5",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.12"
