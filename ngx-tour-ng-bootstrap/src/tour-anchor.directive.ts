@@ -10,8 +10,7 @@ import {
   Renderer2,
   ViewContainerRef,
 } from '@angular/core';
-import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
-import { NgbPopover } from '@ng-bootstrap/ng-bootstrap/popover/popover';
+import { NgbPopoverConfig, NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 import { IStepOption, TourAnchorDirective, TourService } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 

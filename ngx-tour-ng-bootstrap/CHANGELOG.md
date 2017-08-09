@@ -1,3 +1,12 @@
+<a name="1.0.5"></a>
+# [1.0.5](https://github.com/isaacplmann/ngx-tour) (2017-08-09)
+
+
+### Bug fixes
+
+* Fix bundling to not include ng-bootstrap library
+
+
 <a name="1.0.4"></a>
 # [1.0.4](https://github.com/isaacplmann/ngx-tour) (2017-08-01)
 

@@ -6,6 +6,7 @@
   "lib": {
     "entryFile": "src/public_api.ts",
     "externals": {
+      "@ng-bootstrap/ng-bootstrap": "ngb",
       "rxjs/operator/let": "Rx.Observable.prototype",
       "withinviewport": "withinviewport"
     }
