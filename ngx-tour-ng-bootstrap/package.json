@@ -8,7 +8,7 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.27"
   },
   "dependencies": {
-    "ngx-tour-core": "^1.0.3",
+    "ngx-tour-core": "^1.0.0",
     "withinviewport": "^2.0.0"
   }
 }
