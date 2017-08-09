@@ -29,7 +29,7 @@
     "e2e": "ng e2e",
     "pub": "npm run pub:lib && npm run pub:demo",
     "pub:demo": "npm run build -- --base-href /ngx-tour/ && gh-pages -d dist/app",
-    "pub:lib": "npm run build:lib && (npm run pub:lib:core & npm run pub:lib:console & npm run pub:lib:ng-bootstrap & npm run pub:lib:md-menu)",
+    "pub:lib": "npm run build:lib:all && (npm run pub:lib:core & npm run pub:lib:console & npm run pub:lib:ng-bootstrap & npm run pub:lib:md-menu)",
     "pub:lib:core": "cd dist/ngx-tour-core && npm publish",
     "pub:lib:console": "cd dist/ngx-tour-console && npm publish",
     "pub:lib:ng-bootstrap": "cd dist/ngx-tour-ng-bootstrap && npm publish",
