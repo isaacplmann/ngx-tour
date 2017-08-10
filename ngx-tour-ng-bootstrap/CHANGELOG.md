@@ -1,3 +1,12 @@
+<a name="1.0.6"></a>
+# [1.0.6](https://github.com/isaacplmann/ngx-tour) (2017-08-10)
+
+
+### Bug fixes
+
+* Fix bundling for real this time
+
+
 <a name="1.0.5"></a>
 # [1.0.5](https://github.com/isaacplmann/ngx-tour) (2017-08-09)
 
