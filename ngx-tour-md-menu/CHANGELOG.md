@@ -1,3 +1,12 @@
+<a name="1.0.4"></a>
+# [1.0.4](https://github.com/isaacplmann/ngx-tour) (2017-08-30)
+
+
+### Bug fixes
+
+* Update @angular/material to 2.0.0-beta.10
+
+
 <a name="1.0.3"></a>
 # [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-07-31)
 

@@ -1,11 +1,37 @@
-import { Directive, ElementRef, Input, OnDestroy, OnInit, Optional, ViewContainerRef } from '@angular/core';
-import { Directionality, MdMenu, MdMenuTrigger, Overlay, OverlayRef } from '@angular/material';
+import { Directive, ElementRef, InjectionToken, Input, OnDestroy, OnInit, Optional, Self, ViewContainerRef, Inject } from '@angular/core';
+import {
+  Directionality,
+  MdMenu,
+  MdMenuItem,
+  MdMenuTrigger,
+  Overlay,
+  OverlayRef,
+  RepositionScrollStrategy,
+  ScrollStrategy,
+} from '@angular/material';
 import { IStepOption, TourAnchorDirective, TourService, TourState } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
 import { TourStepTemplateService } from './tour-step-template.service';
 
+export const MD_MENU_SCROLL_STRATEGY =
+  new InjectionToken<() => ScrollStrategy>('md-menu-scroll-strategy');
+
+/** @docs-private */
+export function MD_MENU_SCROLL_STRATEGY_PROVIDER_FACTORY(overlay: Overlay):
+  () => RepositionScrollStrategy {
+  return () => overlay.scrollStrategies.reposition();
+}
+
+/** @docs-private */
+export const MD_MENU_SCROLL_STRATEGY_PROVIDER = {
+  provide: MD_MENU_SCROLL_STRATEGY,
+  deps: [Overlay],
+  useFactory: MD_MENU_SCROLL_STRATEGY_PROVIDER_FACTORY,
+};
+
 @Directive({
+  providers: [MD_MENU_SCROLL_STRATEGY_PROVIDER],
   selector: '[tourAnchor]',
 })
 export class TourAnchorMdMenuDirective extends MdMenuTrigger implements OnInit, OnDestroy, TourAnchorDirective {
@@ -13,14 +39,16 @@ export class TourAnchorMdMenuDirective extends MdMenuTrigger implements OnInit, 
   private element: ElementRef;
 
   constructor(
-    private _superOverlay: Overlay, private _superElement: ElementRef,
-    private _superViewContainerRef: ViewContainerRef,
-    @Optional() private _superDir: Directionality,
+    private _superoverlay: Overlay, private _superelement: ElementRef, private _superviewContainerRef: ViewContainerRef,
+    @Optional() @Inject(MD_MENU_SCROLL_STRATEGY) private _superscrollStrategy: any,
+    @Optional() private _superparentMenu: MdMenu,
+    @Optional() @Self() private _supermenuItemInstance: MdMenuItem,
+    @Optional() private _superdir: Directionality,
     private tourService: TourService, private tourStepTemplate: TourStepTemplateService,
   ) {
-    super(_superOverlay, _superElement, _superViewContainerRef, _superDir);
-    this.menu = new MdMenu(undefined);
-    this.element = _superElement;
+    super(_superoverlay, _superelement, _superviewContainerRef, _superscrollStrategy, _superparentMenu, _supermenuItemInstance, _superdir);
+    this.menu = new MdMenu(undefined, { xPosition: 'after', yPosition: 'below', overlapTrigger: true });
+    this.element = _superelement;
   }
 
   public ngOnInit(): void {
