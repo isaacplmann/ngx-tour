@@ -50,6 +50,7 @@
     "@angular/router": "^4.3.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.27",
     "core-js": "^2.4.1",
+    "ngx-bootstrap": "1.9.1",
     "ngx-tour-ng-bootstrap": "^1.0.0",
     "ngx-tour-md-menu": "^1.0.2",
     "withinviewport": "^2.0.0",
