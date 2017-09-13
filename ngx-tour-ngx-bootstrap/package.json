@@ -4,8 +4,10 @@
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
   "author": "Rachel Yordán <rachelyordan@gmail.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "ngx-bootstrap": "1.9.1"
+  },
   "dependencies": {
-    "ngx-bootstrap": "1.9.1",
     "ngx-tour-core": "^1.0.0",
     "withinviewport": "^2.0.0"
   }
