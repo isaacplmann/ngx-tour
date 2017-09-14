@@ -15,6 +15,9 @@ import { DemoComponent } from './demo.component';
       loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
       path: 'ng-bootstrap',
     }, {
+      loadChildren: './ngx-bootstrap/ngx-bootstrap.module#NgxBootstrapModule',
+      path: 'ngx-bootstrap',
+    }, {
       loadChildren: './console/console.module#ConsoleModule',
       path: 'console',
     }, {
