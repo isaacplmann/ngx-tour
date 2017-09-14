@@ -1,23 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TourModule, TourService } from 'ngx-tour-core';
 
-import { TourAnchorNgBootstrapDirective } from './tour-anchor.directive';
+import { TourAnchorNgxBootstrapDirective } from './tour-anchor.directive';
 import { TourStepTemplateComponent } from './tour-step-template.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 
-export { TourAnchorNgBootstrapDirective, TourStepTemplateComponent, TourService };
+export { TourAnchorNgxBootstrapDirective, TourStepTemplateComponent, TourService };
 
 @NgModule({
-  declarations: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
-  exports: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
-  imports: [CommonModule, NgbPopoverModule.forRoot()],
+  declarations: [TourAnchorNgxBootstrapDirective, TourStepTemplateComponent],
+  exports: [TourAnchorNgxBootstrapDirective, TourStepTemplateComponent],
+  imports: [CommonModule, PopoverModule.forRoot()],
 })
-export class TourNgBootstrapModule {
+export class TourNgxBootstrapModule {
   public static forRoot(): ModuleWithProviders {
     return {
-      ngModule: TourNgBootstrapModule,
+      ngModule: TourNgxBootstrapModule,
       providers: [
         TourStepTemplateService,
         ...TourModule.forRoot().providers,
