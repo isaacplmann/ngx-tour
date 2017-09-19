@@ -11,12 +11,12 @@ var map = {
 	],
 	"./md-menu/md-menu.module": [
 		"../../../../../src/app/md-menu/md-menu.module.ts",
-		1,
+		2,
 		0
 	],
 	"./ng-bootstrap/ng-bootstrap.module": [
 		"../../../../../src/app/ng-bootstrap/ng-bootstrap.module.ts",
-		2,
+		1,
 		0
 	]
 };
@@ -57,7 +57,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var DemoModule = (function () {
+var DemoModule = /** @class */ (function () {
     function DemoModule() {
     }
     DemoModule = __decorate([
@@ -93,7 +93,7 @@ var DemoModule = (function () {
 /***/ "../../../../../src/app/demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"page-header\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"\">MdMenu</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"ng-bootstrap\">NgBootstrap</a></li>\n        <li role=\"presentation\" [routerLinkActive]=\"['active']\"><a routerLink=\"console\">Console</a></li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<section class=\"page-header pb-3\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"\">MdMenu</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ng-bootstrap\">NgBootstrap</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"console\">Console</a>\n        </li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -110,7 +110,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var DemoComponent = (function () {
+var DemoComponent = /** @class */ (function () {
     function DemoComponent() {
     }
     DemoComponent = __decorate([
