@@ -9,6 +9,7 @@
       "valor-software/ngx-bootstrap": "ngx",
       "valor-software/ngx-bootstrap/index": "ngx",
       "rxjs/operator/let": "Rx.Observable.prototype",
+      "rxjs/scheduler/queue": "Rx.Observable.prototype",
       "withinviewport": "withinviewport"
     }
   }
