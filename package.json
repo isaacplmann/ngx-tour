@@ -34,6 +34,7 @@
     "pub:lib:core": "cd dist/ngx-tour-core && npm publish",
     "pub:lib:console": "cd dist/ngx-tour-console && npm publish",
     "pub:lib:ng-bootstrap": "cd dist/ngx-tour-ng-bootstrap && npm publish",
+    "pub:lib:ngx-bootstrap": "cd dist/ngx-tour-ngx-bootstrap && npm publish",
     "pub:lib:md-menu": "cd dist/ngx-tour-md-menu && npm publish"
   },
   "dependencies": {
@@ -52,11 +53,11 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.27",
     "core-js": "^2.4.1",
     "ngx-bootstrap": "1.9.1",
-    "ngx-tour-ng-bootstrap": "^1.0.0",
-    "ngx-tour-ngx-bootstrap": "^1.0.0",
     "ngx-tour-md-menu": "^1.0.2",
+    "ngx-tour-ng-bootstrap": "^1.0.0",
+    "ngx-tour-ngx-bootstrap": "file:ngx-tour-ngx-bootstrap",
+    "rxjs": "5.4.1",
     "withinviewport": "^2.0.0",
-    "rxjs": "^5.1.0",
     "zone.js": "^0.8.12"
   },
   "devDependencies": {
