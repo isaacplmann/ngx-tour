@@ -1,3 +1,12 @@
+<a name="2.0.0-beta.5"></a>
+# [2.0.0-beta.5](https://github.com/isaacplmann/ngx-tour) (2017-09-19)
+
+
+### BREAKING CHANGES
+
+* Update to ng-bootstrap@1.0.0-beta.5 and bootstrap 4
+
+
 <a name="1.0.6"></a>
 # [1.0.6](https://github.com/isaacplmann/ngx-tour) (2017-08-10)
 
