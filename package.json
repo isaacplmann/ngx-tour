@@ -34,6 +34,7 @@
     "pub:lib:core": "cd dist/ngx-tour-core && npm publish",
     "pub:lib:console": "cd dist/ngx-tour-console && npm publish",
     "pub:lib:ng-bootstrap": "cd dist/ngx-tour-ng-bootstrap && npm publish",
+    "pub:lib:ngx-bootstrap": "cd dist/ngx-tour-ngx-bootstrap && npm publish",
     "pub:lib:md-menu": "cd dist/ngx-tour-md-menu && npm publish"
   },
   "dependencies": {
