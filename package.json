@@ -55,7 +55,7 @@
     "ngx-bootstrap": "1.9.1",
     "ngx-tour-md-menu": "^1.0.2",
     "ngx-tour-ng-bootstrap": "^1.0.0",
-    "ngx-tour-ngx-bootstrap": "file:dist/ngx-tour-ngx-bootstrap",
+    "ngx-tour-ngx-bootstrap": "^1.0.0",
     "rxjs": "5.4.0",
     "withinviewport": "^2.0.0",
     "zone.js": "^0.8.12"
