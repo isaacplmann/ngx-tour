@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ContentChild, Input, TemplateRef, ViewChild } from '@angular/core';
-import { MdMenu } from '@angular/material';
+import { MatMenu } from '@angular/material';
 import { IStepOption, TourHotkeyListenerComponent, TourService } from 'ngx-tour-core';
 
 import { TourStepTemplateService } from './tour-step-template.service';
@@ -8,32 +8,32 @@ import { TourStepTemplateService } from './tour-step-template.service';
   selector: 'tour-step-template',
   styles: ['/deep/ .tour-step .mat-menu-content { padding: 0px }'],
   template: `
-    <md-menu [overlapTrigger]="false" class="tour-step">
+    <mat-menu [overlapTrigger]="false" class="tour-step">
       <ng-container *ngTemplateOutlet="stepTemplate || defaultTemplate; context: { step: step }"></ng-container>
-    </md-menu>
+    </mat-menu>
     <ng-template #defaultTemplate let-step="step">
-      <md-card (click)="$event.stopPropagation()">
-        <md-card-title>
+      <mat-card (click)="$event.stopPropagation()">
+        <mat-card-title>
           {{step?.title}}
-        </md-card-title>
-        <md-card-content>
+        </mat-card-title>
+        <mat-card-content>
           {{step?.content}}
-        </md-card-content>
-        <md-card-actions>
-          <button md-icon-button [disabled]="!tourService.hasPrev(step)" (click)="tourService.prev()">
-            <md-icon>chevron_left</md-icon>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-icon-button [disabled]="!tourService.hasPrev(step)" (click)="tourService.prev()">
+            <mat-icon>chevron_left</mat-icon>
           </button>
-          <button md-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()">
-            <md-icon>chevron_right</md-icon>
+          <button mat-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()">
+            <mat-icon>chevron_right</mat-icon>
           </button>
-          <button md-button (click)="tourService.end()">End</button>
-        </md-card-actions>
-      </md-card>
+          <button mat-button (click)="tourService.end()">End</button>
+        </mat-card-actions>
+      </mat-card>
     </ng-template>
   `,
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterViewInit {
-  @ViewChild(MdMenu) public tourStep: MdMenu;
+  @ViewChild(MatMenu) public tourStep: MatMenu;
   // public tourStep: any;
 
   @Input()
