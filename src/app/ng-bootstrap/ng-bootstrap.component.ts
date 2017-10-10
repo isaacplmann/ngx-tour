@@ -12,7 +12,7 @@ export class NgBootstrapComponent {
     this.tourService.initialize([{
       anchorId: 'start.tour',
       content: 'Welcome to the Ngx-Tour tour!',
-      placement: 'below',
+      placement: 'right-above',
       title: 'Welcome',
     }, {
       anchorId: 'angular-ui-tour',

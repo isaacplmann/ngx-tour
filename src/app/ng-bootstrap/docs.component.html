@@ -60,7 +60,7 @@ this.tourService.initialize([{{ '{' }}
   <thead>
     <tr>
       <th>Name</th>
-      <th>Type</th>
+      <th style="width: 300px">Type</th>
       <th>Default</th>
       <th>Description</th>
     </tr>
@@ -113,7 +113,12 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>
+      <td>'above' | 'above-right' | 'above-left' | 'above-before' | 'above-after' |
+        'below' | 'below-right' | 'below-left' | 'below-before' | 'below-after' |
+        'after' | 'after-top' | 'after-bottom' |
+        'before' | 'before-top' | 'before-bottom' |
+        'left' | 'left-above' | 'left-below' |
+        'right' | 'right-above' | 'right-below'</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
         Where the tour step should placed with respect to the anchor.

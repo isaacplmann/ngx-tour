@@ -18,7 +18,12 @@ export interface IStepOption {
   route?: string | UrlSegment[];
   nextStep?: number | string;
   prevStep?: number | string;
-  placement?: 'above' | 'below' | 'after' | 'before' | 'left' | 'right';
+  placement?: 'above' | 'above-right' | 'above-left' | 'above-before' | 'above-after' |
+              'below' | 'below-right' | 'below-left' | 'below-before' | 'below-after' |
+              'after' | 'after-top' | 'after-bottom' |
+              'before' | 'before-top' | 'before-bottom' |
+              'left' | 'left-above' | 'left-below' |
+              'right' | 'right-above' | 'right-below';
   preventScrolling?: boolean;
 }
 
