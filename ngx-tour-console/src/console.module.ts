@@ -5,6 +5,8 @@ import { TourModule } from 'ngx-tour-core';
 import { TourAnchorConsoleDirective } from './tour-anchor.directive';
 import { CommonModule } from '@angular/common';
 
+import { ConsoleTourService } from './console-tour.service';
+
 export { TourAnchorConsoleDirective };
 
 @NgModule({
@@ -18,6 +20,7 @@ export class TourConsoleModule {
       ngModule: TourConsoleModule,
       providers: [
         ...TourModule.forRoot().providers,
+        ConsoleTourService
       ],
     };
   }

@@ -60,7 +60,7 @@ this.tourService.initialize([{{ '{' }}
   <thead>
     <tr>
       <th>Name</th>
-      <th style="width: 300px">Type</th>
+      <th>Type</th>
       <th>Default</th>
       <th>Description</th>
     </tr>
@@ -113,15 +113,12 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'above' | 'above-right' | 'above-left' | 'above-before' | 'above-after' |
-        'below' | 'below-right' | 'below-left' | 'below-before' | 'below-after' |
-        'after' | 'after-top' | 'after-bottom' |
-        'before' | 'before-top' | 'before-bottom' |
-        'left' | 'left-above' | 'left-below' |
-        'right' | 'right-above' | 'right-below'</td>
+      <td>Placement | 'after' | 'after-top' | 'after-bottom' |
+        'top-after' | 'top-before' | 'bottom-after' | 'bottom-before' |
+        'before' | 'before-top' | 'before-bottom'</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
-        Where the tour step should placed with respect to the anchor.
+        Where the tour step should placed with respect to the anchor. Supports all placement options of ng bootstrap.
         'before' and 'after' are synonyms for 'left' and 'right' respectively.
         When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.
       </td>
