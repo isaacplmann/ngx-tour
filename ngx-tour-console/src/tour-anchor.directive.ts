@@ -1,5 +1,4 @@
-import { TourAnchorDirective } from 'ngx-tour-core';
-import { IStepOption, TourService } from 'ngx-tour-core';
+import { TourAnchorDirective, TourService, IStepOption } from 'ngx-tour-core';
 import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Directive({
