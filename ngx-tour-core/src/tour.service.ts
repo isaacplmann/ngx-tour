@@ -29,7 +29,7 @@ export enum TourState {
 }
 
 @Injectable()
-export class TourService<T extends IStepOption> {
+export class TourService<T extends IStepOption = IStepOption> {
 
   public stepShow$: Subject<T> = new Subject();
   public stepHide$: Subject<T> = new Subject();

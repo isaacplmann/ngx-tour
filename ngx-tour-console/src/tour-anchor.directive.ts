@@ -1,8 +1,5 @@
-import { TourAnchorDirective } from 'ngx-tour-core';
-import { IStepOption } from 'ngx-tour-core';
+import { TourAnchorDirective, TourService, IStepOption } from 'ngx-tour-core';
 import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
-
-import { ConsoleTourService } from './console-tour.service';
 
 @Directive({
   selector: '[tourAnchor]',
@@ -10,7 +7,7 @@ import { ConsoleTourService } from './console-tour.service';
 export class TourAnchorConsoleDirective implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
 
-  constructor(private tourService: ConsoleTourService) {}
+  constructor(private tourService: TourService) {}
 
   public ngOnInit(): void {
     this.tourService.register(this.tourAnchor, this);

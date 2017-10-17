@@ -1,13 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 
-import { TourService, TourState, IStepOption } from './tour.service';
+import { TourService, TourState } from './tour.service';
 
 @Component({
   selector: 'tour-hotkey-listener',
   template: ` `,
 })
 export class TourHotkeyListenerComponent {
-  constructor(public tourService: TourService<IStepOption>) { }
+  constructor(public tourService: TourService) { }
 
   /**
    * Configures hot keys for controlling the tour with the keyboard

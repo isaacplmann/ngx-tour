@@ -68,6 +68,46 @@ export class NgBootstrapComponent {
       placement: 'bottom',
       title: 'Placement',
     }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - left-top',
+      placement: 'left-top',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - top-left',
+      placement: 'top-left',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - top-right',
+      placement: 'top-right',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - right-top',
+      placement: 'right-top',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - right-bottom',
+      placement: 'right-bottom',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - bottom-right',
+      placement: 'bottom-right',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - bottom-left',
+      placement: 'bottom-left',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - left-bottom',
+      placement: 'left-bottom',
+      title: 'Placement',
+    }, {
       anchorId: 'hotkeys',
       content: 'Try using the hotkeys to navigate through the tour.',
       title: 'Hotkeys',

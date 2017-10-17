@@ -9,9 +9,8 @@ import {
   RepositionScrollStrategy,
   ScrollStrategy,
 } from '@angular/material';
-import { IStepOption, TourAnchorDirective, TourState } from 'ngx-tour-core';
+import { IStepOption, TourAnchorDirective, TourState, TourService } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
-import { MdMenuTourService } from './md-menu-tour.service';
 
 import { TourStepTemplateService } from './tour-step-template.service';
 
@@ -45,7 +44,7 @@ export class TourAnchorMdMenuDirective extends MdMenuTrigger implements OnInit, 
     @Optional() private _superparentMenu: MdMenu,
     @Optional() @Self() private _supermenuItemInstance: MdMenuItem,
     @Optional() private _superdir: Directionality,
-    private tourService: MdMenuTourService, private tourStepTemplate: TourStepTemplateService,
+    private tourService: TourService, private tourStepTemplate: TourStepTemplateService,
   ) {
     super(_superoverlay, _superelement, _superviewContainerRef, _superscrollStrategy, _superparentMenu, _supermenuItemInstance, _superdir);
     this.menu = new MdMenu(undefined, { xPosition: 'after', yPosition: 'below', overlapTrigger: true });

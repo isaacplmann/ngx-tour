@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ContentChild, Input, TemplateRef, ViewChild } from '@angular/core';
 import { MdMenu } from '@angular/material';
-import { IStepOption, TourHotkeyListenerComponent } from 'ngx-tour-core';
-import { MdMenuTourService } from './md-menu-tour.service';
+import { IStepOption, TourHotkeyListenerComponent, TourService } from 'ngx-tour-core';
 
 import { TourStepTemplateService } from './tour-step-template.service';
 
@@ -43,7 +42,7 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent imple
 
   public step: IStepOption = {};
 
-  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: MdMenuTourService) {
+  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: TourService) {
     super(tourService);
   }
 

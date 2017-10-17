@@ -1,13 +1,11 @@
-import { TourHotkeyListenerComponent } from 'ngx-tour-core';
+import { TourHotkeyListenerComponent, TourService } from 'ngx-tour-core';
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { TourModule } from 'ngx-tour-core';
 import { TourAnchorConsoleDirective } from './tour-anchor.directive';
 import { CommonModule } from '@angular/common';
 
-import { ConsoleTourService } from './console-tour.service';
-
-export { TourAnchorConsoleDirective };
+export { TourAnchorConsoleDirective, TourService };
 
 @NgModule({
   declarations: [TourAnchorConsoleDirective],
@@ -20,7 +18,6 @@ export class TourConsoleModule {
       ngModule: TourConsoleModule,
       providers: [
         ...TourModule.forRoot().providers,
-        ConsoleTourService
       ],
     };
   }
