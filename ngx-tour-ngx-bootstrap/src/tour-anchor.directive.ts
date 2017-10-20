@@ -8,10 +8,11 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { ComponentLoaderFactory, PopoverConfig, PopoverDirective } from 'ngx-bootstrap';
-import { IStepOption, TourAnchorDirective, TourService } from 'ngx-tour-core';
+import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
 import { TourStepTemplateService } from './tour-step-template.service';
+import { NgxbTourService } from './ngx-bootstrap-tour.service';
 
 @Directive({
   selector: '[tourAnchor]',
@@ -20,7 +21,7 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   @Input() public tourAnchor: string;
   private element: ElementRef;
 
-  constructor(private tourService: TourService,
+  constructor(private tourService: NgxbTourService,
               private tourStepTemplate: TourStepTemplateService,
               _elementRef: ElementRef,
               _renderer: Renderer,
@@ -41,30 +42,12 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   }
 
   public showTourStep(step: IStepOption): void {
-    console.log('this.tourStepTemplate.template: ' + this.tourStepTemplate.template);
     this.popover = this.tourStepTemplate.template;
     this.popoverContext = { step };
     this.popoverTitle = step.title;
     this.container =  'body';
     this.containerClass = 'ngx-bootstrap';
-    switch (step.placement) {
-      case 'above':
-        this.placement = 'top';
-        break;
-      case 'below':
-        this.placement = 'bottom';
-        break;
-      case 'right':
-      case 'after':
-        this.placement = 'right';
-        break;
-      case 'left':
-      case 'before':
-        this.placement = 'left';
-        break;
-      default:
-        this.placement = 'top';
-    }
+    this.placement = step.placement || 'top';
     this.show();
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {

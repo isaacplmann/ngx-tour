@@ -16,7 +16,7 @@
   </li>
   <li>Or for Bootstrap 3:</li><br>
   <code>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </code>
 </ol>
 
@@ -122,12 +122,11 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>
+      <td>'top' | 'bottom' | 'left' | 'right' | 'auto'</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
-        Where the tour step should placed with respect to the anchor.
-        'before' and 'after' are synonyms for 'left' and 'right' respectively.
-        When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.
+        Placement of a popover.
+        See the <a href="https://valor-software.com/ngx-bootstrap/index-bs4.html#/popover#popover-directive">ngx-bootstrap docs</a>.
       </td>
     </tr>
     <tr>

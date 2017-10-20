@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NgxBootstrapComponent {
   constructor(public tourService: TourService) {
-    this.tourService.events$.subscribe(console.log);
     this.tourService.initialize([{
       anchorId: 'start.tour',
       content: 'Welcome to the Ngx-Tour tour!',
@@ -27,7 +26,7 @@ export class NgxBootstrapComponent {
     }, {
       anchorId: 'tourService.start',
       content: 'Don\'t forget to actually start the tour.',
-      placement: 'auto',
+      placement: 'top',
       title: 'Start the tour',
     }, {
       anchorId: 'config.anchorId',
@@ -40,7 +39,7 @@ export class NgxBootstrapComponent {
     }, {
       anchorId: 'another.route',
       content: 'Like this!',
-      route: 'ng-bootstrap/other',
+      route: 'ngx-bootstrap/other',
       title: 'Another Route',
     }, {
       anchorId: 'config.route',
@@ -51,11 +50,6 @@ export class NgxBootstrapComponent {
       anchorId: 'config.placement.default',
       content: 'Steps can be positioned around an anchor. You can even have multiple steps use the same anchor.',
       title: 'No Placement',
-    }, {
-      anchorId: 'installation',
-      content: 'First, install the library...',
-      placement: 'left',
-      title: 'Installation',
     }, {
       anchorId: 'config.placement.default',
       content: 'Sliiide to the left.',
@@ -69,8 +63,8 @@ export class NgxBootstrapComponent {
     }, {
       anchorId: 'config.placement.default',
       content: 'Take it back now y\'all.  One hop this time.',
-      placement: 'auto',
-      title: 'Auto Placement',
+      placement: 'bottom',
+      title: 'Bottom Placement',
     }, {
       anchorId: 'hotkeys',
       content: 'Try using the hotkeys to navigate through the tour.',
