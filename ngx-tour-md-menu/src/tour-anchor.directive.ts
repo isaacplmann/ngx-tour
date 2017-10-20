@@ -1,11 +1,10 @@
-import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { ComponentFactoryResolver, Directive, ElementRef, Injector, Input, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material';
-import { IStepOption, TourAnchorDirective, TourService } from 'ngx-tour-core';
+import { IStepOption, TourAnchorDirective, TourService, TourState } from 'ngx-tour-core';
+import { Subscription } from 'rxjs/Rx';
 import withinviewport from 'withinviewport';
 
+import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
-import { TourState } from './public_api';
 
 @Directive({
   selector: '[tourAnchor]',
@@ -13,6 +12,7 @@ import { TourState } from './public_api';
 export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
   public opener: TourAnchorOpenerComponent;
+  public menuCloseSubscription: Subscription;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
@@ -35,7 +35,6 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
   }
 
   public showTourStep(step: IStepOption): void {
-    console.log('showTourStep', step);
     this.tourStepTemplate.templateComponent.step = step;
     // Ignore step.placement
     if (!step.preventScrolling) {
@@ -47,9 +46,12 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
     }
     (<any>this.opener.trigger)._element = this.element;
     this.opener.trigger.menu = this.tourStepTemplate.templateComponent.tourStep;
+    this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
-    this.opener.trigger.onMenuClose.first().subscribe(event => {
-      console.log(event, step);
+    if (this.menuCloseSubscription) {
+      this.menuCloseSubscription.unsubscribe();
+    }
+    this.menuCloseSubscription = this.opener.trigger.onMenuClose.first().subscribe(event => {
       if (this.tourService.getStatus() !== TourState.OFF) {
         this.tourService.end();
       }
@@ -57,7 +59,9 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
   }
 
   public hideTourStep(): void {
-    console.log('hideTourStep', this.opener.trigger);
+    if (this.menuCloseSubscription) {
+      this.menuCloseSubscription.unsubscribe();
+    }
     this.opener.trigger.closeMenu();
   }
 }

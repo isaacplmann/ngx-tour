@@ -34,7 +34,6 @@ import { TourStepTemplateService } from './tour-step-template.service';
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterViewInit {
   @ViewChild(MatMenu) public tourStep: MatMenu;
-  // public tourStep: any;
 
   @Input()
   @ContentChild(TemplateRef)
