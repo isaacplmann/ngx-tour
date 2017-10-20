@@ -1,25 +1,27 @@
+import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { MdMenuModule, MdButtonModule, MdCardModule, MdIconModule } from '@angular/material';
+import { MatMenuModule, MatButtonModule, MatCardModule, MatIconModule, MatMenuTrigger } from '@angular/material';
 
 import { TourModule, TourService } from 'ngx-tour-core';
-import { TourAnchorMdMenuDirective } from './tour-anchor.directive';
+import { TourAnchorMatMenuDirective } from './tour-anchor.directive';
 import { TourStepTemplateComponent } from './tour-step-template.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 
-export { TourAnchorMdMenuDirective, TourStepTemplateComponent, TourService };
+export { TourAnchorMatMenuDirective, TourStepTemplateComponent, TourService };
 
 @NgModule({
-  declarations: [TourAnchorMdMenuDirective, TourStepTemplateComponent],
-  exports: [TourAnchorMdMenuDirective, TourStepTemplateComponent, TourModule],
+  declarations: [TourAnchorMatMenuDirective, TourStepTemplateComponent, TourAnchorOpenerComponent],
+  entryComponents: [TourAnchorOpenerComponent],
+  exports: [TourAnchorMatMenuDirective, TourStepTemplateComponent, TourModule],
   imports: [CommonModule, TourModule,
-    MdMenuModule, MdCardModule, MdButtonModule, MdIconModule
+    MatMenuModule, MatCardModule, MatButtonModule, MatIconModule
   ],
 })
-export class TourMdMenuModule {
+export class TourMatMenuModule {
   public static forRoot(): ModuleWithProviders {
     return {
-      ngModule: TourMdMenuModule,
+      ngModule: TourMatMenuModule,
       providers: [
         TourStepTemplateService,
         ...TourModule.forRoot().providers,

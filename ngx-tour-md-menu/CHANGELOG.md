@@ -1,3 +1,13 @@
+<a name="2.0.0-beta.12"></a>
+# [2.0.0-beta.12](https://github.com/isaacplmann/ngx-tour) (2017-10-20)
+
+
+### BREAKING CHANGES
+
+* Update @angular/material to 2.0.0-beta.12
+* Except for the library name, all 'md-' strings have been changed to 'mat-'
+
+
 <a name="1.0.4"></a>
 # [1.0.4](https://github.com/isaacplmann/ngx-tour) (2017-08-30)
 

@@ -1,14 +1,14 @@
 {
   "name": "ngx-tour-md-menu",
-  "version": "1.0.4",
+  "version": "2.0.0-beta.12",
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "@angular/animations": "^4.3.0",
-    "@angular/cdk": "2.0.0-beta.10",
+    "@angular/cdk": "2.0.0-beta.12",
     "@angular/http": "^4.3.0",
-    "@angular/material": "2.0.0-beta.10"
+    "@angular/material": "2.0.0-beta.12"
   },
   "dependencies": {
     "ngx-tour-core": "^1.0.0",

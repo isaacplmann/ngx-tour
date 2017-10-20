@@ -1,11 +1,11 @@
 <h2>About</h2>
 <p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
-<p><code>TourMdMenuModule</code> is an implementation of the tour ui that uses <a href="http://material.angular.io">Angular Material</a> MdMenu to display tour steps.</p>
+<p><code>TourMatMenuModule</code> is an implementation of the tour ui that uses <a href="http://material.angular.io">Angular Material</a> MatMenu to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
   <li><code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code></li>
-  <li>import <code>TourMdMenuModule.forRoot()</code> into your app module</li>
+  <li>import <code>TourMatMenuModule.forRoot()</code> into your app module</li>
   <li>Make sure <code>RouterModule</code> is imported in your app module</li>
   <li>Make sure Angular Material is <a href="https://material.angular.io/guide/getting-started">installed correctly</a></li>
 </ol>
@@ -31,7 +31,7 @@ this.tourService.initialize([{{ '{' }}
 }]);</pre>
   </li>
   <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
-  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu">demo source code</a> for an example.</li>
+  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/mat-menu">demo source code</a> for an example.</li>
 </ol>
 
 <h2>TourService</h2>
@@ -115,7 +115,7 @@ this.tourService.initialize([{{ '{' }}
       <td>N/A</td>
       <td>N/A</td>
       <td>
-        Ignored by <code>TourMdMenuModule</code>
+        Ignored by <code>TourMatMenuModule</code>
       </td>
     </tr>
     <tr>
@@ -223,23 +223,23 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
 </p>
 <pre><code>&lt;tour-step-template&gt;
   &lt;ng-template let-step="step"&gt;
-    &lt;md-card (click)="$event.stopPropagation()"&gt;
-      &lt;md-card-title&gt;
+    &lt;mat-card (click)="$event.stopPropagation()"&gt;
+      &lt;mat-card-title&gt;
         {{ '{{' }}step?.title}}
-      &lt;/md-card-title&gt;
-      &lt;md-card-content&gt;
+      &lt;/mat-card-title&gt;
+      &lt;mat-card-content&gt;
         {{ '{{' }}step?.content}}
-      &lt;/md-card-content&gt;
-      &lt;md-card-actions&gt;
-        &lt;button md-icon-button [disabled]="!tourService.hasPrev(step)" (click)="tourService.prev()"&gt;
-          &lt;md-icon&gt;chevron_left&lt;/md-icon&gt;
+      &lt;/mat-card-content&gt;
+      &lt;mat-card-actions&gt;
+        &lt;button mat-icon-button [disabled]="!tourService.hasPrev(step)" (click)="tourService.prev()"&gt;
+          &lt;mat-icon&gt;chevron_left&lt;/mat-icon&gt;
         &lt;/button&gt;
-        &lt;button md-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()"&gt;
-          &lt;md-icon&gt;chevron_right&lt;/md-icon&gt;
+        &lt;button mat-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()"&gt;
+          &lt;mat-icon&gt;chevron_right&lt;/mat-icon&gt;
         &lt;/button&gt;
-        &lt;button md-button (click)="tourService.end()"&gt;End&lt;/button&gt;
-      &lt;/md-card-actions&gt;
-    &lt;/md-card&gt;
+        &lt;button mat-button (click)="tourService.end()"&gt;End&lt;/button&gt;
+      &lt;/mat-card-actions&gt;
+    &lt;/mat-card&gt;
   &lt;/ng-template&gt;
 &lt;/tour-step-template&gt;
 </code></pre>
