@@ -8,7 +8,7 @@
   <li>Import <code>TourNgBootstrapModule.forRoot()</code> into your app module</li>
   <li>Make sure <code>RouterModule</code> is imported in your app module</li>
   <li>Include bootstrap css somehow - i.e. in your <code>index.html</code> add this line:<br>
-      <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;</code></li>
+      <code>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"&gt;</code></li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
@@ -113,12 +113,10 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>
+      <td>Placement of a popover accepts: "top", "top-left", "top-right", "bottom", "bottom-left", "bottom-right", "left", "left-top", "left-bottom", "right", "right-top", "right-bottom" and array of above values.</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
-        Where the tour step should placed with respect to the anchor.
-        'before' and 'after' are synonyms for 'left' and 'right' respectively.
-        When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.
+        Where the tour step should placed with respect to the anchor. Supports all <a href="https://ng-bootstrap.github.io/#/components/popover/api#NgbPopover">placement options of ng bootstrap</a>.
       </td>
     </tr>
     <tr>

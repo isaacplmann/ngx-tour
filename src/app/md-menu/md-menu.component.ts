@@ -41,7 +41,7 @@ export class MdMenuComponent {
     }, {
       anchorId: 'another.route',
       content: 'Like this!',
-      route: 'md-menu/other',
+      route: 'other',
       title: 'Another Route',
     }, {
       anchorId: 'config.route',

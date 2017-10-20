@@ -41,9 +41,12 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   }
 
   public showTourStep(step: IStepOption): void {
+    console.log('this.tourStepTemplate.template: ' + this.tourStepTemplate.template);
     this.popover = this.tourStepTemplate.template;
+    this.popoverContext = { step };
     this.popoverTitle = step.title;
     this.container =  'body';
+    this.containerClass = 'ngx-bootstrap';
     switch (step.placement) {
       case 'above':
         this.placement = 'top';
@@ -62,7 +65,6 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
       default:
         this.placement = 'top';
     }
-    // this.show({ step });
     this.show();
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {

@@ -1,3 +1,12 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/isaacplmann/ngx-tour) (2017-10-17)
+
+
+### Features
+
+* TourService made generic but defaults to IStepOoption
+
+
 <a name="1.0.3"></a>
 # [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-08-09)
 

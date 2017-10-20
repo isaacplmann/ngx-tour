@@ -12,23 +12,22 @@ export class NgxBootstrapComponent {
     this.tourService.initialize([{
       anchorId: 'start.tour',
       content: 'Welcome to the Ngx-Tour tour!',
-      placement: 'below',
+      placement: 'right',
       title: 'Welcome',
     }, {
       anchorId: 'angular-ui-tour',
       content: 'Thanks to angular-ui-tour for the inspiration for the library',
+      placement: 'bottom',
       title: 'angular-ui-tour',
-    }, {
-      anchorId: 'installation',
-      content: 'First, install the library...',
-      title: 'Installation',
     }, {
       anchorId: 'usage',
       content: '...then use it.',
+      placement: 'right',
       title: 'Usage',
     }, {
       anchorId: 'tourService.start',
       content: 'Don\'t forget to actually start the tour.',
+      placement: 'auto',
       title: 'Start the tour',
     }, {
       anchorId: 'config.anchorId',
@@ -36,7 +35,7 @@ export class NgxBootstrapComponent {
       title: 'Anchor',
     }, {
       anchorId: 'config.route',
-      content: 'Tours can span multiple routes.',
+      content: 'Tours can span multiple routes. No placement.',
       title: 'Route',
     }, {
       anchorId: 'another.route',
@@ -46,27 +45,32 @@ export class NgxBootstrapComponent {
     }, {
       anchorId: 'config.route',
       content: 'And then back again.',
-      placement: 'below',
+      placement: 'bottom',
       title: 'Route Return',
     }, {
       anchorId: 'config.placement.default',
       content: 'Steps can be positioned around an anchor. You can even have multiple steps use the same anchor.',
-      title: 'Placement',
+      title: 'No Placement',
+    }, {
+      anchorId: 'installation',
+      content: 'First, install the library...',
+      placement: 'left',
+      title: 'Installation',
     }, {
       anchorId: 'config.placement.default',
       content: 'Sliiide to the left.',
       placement: 'left',
-      title: 'Placement',
+      title: 'Left Placement',
     }, {
       anchorId: 'config.placement.default',
       content: 'Sliiide to the right.',
       placement: 'right',
-      title: 'Placement',
+      title: 'Right Placement',
     }, {
       anchorId: 'config.placement.default',
       content: 'Take it back now y\'all.  One hop this time.',
-      placement: 'below',
-      title: 'Placement',
+      placement: 'auto',
+      title: 'Auto Placement',
     }, {
       anchorId: 'hotkeys',
       content: 'Try using the hotkeys to navigate through the tour.',
@@ -76,10 +80,10 @@ export class NgxBootstrapComponent {
       content: 'You can subscribe to events',
       title: 'Events',
     }],
-    {
-      route: 'ngx-bootstrap',
-    }
-  );
+      {
+        route: 'ngx-bootstrap',
+      }
+    );
     this.tourService.start();
   }
 }

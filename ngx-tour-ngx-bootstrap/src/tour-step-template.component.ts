@@ -15,6 +15,7 @@ import { Component, TemplateRef, ViewChild, AfterContentInit, ViewEncapsulation,
       </div>
     </ng-template>
   `,
+  styleUrls: ['./ngx-bootstrap.css'],
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterContentInit {
   @ViewChild('tourStep', { read: TemplateRef }) public defaultTourStepTemplate: TemplateRef<any>;

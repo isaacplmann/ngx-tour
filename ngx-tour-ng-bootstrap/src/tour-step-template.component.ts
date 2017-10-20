@@ -1,6 +1,7 @@
-import { TourService, TourHotkeyListenerComponent, IStepOption } from 'ngx-tour-core';
+import { TourHotkeyListenerComponent, IStepOption } from 'ngx-tour-core';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { Component, TemplateRef, ViewChild, AfterContentInit, ViewEncapsulation, Input, ContentChild } from '@angular/core';
+import { NgbTourService } from './ng-bootstrap-tour.service';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -23,7 +24,7 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent imple
   @ContentChild(TemplateRef)
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
 
-  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: TourService) {
+  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: NgbTourService) {
     super(tourService);
   }
 

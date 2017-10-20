@@ -9,7 +9,7 @@ import {
   RepositionScrollStrategy,
   ScrollStrategy,
 } from '@angular/material';
-import { IStepOption, TourAnchorDirective, TourService, TourState } from 'ngx-tour-core';
+import { IStepOption, TourAnchorDirective, TourState, TourService } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
 import { TourStepTemplateService } from './tour-step-template.service';
