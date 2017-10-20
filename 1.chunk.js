@@ -4,8 +4,8 @@ webpackJsonp([1],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter__ = __webpack_require__("../../../../rxjs/add/operator/filter.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_filter__);
@@ -20,14 +20,12 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ng_bootstrap_ng_bootstrap_index__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_withinviewport__ = __webpack_require__("../../../../../dist/ngx-tour-ng-bootstrap/node_modules/withinviewport/withinviewport.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_withinviewport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_withinviewport__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NgbTourService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TourNgBootstrapModule; });
 /* unused harmony export TourAnchorNgBootstrapDirective */
 /* unused harmony export TourStepTemplateComponent */
-/* unused harmony export TourModule */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TourService; });
-/* unused harmony export TourState */
-/* unused harmony export TourHotkeyListenerComponent */
 /* unused harmony export ɵa */
+/* unused harmony export ɵb */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -307,7 +305,7 @@ var TourService = (function () {
     return TourService;
 }());
 TourService.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Injectable */] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */] },
 ];
 /**
  * @nocollapse
@@ -355,7 +353,7 @@ var TourHotkeyListenerComponent = (function () {
     return TourHotkeyListenerComponent;
 }());
 TourHotkeyListenerComponent.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'tour-hotkey-listener',
                 template: " ",
             },] },
@@ -369,9 +367,9 @@ TourHotkeyListenerComponent.ctorParameters = function () {
     ];
 };
 TourHotkeyListenerComponent.propDecorators = {
-    'onEscapeKey': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* HostListener */], args: ['window:keydown.Escape',] },],
-    'onArrowRightKey': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* HostListener */], args: ['window:keydown.ArrowRight',] },],
-    'onArrowLeftKey': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* HostListener */], args: ['window:keydown.ArrowLeft',] },],
+    'onEscapeKey': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* HostListener */], args: ['window:keydown.Escape',] },],
+    'onArrowRightKey': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* HostListener */], args: ['window:keydown.ArrowRight',] },],
+    'onArrowLeftKey': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* HostListener */], args: ['window:keydown.ArrowLeft',] },],
 };
 var TourModule = (function () {
     function TourModule() {
@@ -390,23 +388,37 @@ var TourModule = (function () {
     return TourModule;
 }());
 TourModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */], args: [{
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */], args: [{
                 declarations: [TourHotkeyListenerComponent],
                 exports: [TourHotkeyListenerComponent],
-                imports: [__WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */]],
+                imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */]],
             },] },
 ];
 /**
  * @nocollapse
  */
 TourModule.ctorParameters = function () { return []; };
+var NgbTourService = /** @class */ (function (_super) {
+    __extends(NgbTourService, _super);
+    function NgbTourService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return NgbTourService;
+}(TourService));
+NgbTourService.decorators = [
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */] },
+];
+/**
+ * @nocollapse
+ */
+NgbTourService.ctorParameters = function () { return []; };
 var TourStepTemplateService = /** @class */ (function () {
     function TourStepTemplateService() {
     }
     return TourStepTemplateService;
 }());
 TourStepTemplateService.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* Injectable */] },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Injectable */] },
 ];
 /**
  * @nocollapse
@@ -452,24 +464,9 @@ var TourAnchorNgBootstrapDirective = /** @class */ (function (_super) {
         this.ngbPopover = this.tourStepTemplate.template;
         this.popoverTitle = step.title;
         this.container = 'body';
-        switch (step.placement) {
-            case 'above':
-                this.placement = 'top';
-                break;
-            case 'below':
-                this.placement = 'bottom';
-                break;
-            case 'right':
-            case 'after':
-                this.placement = 'right';
-                break;
-            case 'left':
-            case 'before':
-                this.placement = 'left';
-                break;
-            default:
-                this.placement = 'top';
-        }
+        this.placement = /** @type {?} */ ((step.placement || 'top')
+            .replace('before', 'left').replace('after', 'right')
+            .replace('below', 'bottom').replace('above', 'top'));
         this.open({ step: step });
         if (!step.preventScrolling) {
             if (!__WEBPACK_IMPORTED_MODULE_9_withinviewport___default()(this.element.nativeElement, { sides: 'bottom' })) {
@@ -489,7 +486,7 @@ var TourAnchorNgBootstrapDirective = /** @class */ (function (_super) {
     return TourAnchorNgBootstrapDirective;
 }(__WEBPACK_IMPORTED_MODULE_8__ng_bootstrap_ng_bootstrap_index__["a" /* NgbPopover */]));
 TourAnchorNgBootstrapDirective.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* Directive */], args: [{
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* Directive */], args: [{
                 selector: '[tourAnchor]',
             },] },
 ];
@@ -497,18 +494,18 @@ TourAnchorNgBootstrapDirective.decorators = [
  * @nocollapse
  */
 TourAnchorNgBootstrapDirective.ctorParameters = function () { return [
-    { type: TourService, },
+    { type: NgbTourService, },
     { type: TourStepTemplateService, },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["l" /* ElementRef */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Renderer2 */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ComponentFactoryResolver */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ViewContainerRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* ElementRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Renderer2 */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injector */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ComponentFactoryResolver */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ViewContainerRef */], },
     { type: __WEBPACK_IMPORTED_MODULE_8__ng_bootstrap_ng_bootstrap_index__["b" /* NgbPopoverConfig */], },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
 ]; };
 TourAnchorNgBootstrapDirective.propDecorators = {
-    'tourAnchor': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
+    'tourAnchor': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
 };
 var TourStepTemplateComponent = /** @class */ (function (_super) {
     __extends(TourStepTemplateComponent, _super);
@@ -531,8 +528,8 @@ var TourStepTemplateComponent = /** @class */ (function (_super) {
     return TourStepTemplateComponent;
 }(TourHotkeyListenerComponent));
 TourStepTemplateComponent.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
-                encapsulation: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* ViewEncapsulation */].None,
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
+                encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* ViewEncapsulation */].None,
                 selector: 'tour-step-template',
                 template: "\n    <ng-template #tourStep let-step=\"step\">\n      <p class=\"tour-step-content\">{{step?.content}}</p>\n      <div class=\"tour-step-navigation\">\n        <button *ngIf=\"tourService.hasPrev(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.prev()\">\u00AB Prev</button>\n        <button *ngIf=\"tourService.hasNext(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.next()\">Next \u00BB</button>\n        <button class=\"btn btn-sm btn-default\" (click)=\"tourService.end()\">End</button>\n      </div>\n    </ng-template>\n  ",
             },] },
@@ -542,11 +539,11 @@ TourStepTemplateComponent.decorators = [
  */
 TourStepTemplateComponent.ctorParameters = function () { return [
     { type: TourStepTemplateService, },
-    { type: TourService, },
+    { type: NgbTourService, },
 ]; };
 TourStepTemplateComponent.propDecorators = {
-    'defaultTourStepTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ViewChild */], args: ['tourStep', { read: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */] },] },],
-    'stepTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */],] },],
+    'defaultTourStepTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* ViewChild */], args: ['tourStep', { read: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */] },] },],
+    'stepTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */],] },],
 };
 var TourNgBootstrapModule = /** @class */ (function () {
     function TourNgBootstrapModule() {
@@ -559,16 +556,18 @@ var TourNgBootstrapModule = /** @class */ (function () {
             ngModule: TourNgBootstrapModule,
             providers: [
                 TourStepTemplateService
-            ].concat(TourModule.forRoot().providers),
+            ].concat(TourModule.forRoot().providers, [
+                NgbTourService
+            ]),
         };
     };
     return TourNgBootstrapModule;
 }());
 TourNgBootstrapModule.decorators = [
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */], args: [{
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */], args: [{
                 declarations: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
                 exports: [TourAnchorNgBootstrapDirective, TourStepTemplateComponent],
-                imports: [__WEBPACK_IMPORTED_MODULE_0__angular_common__["h" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_8__ng_bootstrap_ng_bootstrap_index__["c" /* NgbPopoverModule */].forRoot()],
+                imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_8__ng_bootstrap_ng_bootstrap_index__["c" /* NgbPopoverModule */].forRoot()],
             },] },
 ];
 /**
@@ -833,7 +832,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ "../../../../../src/app/ng-bootstrap/docs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>About</h2>\n<p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor=\"angular-ui-tour\" href=\"http://benmarch.github.io/angular-ui-tour\">angular-ui-tour</a>.</p>\n<p><code>TourNgBootstrapModule</code> is an implementation of the tour ui that uses <a href=\"https://ng-bootstrap.github.io\">NgBootstrap</a> popovers to display tour steps.</p>\n\n<h2 tourAnchor=\"installation\">Installation</h2>\n<ol>\n  <li><code>npm install ngx-tour-ng-bootstrap @ng-bootstrap/ng-bootstrap</code></li>\n  <li>Import <code>TourNgBootstrapModule.forRoot()</code> into your app module</li>\n  <li>Make sure <code>RouterModule</code> is imported in your app module</li>\n  <li>Include bootstrap css somehow - i.e. in your <code>index.html</code> add this line:<br>\n      <code>&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\"&gt;</code></li>\n</ol>\n\n<h2 tourAnchor=\"usage\">Usage</h2>\n<ol>\n  <li>Add <code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code> to your root app component</li>\n  <li>\n    Define anchor points for the tour steps by adding the <code>tourAnchor</code> directive throughout your app.\n    <pre><code>&lt;div tourAnchor=\"some.anchor.id\"&gt;...&lt;/div&gt;</code></pre>\n  </li>\n  <li>\n    Define your tour steps using <code>tourService.initialize(steps)</code>\n    <pre>\nthis.tourService.initialize([{{ '{' }}\n  anchorId: 'some.anchor.id',\n  content: 'Some content',\n  title: 'First',\n}, {{ '{' }}\n  anchorId: 'another.anchor.id',\n  content: 'Other content',\n  title: 'Second',\n}]);</pre>\n  </li>\n  <li>Start the tour with <code tourAnchor=\"tourService.start\">tourService.start()</code></li>\n  <li>Check out the <a href=\"https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ng-bootstrap\">demo source code</a> for an example.</li>\n</ol>\n\n<h2>TourService</h2>\n<p>The <code>TourService</code> controls the tour.  Some key functions include:</p>\n<dl>\n  <dt>start()</dt>\n  <dd>Starts the tour</dd>\n  <dt>startAt(stepId: number | string)</dt>\n  <dd>Start the tour at the step with stepId or at the specified index</dd>\n  <dt>end()</dt>\n  <dd>Ends the tour</dd>\n  <dt>pause()</dt>\n  <dd>Pauses the tour</dd>\n  <dt>resume()</dt>\n  <dd>Resumes the tour</dd>\n  <dt>next()</dt>\n  <dd>Goes to the next step</dd>\n  <dt>prev()</dt>\n  <dd>Goes to the previous step</dd>\n</dl>\n\n<h2>Step Configuration</h2>\n<p>Each step can have the following properties.</p>\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Type</th>\n      <th>Default</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>stepId</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>A unique identifier for the step</td>\n    </tr>\n    <tr tourAnchor=\"config.anchorId\">\n      <td>anchorId</td>\n      <td>string</td>\n      <td>required</td>\n      <td>The anchor to which the step will be attached</td>\n    </tr>\n    <tr>\n      <td>title</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>The title of the tour step</td>\n    </tr>\n    <tr>\n      <td>content</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>The content text of the tour step</td>\n    </tr>\n    <tr tourAnchor=\"config.route\">\n      <td>route</td>\n      <td>string | UrlSegment[]</td>\n      <td>undefined</td>\n      <td>\n        The route to which the tour should navigate before attempting to show this tour step.\n        If undefined, no navigation is attempted.\n      </td>\n    </tr>\n    <tr tourAnchor=\"config.nextStep\">\n      <td>nextStep</td>\n      <td>number | string</td>\n      <td>undefined</td>\n      <td>The step index or stepId of the next step.  If undefined, the next step in the steps array is used.</td>\n    </tr>\n    <tr>\n      <td>prevStep</td>\n      <td>number | string</td>\n      <td>undefined</td>\n      <td>The step index or stepId of the previous step.  If undefined, the previous step in the steps array is used.</td>\n    </tr>\n    <tr>\n      <td>placement</td>\n      <td>'above' | 'below' | 'after' | 'before' | 'left' | 'right'</td>\n      <td><span tourAnchor=\"config.placement.default\">'top'</span></td>\n      <td>\n        Where the tour step should placed with respect to the anchor.\n        'before' and 'after' are synonyms for 'left' and 'right' respectively.\n        When RTL support is implemented, 'before' and 'after' will swap directions when RTL mode is enabled.\n      </td>\n    </tr>\n    <tr>\n      <td>preventScrolling</td>\n      <td>boolean</td>\n      <td>false</td>\n      <td>\n        Tour steps automatically scroll to the middle of the screen, if they are off the screen when shown.\n        Setting this value to true will disable the scroll behavior.\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>Defaults</h2>\n<p>You can set default values in the <code>TourService.initialize</code> function.</p>\n<pre>\nthis.tourService.initialize(steps, {{ '{' }}\n  route: '',\n  placement: 'left',\n  preventScrolling: true,\n});\n</pre>\n<p>Any value explicitly defined in a step will override the default value.</p>\n\n<h2 tourAnchor=\"hotkeys\">Hotkeys</h2>\n<p>\n  Hotkeys are provided using Angular's <code>@HostListener</code> decorator.  Hotkeys are enabled when the tour starts and disabled when the tour ends.\n</p>\n<ul>\n  <li><strong>left arrow</strong><span> - previous step</span></li>\n  <li><strong>right arrow</strong><span> - next step</span></li>\n  <li><strong>esc</strong><span> - end tour</span></li>\n</ul>\n\n<h2 tourAnchor=\"events\">Event Observables</h2>\n<p>The <code>TourService</code> emits events that can be subscribed to like this:</p>\n<pre>\nthis.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}\n  console.log('tour configured with these steps:', steps);\n});\n</pre>\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Payload</th>\n      <th>Emitted When</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>stepShow$</td>\n      <td>IStepOption</td>\n      <td>A step is shown</td>\n    </tr>\n    <tr>\n      <td>stepHide$</td>\n      <td>IStepOption</td>\n      <td>A step is hidden</td>\n    </tr>\n    <tr>\n      <td>initialize$</td>\n      <td>IStepOption[]</td>\n      <td>The tour is configured with a set of steps</td>\n    </tr>\n    <tr>\n      <td>start$</td>\n      <td>IStepOption</td>\n      <td>The tour begins</td>\n    </tr>\n    <tr>\n      <td>end$</td>\n      <td>any</td>\n      <td>The tour ends</td>\n    </tr>\n    <tr>\n      <td>pause$</td>\n      <td>IStepOption</td>\n      <td>The tour is paused</td>\n    </tr>\n    <tr>\n      <td>resume$</td>\n      <td>IStepOption</td>\n      <td>The tour resumes</td>\n    </tr>\n    <tr>\n      <td>anchorRegister$</td>\n      <td>string</td>\n      <td>An anchor is registered with the tour</td>\n    </tr>\n    <tr>\n      <td>anchorUnregister$</td>\n      <td>string</td>\n      <td>An anchor is unregistered from the tour</td>\n    </tr>\n  </tbody>\n</table>\n\n<h2 tourAnchor=\"template\">Custom template</h2>\n<p>\n  You can also customize the tour step template by providing an <code>&lt;ng-template let-step=\"step\" &gt;</code> inside the <code>&lt;tour-step-template&gt;</code>\n</p>\n<p>\n  The default template is equivalent to this:\n</p>\n<pre><code>&lt;tour-step-template&gt;\n  &lt;ng-template let-step=\"step\"&gt;\n    &lt;p class=\"tour-step-content\"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;\n    &lt;div class=\"tour-step-navigation\"&gt;\n      &lt;button *ngIf=\"tourService.hasPrev(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.prev()\"&gt;« Prev&lt;/button&gt;\n      &lt;button *ngIf=\"tourService.hasNext(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.next()\"&gt;Next »&lt;/button&gt;\n      &lt;button class=\"btn btn-sm btn-default\" (click)=\"tourService.end()\"&gt;End&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/ng-template&gt;\n&lt;/tour-step-template&gt;\n</code></pre>\n"
+module.exports = "<h2>About</h2>\n<p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor=\"angular-ui-tour\" href=\"http://benmarch.github.io/angular-ui-tour\">angular-ui-tour</a>.</p>\n<p><code>TourNgBootstrapModule</code> is an implementation of the tour ui that uses <a href=\"https://ng-bootstrap.github.io\">NgBootstrap</a> popovers to display tour steps.</p>\n\n<h2 tourAnchor=\"installation\">Installation</h2>\n<ol>\n  <li><code>npm install ngx-tour-ng-bootstrap @ng-bootstrap/ng-bootstrap</code></li>\n  <li>Import <code>TourNgBootstrapModule.forRoot()</code> into your app module</li>\n  <li>Make sure <code>RouterModule</code> is imported in your app module</li>\n  <li>Include bootstrap css somehow - i.e. in your <code>index.html</code> add this line:<br>\n      <code>&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css\" integrity=\"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M\" crossorigin=\"anonymous\"&gt;</code></li>\n</ol>\n\n<h2 tourAnchor=\"usage\">Usage</h2>\n<ol>\n  <li>Add <code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code> to your root app component</li>\n  <li>\n    Define anchor points for the tour steps by adding the <code>tourAnchor</code> directive throughout your app.\n    <pre><code>&lt;div tourAnchor=\"some.anchor.id\"&gt;...&lt;/div&gt;</code></pre>\n  </li>\n  <li>\n    Define your tour steps using <code>tourService.initialize(steps)</code>\n    <pre>\nthis.tourService.initialize([{{ '{' }}\n  anchorId: 'some.anchor.id',\n  content: 'Some content',\n  title: 'First',\n}, {{ '{' }}\n  anchorId: 'another.anchor.id',\n  content: 'Other content',\n  title: 'Second',\n}]);</pre>\n  </li>\n  <li>Start the tour with <code tourAnchor=\"tourService.start\">tourService.start()</code></li>\n  <li>Check out the <a href=\"https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ng-bootstrap\">demo source code</a> for an example.</li>\n</ol>\n\n<h2>TourService</h2>\n<p>The <code>TourService</code> controls the tour.  Some key functions include:</p>\n<dl>\n  <dt>start()</dt>\n  <dd>Starts the tour</dd>\n  <dt>startAt(stepId: number | string)</dt>\n  <dd>Start the tour at the step with stepId or at the specified index</dd>\n  <dt>end()</dt>\n  <dd>Ends the tour</dd>\n  <dt>pause()</dt>\n  <dd>Pauses the tour</dd>\n  <dt>resume()</dt>\n  <dd>Resumes the tour</dd>\n  <dt>next()</dt>\n  <dd>Goes to the next step</dd>\n  <dt>prev()</dt>\n  <dd>Goes to the previous step</dd>\n</dl>\n\n<h2>Step Configuration</h2>\n<p>Each step can have the following properties.</p>\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Type</th>\n      <th>Default</th>\n      <th>Description</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>stepId</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>A unique identifier for the step</td>\n    </tr>\n    <tr tourAnchor=\"config.anchorId\">\n      <td>anchorId</td>\n      <td>string</td>\n      <td>required</td>\n      <td>The anchor to which the step will be attached</td>\n    </tr>\n    <tr>\n      <td>title</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>The title of the tour step</td>\n    </tr>\n    <tr>\n      <td>content</td>\n      <td>string</td>\n      <td>\"\"</td>\n      <td>The content text of the tour step</td>\n    </tr>\n    <tr tourAnchor=\"config.route\">\n      <td>route</td>\n      <td>string | UrlSegment[]</td>\n      <td>undefined</td>\n      <td>\n        The route to which the tour should navigate before attempting to show this tour step.\n        If undefined, no navigation is attempted.\n      </td>\n    </tr>\n    <tr tourAnchor=\"config.nextStep\">\n      <td>nextStep</td>\n      <td>number | string</td>\n      <td>undefined</td>\n      <td>The step index or stepId of the next step.  If undefined, the next step in the steps array is used.</td>\n    </tr>\n    <tr>\n      <td>prevStep</td>\n      <td>number | string</td>\n      <td>undefined</td>\n      <td>The step index or stepId of the previous step.  If undefined, the previous step in the steps array is used.</td>\n    </tr>\n    <tr>\n      <td>placement</td>\n      <td>Placement of a popover accepts: \"top\", \"top-left\", \"top-right\", \"bottom\", \"bottom-left\", \"bottom-right\", \"left\", \"left-top\", \"left-bottom\", \"right\", \"right-top\", \"right-bottom\" and array of above values.</td>\n      <td><span tourAnchor=\"config.placement.default\">'top'</span></td>\n      <td>\n        Where the tour step should placed with respect to the anchor. Supports all <a href=\"https://ng-bootstrap.github.io/#/components/popover/api#NgbPopover\">placement options of ng bootstrap</a>.\n      </td>\n    </tr>\n    <tr>\n      <td>preventScrolling</td>\n      <td>boolean</td>\n      <td>false</td>\n      <td>\n        Tour steps automatically scroll to the middle of the screen, if they are off the screen when shown.\n        Setting this value to true will disable the scroll behavior.\n      </td>\n    </tr>\n  </tbody>\n</table>\n\n<h2>Defaults</h2>\n<p>You can set default values in the <code>TourService.initialize</code> function.</p>\n<pre>\nthis.tourService.initialize(steps, {{ '{' }}\n  route: '',\n  placement: 'left',\n  preventScrolling: true,\n});\n</pre>\n<p>Any value explicitly defined in a step will override the default value.</p>\n\n<h2 tourAnchor=\"hotkeys\">Hotkeys</h2>\n<p>\n  Hotkeys are provided using Angular's <code>@HostListener</code> decorator.  Hotkeys are enabled when the tour starts and disabled when the tour ends.\n</p>\n<ul>\n  <li><strong>left arrow</strong><span> - previous step</span></li>\n  <li><strong>right arrow</strong><span> - next step</span></li>\n  <li><strong>esc</strong><span> - end tour</span></li>\n</ul>\n\n<h2 tourAnchor=\"events\">Event Observables</h2>\n<p>The <code>TourService</code> emits events that can be subscribed to like this:</p>\n<pre>\nthis.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}\n  console.log('tour configured with these steps:', steps);\n});\n</pre>\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Name</th>\n      <th>Payload</th>\n      <th>Emitted When</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>stepShow$</td>\n      <td>IStepOption</td>\n      <td>A step is shown</td>\n    </tr>\n    <tr>\n      <td>stepHide$</td>\n      <td>IStepOption</td>\n      <td>A step is hidden</td>\n    </tr>\n    <tr>\n      <td>initialize$</td>\n      <td>IStepOption[]</td>\n      <td>The tour is configured with a set of steps</td>\n    </tr>\n    <tr>\n      <td>start$</td>\n      <td>IStepOption</td>\n      <td>The tour begins</td>\n    </tr>\n    <tr>\n      <td>end$</td>\n      <td>any</td>\n      <td>The tour ends</td>\n    </tr>\n    <tr>\n      <td>pause$</td>\n      <td>IStepOption</td>\n      <td>The tour is paused</td>\n    </tr>\n    <tr>\n      <td>resume$</td>\n      <td>IStepOption</td>\n      <td>The tour resumes</td>\n    </tr>\n    <tr>\n      <td>anchorRegister$</td>\n      <td>string</td>\n      <td>An anchor is registered with the tour</td>\n    </tr>\n    <tr>\n      <td>anchorUnregister$</td>\n      <td>string</td>\n      <td>An anchor is unregistered from the tour</td>\n    </tr>\n  </tbody>\n</table>\n\n<h2 tourAnchor=\"template\">Custom template</h2>\n<p>\n  You can also customize the tour step template by providing an <code>&lt;ng-template let-step=\"step\" &gt;</code> inside the <code>&lt;tour-step-template&gt;</code>\n</p>\n<p>\n  The default template is equivalent to this:\n</p>\n<pre><code>&lt;tour-step-template&gt;\n  &lt;ng-template let-step=\"step\"&gt;\n    &lt;p class=\"tour-step-content\"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;\n    &lt;div class=\"tour-step-navigation\"&gt;\n      &lt;button *ngIf=\"tourService.hasPrev(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.prev()\"&gt;« Prev&lt;/button&gt;\n      &lt;button *ngIf=\"tourService.hasNext(step)\" class=\"btn btn-sm btn-default\" (click)=\"tourService.next()\"&gt;Next »&lt;/button&gt;\n      &lt;button class=\"btn btn-sm btn-default\" (click)=\"tourService.end()\"&gt;End&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/ng-template&gt;\n&lt;/tour-step-template&gt;\n</code></pre>\n"
 
 /***/ }),
 
@@ -899,7 +898,7 @@ var NgBootstrapComponent = /** @class */ (function () {
         this.tourService.initialize([{
                 anchorId: 'start.tour',
                 content: 'Welcome to the Ngx-Tour tour!',
-                placement: 'below',
+                placement: 'bottom',
                 title: 'Welcome',
             }, {
                 anchorId: 'angular-ui-tour',
@@ -933,7 +932,7 @@ var NgBootstrapComponent = /** @class */ (function () {
             }, {
                 anchorId: 'config.route',
                 content: 'And then back again.',
-                placement: 'below',
+                placement: 'bottom',
                 title: 'Route Return',
             }, {
                 anchorId: 'config.placement.default',
@@ -952,7 +951,47 @@ var NgBootstrapComponent = /** @class */ (function () {
             }, {
                 anchorId: 'config.placement.default',
                 content: 'Take it back now y\'all.  One hop this time.',
-                placement: 'below',
+                placement: 'bottom',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - left-top',
+                placement: 'left-top',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - top-left',
+                placement: 'top-left',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - top-right',
+                placement: 'top-right',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - right-top',
+                placement: 'right-top',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - right-bottom',
+                placement: 'right-bottom',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - bottom-right',
+                placement: 'bottom-right',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - bottom-left',
+                placement: 'bottom-left',
+                title: 'Placement',
+            }, {
+                anchorId: 'config.placement.default',
+                content: 'And on the corners - left-bottom',
+                placement: 'left-bottom',
                 title: 'Placement',
             }, {
                 anchorId: 'hotkeys',
@@ -1127,7 +1166,7 @@ NgbPanelTitle.decorators = [
 ];
 /** @nocollapse */
 NgbPanelTitle.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */], },
 ]; };
 /**
  * This directive must be used to wrap accordion panel content.
@@ -1144,7 +1183,7 @@ NgbPanelContent.decorators = [
 ];
 /** @nocollapse */
 NgbPanelContent.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */], },
 ]; };
 /**
  * The NgbPanel directive represents an individual panel with the title and collapsible
@@ -1180,8 +1219,8 @@ NgbPanel.propDecorators = {
     'id': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'title': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'type': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
-    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbPanelContent,] },],
-    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbPanelTitle,] },],
+    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbPanelContent,] },],
+    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbPanelTitle,] },],
 };
 /**
  * The NgbAccordion directive is a collection of panels.
@@ -1366,7 +1405,7 @@ var NgbAlert = (function () {
 NgbAlert.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-alert',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "\n    <div [class]=\"'alert alert-' + type + (dismissible ? ' alert-dismissible' : '')\" role=\"alert\">\n      <button *ngIf=\"dismissible\" type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"closeHandler()\">\n            <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <ng-content></ng-content>\n    </div>\n    "
             },] },
 ];
@@ -1466,7 +1505,7 @@ NgbButtonsModule.ctorParameters = function () { return []; };
 
 var NGB_CHECKBOX_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbCheckBox; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbCheckBox; }),
     multi: true
 };
 /**
@@ -1586,7 +1625,7 @@ NgbButtonLabel.ctorParameters = function () { return []; };
 
 var NGB_RADIO_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbRadioGroup; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbRadioGroup; }),
     multi: true
 };
 var nextId = 0;
@@ -1808,7 +1847,7 @@ NgbSlide.decorators = [
 ];
 /** @nocollapse */
 NgbSlide.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */], },
 ]; };
 NgbSlide.propDecorators = {
     'id': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
@@ -2116,7 +2155,7 @@ var NgbDatepickerDayView = (function () {
 NgbDatepickerDayView.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: '[ngbDatepickerDayView]',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 styles: ["\n    :host {\n      text-align: center;\n      width: 2rem;\n      height: 2rem;\n      line-height: 2rem;\n      border-radius: 0.25rem;\n      background: transparent;\n    }\n    :host.outside {\n      opacity: 0.5;\n    }\n  "],
                 host: {
                     'class': 'btn-light',
@@ -2219,12 +2258,12 @@ NgbDatepickerI18nDefault.ctorParameters = function () { return []; };
 
 var NGB_DATEPICKER_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbInputDatepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbInputDatepicker; }),
     multi: true
 };
 var NGB_DATEPICKER_VALIDATOR = {
-    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* NG_VALIDATORS */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbInputDatepicker; }),
+    provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* NG_VALIDATORS */],
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbInputDatepicker; }),
     multi: true
 };
 /**
@@ -2415,7 +2454,7 @@ NgbInputDatepicker.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ViewContainerRef */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Renderer2 */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ComponentFactoryResolver */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
     { type: __WEBPACK_IMPORTED_MODULE_7__datepicker_service__["a" /* NgbDatepickerService */], },
     { type: __WEBPACK_IMPORTED_MODULE_6__ngb_calendar__["a" /* NgbCalendar */], },
 ]; };
@@ -2637,7 +2676,7 @@ var NgbDatepickerNavigationSelect = (function () {
 NgbDatepickerNavigationSelect.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-datepicker-navigation-select',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 styles: ["\n    select {\n      /* to align with btn-sm */\n      padding: 0.25rem 0.5rem;\n      font-size: 0.875rem;      \n      line-height: 1.25;\n      /* to cancel the custom height set by custom-select */\n      height: inherit;\n      width: 50%;\n    }\n  "],
                 template: "\n    <select\n      [disabled]=\"disabled\"\n      class=\"custom-select d-inline-block\"\n      [value]=\"date?.month\"\n      (change)=\"changeMonth($event.target.value)\"\n      tabindex=\"-1\">\n        <option *ngFor=\"let m of months\" [value]=\"m\">{{ i18n.getMonthShortName(m) }}</option>\n    </select><select\n      [disabled]=\"disabled\"\n      class=\"custom-select d-inline-block\"\n      [value]=\"date?.year\"\n      (change)=\"changeYear($event.target.value)\"\n      tabindex=\"-1\">\n        <option *ngFor=\"let y of years\" [value]=\"y\">{{ y }}</option>\n    </select> \n  "
             },] },
@@ -2694,7 +2733,7 @@ var NgbDatepickerNavigation = (function () {
 NgbDatepickerNavigation.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-datepicker-navigation',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: { 'class': 'd-flex justify-content-between', '[class.collapsed]': '!showSelect' },
                 styles: ["\n    :host {\n      height: 2rem;\n      line-height: 1.85rem;\n    }\n    :host.collapsed {\n      margin-bottom: -2rem;        \n    }\n    .ngb-dp-navigation-chevron::before {\n      border-style: solid;\n      border-width: 0.2em 0.2em 0 0;\n      content: '';\n      display: inline-block;\n      height: 0.75em;\n      transform: rotate(-135deg);\n      -webkit-transform: rotate(-135deg);\n      -ms-transform: rotate(-135deg);\n      width: 0.75em;\n      margin: 0 0 0 0.5rem;\n    }    \n    .ngb-dp-navigation-chevron.right:before {\n      -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      transform: rotate(45deg);\n      margin: 0 0.5rem 0 0;\n    }\n    .btn-link {\n      cursor: pointer;\n      outline: 0;\n    }\n    .btn-link[disabled] {\n      cursor: not-allowed;\n      opacity: .65;\n    }    \n  "],
                 template: "\n    <button type=\"button\" class=\"btn-link\" (click)=\"!!doNavigate(navigation.PREV)\" [disabled]=\"prevDisabled()\" tabindex=\"-1\">\n      <span class=\"ngb-dp-navigation-chevron\"></span>    \n    </button>\n    \n    <ngb-datepicker-navigation-select *ngIf=\"showSelect\" class=\"d-block\" [style.width.rem]=\"months * 9\"\n      [date]=\"date\"\n      [minDate]=\"minDate\"\n      [maxDate]=\"maxDate\"\n      [disabled] = \"disabled\"\n      (select)=\"selectDate($event)\">\n    </ngb-datepicker-navigation-select>\n    \n    <button type=\"button\" class=\"btn-link\" (click)=\"!!doNavigate(navigation.NEXT)\" [disabled]=\"nextDisabled()\" tabindex=\"-1\">\n      <span class=\"ngb-dp-navigation-chevron right\"></span>\n    </button>\n  "
@@ -3103,7 +3142,7 @@ var NavigationEvent;
 
 var NGB_DATEPICKER_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbDatepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbDatepicker; }),
     multi: true
 };
 /**
@@ -3238,7 +3277,7 @@ NgbDatepicker.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 exportAs: 'ngbDatepicker',
                 selector: 'ngb-datepicker',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     'class': 'd-inline-block rounded',
                     'tabindex': '0',
@@ -3907,7 +3946,7 @@ NgbDropdownMenu.decorators = [
 ];
 /** @nocollapse */
 NgbDropdownMenu.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* ElementRef */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Renderer2 */], },
 ]; };
@@ -3938,7 +3977,7 @@ NgbDropdownToggle.decorators = [
 ];
 /** @nocollapse */
 NgbDropdownToggle.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
+    { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["l" /* ElementRef */], },
 ]; };
 /**
@@ -4042,11 +4081,11 @@ NgbDropdown.decorators = [
 /** @nocollapse */
 NgbDropdown.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_1__dropdown_config__["a" /* NgbDropdownConfig */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
 ]; };
 NgbDropdown.propDecorators = {
-    '_menu': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbDropdownMenu,] },],
-    '_toggle': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbDropdownToggle,] },],
+    '_menu': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbDropdownMenu,] },],
+    '_toggle': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbDropdownToggle,] },],
     'autoClose': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     '_open': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */], args: ['open',] },],
     'placement': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
@@ -4445,7 +4484,7 @@ var NgbModalStack = (function () {
         if (!content) {
             return new __WEBPACK_IMPORTED_MODULE_1__util_popup__["b" /* ContentRef */]([]);
         }
-        else if (content instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */]) {
+        else if (content instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */]) {
             var viewRef = content.createEmbeddedView(context);
             this._applicationRef.attachView(viewRef);
             return new __WEBPACK_IMPORTED_MODULE_1__util_popup__["b" /* ContentRef */]([viewRef.rootNodes], viewRef);
@@ -4455,7 +4494,7 @@ var NgbModalStack = (function () {
         }
         else {
             var contentCmptFactory = moduleCFR.resolveComponentFactory(content);
-            var modalContentInjector = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_18" /* ReflectiveInjector */].resolveAndCreate([{ provide: __WEBPACK_IMPORTED_MODULE_5__modal_ref__["a" /* NgbActiveModal */], useValue: context }], contentInjector);
+            var modalContentInjector = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* ReflectiveInjector */].resolveAndCreate([{ provide: __WEBPACK_IMPORTED_MODULE_5__modal_ref__["a" /* NgbActiveModal */], useValue: context }], contentInjector);
             var componentRef = contentCmptFactory.create(modalContentInjector);
             this._applicationRef.attachView(componentRef.hostView);
             return new __WEBPACK_IMPORTED_MODULE_1__util_popup__["b" /* ContentRef */]([[componentRef.location.nativeElement]], componentRef.hostView, componentRef);
@@ -4826,7 +4865,7 @@ var NgbPagination = (function () {
 NgbPagination.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-pagination',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: { 'role': 'navigation' },
                 template: "\n    <ul [class]=\"'pagination' + (size ? ' pagination-' + size : '')\">\n      <li *ngIf=\"boundaryLinks\" class=\"page-item\"\n        [class.disabled]=\"!hasPrevious() || disabled\">\n        <a aria-label=\"First\" class=\"page-link\" href (click)=\"!!selectPage(1)\" [attr.tabindex]=\"(hasPrevious() ? null : '-1')\">\n          <span aria-hidden=\"true\">&laquo;&laquo;</span>\n        </a>\n      </li>\n\n      <li *ngIf=\"directionLinks\" class=\"page-item\"\n        [class.disabled]=\"!hasPrevious() || disabled\">\n        <a aria-label=\"Previous\" class=\"page-link\" href (click)=\"!!selectPage(page-1)\" [attr.tabindex]=\"(hasPrevious() ? null : '-1')\">\n          <span aria-hidden=\"true\">&laquo;</span>\n        </a>\n      </li>\n      <li *ngFor=\"let pageNumber of pages\" class=\"page-item\" [class.active]=\"pageNumber === page\"\n        [class.disabled]=\"isEllipsis(pageNumber) || disabled\">\n        <a *ngIf=\"isEllipsis(pageNumber)\" class=\"page-link\">...</a>\n        <a *ngIf=\"!isEllipsis(pageNumber)\" class=\"page-link\" href (click)=\"!!selectPage(pageNumber)\">\n          {{pageNumber}}\n          <span *ngIf=\"pageNumber === page\" class=\"sr-only\">(current)</span>\n        </a>\n      </li>\n      <li *ngIf=\"directionLinks\" class=\"page-item\" [class.disabled]=\"!hasNext() || disabled\">\n        <a aria-label=\"Next\" class=\"page-link\" href (click)=\"!!selectPage(page+1)\" [attr.tabindex]=\"(hasNext() ? null : '-1')\">\n          <span aria-hidden=\"true\">&raquo;</span>\n        </a>\n      </li>\n\n      <li *ngIf=\"boundaryLinks\" class=\"page-item\" [class.disabled]=\"!hasNext() || disabled\">\n        <a aria-label=\"Last\" class=\"page-link\" href (click)=\"!!selectPage(pageCount)\" [attr.tabindex]=\"(hasNext() ? null : '-1')\">\n          <span aria-hidden=\"true\">&raquo;&raquo;</span>\n        </a>\n      </li>\n    </ul>\n  "
             },] },
@@ -4953,7 +4992,7 @@ var NgbPopoverWindow = (function () {
 NgbPopoverWindow.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-popover-window',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     '[class]': '"popover bs-popover-" + placement.split("-")[0]+" bs-popover-" + placement',
                     'role': 'tooltip',
@@ -5069,7 +5108,7 @@ NgbPopover.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ComponentFactoryResolver */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ViewContainerRef */], },
     { type: __WEBPACK_IMPORTED_MODULE_4__popover_config__["a" /* NgbPopoverConfig */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
 ]; };
 NgbPopover.propDecorators = {
     'ngbPopover': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
@@ -5180,7 +5219,7 @@ var NgbProgressbar = (function () {
 NgbProgressbar.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-progressbar',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "\n    <div class=\"progress\">\n      <div class=\"progress-bar{{type ? ' bg-' + type : ''}}{{animated ? ' progress-bar-animated' : ''}}{{striped ?\n    ' progress-bar-striped' : ''}}\" role=\"progressbar\" [style.width.%]=\"getPercentValue()\"\n    [attr.aria-valuenow]=\"getValue()\" aria-valuemin=\"0\" [attr.aria-valuemax]=\"max\">\n        <span *ngIf=\"showValue\">{{getPercentValue()}}%</span><ng-content></ng-content>\n      </div>\n    </div>\n  "
             },] },
 ];
@@ -5287,7 +5326,7 @@ var Key;
 })(Key || (Key = {}));
 var NGB_RATING_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbRating; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbRating; }),
     multi: true
 };
 /**
@@ -5402,7 +5441,7 @@ var NgbRating = (function () {
 NgbRating.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-rating',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     'class': 'd-inline-flex',
                     'tabindex': '0',
@@ -5430,7 +5469,7 @@ NgbRating.propDecorators = {
     'rate': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'readonly': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'resettable': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
-    'starTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */],] },],
+    'starTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */],] },],
     'hover': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Output */] },],
     'leave': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Output */] },],
     'rateChange': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Output */] },],
@@ -5530,7 +5569,7 @@ NgbTabTitle.decorators = [
 ];
 /** @nocollapse */
 NgbTabTitle.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */], },
 ]; };
 /**
  * This directive must be used to wrap content to be displayed in a tab.
@@ -5547,7 +5586,7 @@ NgbTabContent.decorators = [
 ];
 /** @nocollapse */
 NgbTabContent.ctorParameters = function () { return [
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */], },
 ]; };
 /**
  * A directive representing an individual tab.
@@ -5575,8 +5614,8 @@ NgbTab.propDecorators = {
     'id': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'title': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
     'disabled': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
-    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbTabContent,] },],
-    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ContentChild */], args: [NgbTabTitle,] },],
+    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbTabContent,] },],
+    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* ContentChild */], args: [NgbTabTitle,] },],
 };
 /**
  * A component that makes it easy to create tabbed interface.
@@ -5815,7 +5854,7 @@ NgbTimepickerConfig.ctorParameters = function () { return []; };
 
 var NGB_TIMEPICKER_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbTimepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbTimepicker; }),
     multi: true
 };
 /**
@@ -6044,7 +6083,7 @@ var NgbTooltipWindow = (function () {
 NgbTooltipWindow.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-tooltip-window',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     '[class]': '"tooltip show bs-tooltip-" + placement.split("-")[0]+" bs-tooltip-" + placement',
                     'role': 'tooltip',
@@ -6173,7 +6212,7 @@ NgbTooltip.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ComponentFactoryResolver */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ViewContainerRef */], },
     { type: __WEBPACK_IMPORTED_MODULE_4__tooltip_config__["a" /* NgbTooltipConfig */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
 ]; };
 NgbTooltip.propDecorators = {
     'placement': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
@@ -6253,7 +6292,7 @@ var NgbHighlight = (function () {
 NgbHighlight.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-highlight',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "<ng-template ngFor [ngForOf]=\"parts\" let-part let-isOdd=\"odd\">" +
                     "<span *ngIf=\"isOdd\" class=\"{{highlightClass}}\">{{part}}</span><ng-template [ngIf]=\"!isOdd\">{{part}}</ng-template>" +
                     "</ng-template>",
@@ -6434,7 +6473,7 @@ var Key;
 })(Key || (Key = {}));
 var NGB_TYPEAHEAD_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* forwardRef */])(function () { return NgbTypeahead; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* forwardRef */])(function () { return NgbTypeahead; }),
     multi: true
 };
 var nextWindowId = 0;
@@ -6660,7 +6699,7 @@ NgbTypeahead.ctorParameters = function () { return [
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injector */], },
     { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ComponentFactoryResolver */], },
     { type: __WEBPACK_IMPORTED_MODULE_11__typeahead_config__["a" /* NgbTypeaheadConfig */], },
-    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* NgZone */], },
+    { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgZone */], },
 ]; };
 NgbTypeahead.propDecorators = {
     'container': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Input */] },],
@@ -6770,7 +6809,7 @@ var PopupService = (function () {
         if (!content) {
             return new ContentRef([]);
         }
-        else if (content instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* TemplateRef */]) {
+        else if (content instanceof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* TemplateRef */]) {
             var viewRef = this._viewContainerRef.createEmbeddedView(content, context);
             return new ContentRef([viewRef.rootNodes], viewRef);
         }

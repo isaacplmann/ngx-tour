@@ -470,7 +470,7 @@ NgbPanelTitle.decorators = [
 /** @nocollapse */
 NgbPanelTitle.ctorParameters = function () {
     return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */], },
     ];
 };
 /**
@@ -488,7 +488,7 @@ NgbPanelContent.decorators = [
 /** @nocollapse */
 NgbPanelContent.ctorParameters = function () {
     return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */], },
     ];
 };
 /**
@@ -524,8 +524,8 @@ NgbPanel.propDecorators = {
     'id': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'title': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'type': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
-    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbPanelContent,] },],
-    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbPanelTitle,] },],
+    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbPanelContent,] },],
+    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbPanelTitle,] },],
 };
 /**
  * The NgbAccordion directive is a collection of panels.
@@ -660,7 +660,7 @@ var NgbAlert = (function () {
 NgbAlert.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-alert',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "\n    <div [class]=\"'alert alert-' + type + (dismissible ? ' alert-dismissible' : '')\" role=\"alert\">\n      <button *ngIf=\"dismissible\" type=\"button\" class=\"close\" aria-label=\"Close\" (click)=\"closeHandler()\">\n            <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <ng-content></ng-content>\n    </div>\n    "
             },] },
 ];
@@ -701,7 +701,7 @@ NgbButtonLabel.decorators = [
 NgbButtonLabel.ctorParameters = function () { return []; };
 var NGB_CHECKBOX_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbCheckBox; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbCheckBox; }),
     multi: true
 };
 /**
@@ -781,7 +781,7 @@ NgbCheckBox.propDecorators = {
 };
 var NGB_RADIO_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbRadioGroup; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbRadioGroup; }),
     multi: true
 };
 var nextId$1 = 0;
@@ -987,7 +987,7 @@ NgbSlide.decorators = [
 /** @nocollapse */
 NgbSlide.ctorParameters = function () {
     return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */], },
     ];
 };
 NgbSlide.propDecorators = {
@@ -1786,7 +1786,7 @@ NgbDatepickerI18nDefault.decorators = [
 NgbDatepickerI18nDefault.ctorParameters = function () { return []; };
 var NGB_DATEPICKER_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbDatepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbDatepicker; }),
     multi: true
 };
 /**
@@ -1920,7 +1920,7 @@ NgbDatepicker.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 exportAs: 'ngbDatepicker',
                 selector: 'ngb-datepicker',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     'class': 'd-inline-block rounded',
                     'tabindex': '0',
@@ -2023,7 +2023,7 @@ var NgbDatepickerNavigation = (function () {
 NgbDatepickerNavigation.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-datepicker-navigation',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: { 'class': 'd-flex justify-content-between', '[class.collapsed]': '!showSelect' },
                 styles: ["\n    :host {\n      height: 2rem;\n      line-height: 1.85rem;\n    }\n    :host.collapsed {\n      margin-bottom: -2rem;        \n    }\n    .ngb-dp-navigation-chevron::before {\n      border-style: solid;\n      border-width: 0.2em 0.2em 0 0;\n      content: '';\n      display: inline-block;\n      height: 0.75em;\n      transform: rotate(-135deg);\n      -webkit-transform: rotate(-135deg);\n      -ms-transform: rotate(-135deg);\n      width: 0.75em;\n      margin: 0 0 0 0.5rem;\n    }    \n    .ngb-dp-navigation-chevron.right:before {\n      -webkit-transform: rotate(45deg);\n      -ms-transform: rotate(45deg);\n      transform: rotate(45deg);\n      margin: 0 0.5rem 0 0;\n    }\n    .btn-link {\n      cursor: pointer;\n      outline: 0;\n    }\n    .btn-link[disabled] {\n      cursor: not-allowed;\n      opacity: .65;\n    }    \n  "],
                 template: "\n    <button type=\"button\" class=\"btn-link\" (click)=\"!!doNavigate(navigation.PREV)\" [disabled]=\"prevDisabled()\" tabindex=\"-1\">\n      <span class=\"ngb-dp-navigation-chevron\"></span>    \n    </button>\n    \n    <ngb-datepicker-navigation-select *ngIf=\"showSelect\" class=\"d-block\" [style.width.rem]=\"months * 9\"\n      [date]=\"date\"\n      [minDate]=\"minDate\"\n      [maxDate]=\"maxDate\"\n      [disabled] = \"disabled\"\n      (select)=\"selectDate($event)\">\n    </ngb-datepicker-navigation-select>\n    \n    <button type=\"button\" class=\"btn-link\" (click)=\"!!doNavigate(navigation.NEXT)\" [disabled]=\"nextDisabled()\" tabindex=\"-1\">\n      <span class=\"ngb-dp-navigation-chevron right\"></span>\n    </button>\n  "
@@ -2343,12 +2343,12 @@ function toItemIndexes(a) {
 }
 var NGB_DATEPICKER_VALUE_ACCESSOR$1 = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbInputDatepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbInputDatepicker; }),
     multi: true
 };
 var NGB_DATEPICKER_VALIDATOR = {
-    provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["c" /* NG_VALIDATORS */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbInputDatepicker; }),
+    provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["e" /* NG_VALIDATORS */],
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbInputDatepicker; }),
     multi: true
 };
 /**
@@ -2540,7 +2540,7 @@ NgbInputDatepicker.ctorParameters = function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ViewContainerRef */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Renderer2 */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ComponentFactoryResolver */], },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* NgZone */], },
         { type: NgbDatepickerService, },
         { type: NgbCalendar, },
     ];
@@ -2569,7 +2569,7 @@ var NgbDatepickerDayView = (function () {
 NgbDatepickerDayView.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: '[ngbDatepickerDayView]',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 styles: ["\n    :host {\n      text-align: center;\n      width: 2rem;\n      height: 2rem;\n      line-height: 2rem;\n      border-radius: 0.25rem;\n      background: transparent;\n    }\n    :host.outside {\n      opacity: 0.5;\n    }\n  "],
                 host: {
                     'class': 'btn-light',
@@ -2628,7 +2628,7 @@ var NgbDatepickerNavigationSelect = (function () {
 NgbDatepickerNavigationSelect.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-datepicker-navigation-select',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 styles: ["\n    select {\n      /* to align with btn-sm */\n      padding: 0.25rem 0.5rem;\n      font-size: 0.875rem;      \n      line-height: 1.25;\n      /* to cancel the custom height set by custom-select */\n      height: inherit;\n      width: 50%;\n    }\n  "],
                 template: "\n    <select\n      [disabled]=\"disabled\"\n      class=\"custom-select d-inline-block\"\n      [value]=\"date?.month\"\n      (change)=\"changeMonth($event.target.value)\"\n      tabindex=\"-1\">\n        <option *ngFor=\"let m of months\" [value]=\"m\">{{ i18n.getMonthShortName(m) }}</option>\n    </select><select\n      [disabled]=\"disabled\"\n      class=\"custom-select d-inline-block\"\n      [value]=\"date?.year\"\n      (change)=\"changeYear($event.target.value)\"\n      tabindex=\"-1\">\n        <option *ngFor=\"let y of years\" [value]=\"y\">{{ y }}</option>\n    </select> \n  "
             },] },
@@ -2945,7 +2945,7 @@ NgbDropdownMenu.decorators = [
 /** @nocollapse */
 NgbDropdownMenu.ctorParameters = function () {
     return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["l" /* ElementRef */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* Renderer2 */], },
     ];
@@ -2977,7 +2977,7 @@ NgbDropdownToggle.decorators = [
 /** @nocollapse */
 NgbDropdownToggle.ctorParameters = function () {
     return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["E" /* Inject */], args: [__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbDropdown; }),] },] },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["l" /* ElementRef */], },
     ];
 };
@@ -3082,12 +3082,12 @@ NgbDropdown.decorators = [
 NgbDropdown.ctorParameters = function () {
     return [
         { type: NgbDropdownConfig, },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* NgZone */], },
     ];
 };
 NgbDropdown.propDecorators = {
-    '_menu': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbDropdownMenu,] },],
-    '_toggle': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbDropdownToggle,] },],
+    '_menu': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbDropdownMenu,] },],
+    '_toggle': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbDropdownToggle,] },],
     'autoClose': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     '_open': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */], args: ['open',] },],
     'placement': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
@@ -3229,7 +3229,7 @@ var PopupService = (function () {
         if (!content) {
             return new ContentRef([]);
         }
-        else if (content instanceof __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */]) {
+        else if (content instanceof __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */]) {
             var viewRef = this._viewContainerRef.createEmbeddedView(content, context);
             return new ContentRef([viewRef.rootNodes], viewRef);
         }
@@ -3370,7 +3370,7 @@ var NgbModalStack = (function () {
         if (!content) {
             return new ContentRef([]);
         }
-        else if (content instanceof __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */]) {
+        else if (content instanceof __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */]) {
             var viewRef = content.createEmbeddedView(context);
             this._applicationRef.attachView(viewRef);
             return new ContentRef([viewRef.rootNodes], viewRef);
@@ -3380,7 +3380,7 @@ var NgbModalStack = (function () {
         }
         else {
             var contentCmptFactory = moduleCFR.resolveComponentFactory(content);
-            var modalContentInjector = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_18" /* ReflectiveInjector */].resolveAndCreate([{ provide: NgbActiveModal, useValue: context }], contentInjector);
+            var modalContentInjector = __WEBPACK_IMPORTED_MODULE_1__angular_core__["_19" /* ReflectiveInjector */].resolveAndCreate([{ provide: NgbActiveModal, useValue: context }], contentInjector);
             var componentRef = contentCmptFactory.create(modalContentInjector);
             this._applicationRef.attachView(componentRef.hostView);
             return new ContentRef([[componentRef.location.nativeElement]], componentRef.hostView, componentRef);
@@ -3601,7 +3601,7 @@ var NgbPagination = (function () {
 NgbPagination.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-pagination',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: { 'role': 'navigation' },
                 template: "\n    <ul [class]=\"'pagination' + (size ? ' pagination-' + size : '')\">\n      <li *ngIf=\"boundaryLinks\" class=\"page-item\"\n        [class.disabled]=\"!hasPrevious() || disabled\">\n        <a aria-label=\"First\" class=\"page-link\" href (click)=\"!!selectPage(1)\" [attr.tabindex]=\"(hasPrevious() ? null : '-1')\">\n          <span aria-hidden=\"true\">&laquo;&laquo;</span>\n        </a>\n      </li>\n\n      <li *ngIf=\"directionLinks\" class=\"page-item\"\n        [class.disabled]=\"!hasPrevious() || disabled\">\n        <a aria-label=\"Previous\" class=\"page-link\" href (click)=\"!!selectPage(page-1)\" [attr.tabindex]=\"(hasPrevious() ? null : '-1')\">\n          <span aria-hidden=\"true\">&laquo;</span>\n        </a>\n      </li>\n      <li *ngFor=\"let pageNumber of pages\" class=\"page-item\" [class.active]=\"pageNumber === page\"\n        [class.disabled]=\"isEllipsis(pageNumber) || disabled\">\n        <a *ngIf=\"isEllipsis(pageNumber)\" class=\"page-link\">...</a>\n        <a *ngIf=\"!isEllipsis(pageNumber)\" class=\"page-link\" href (click)=\"!!selectPage(pageNumber)\">\n          {{pageNumber}}\n          <span *ngIf=\"pageNumber === page\" class=\"sr-only\">(current)</span>\n        </a>\n      </li>\n      <li *ngIf=\"directionLinks\" class=\"page-item\" [class.disabled]=\"!hasNext() || disabled\">\n        <a aria-label=\"Next\" class=\"page-link\" href (click)=\"!!selectPage(page+1)\" [attr.tabindex]=\"(hasNext() ? null : '-1')\">\n          <span aria-hidden=\"true\">&raquo;</span>\n        </a>\n      </li>\n\n      <li *ngIf=\"boundaryLinks\" class=\"page-item\" [class.disabled]=\"!hasNext() || disabled\">\n        <a aria-label=\"Last\" class=\"page-link\" href (click)=\"!!selectPage(pageCount)\" [attr.tabindex]=\"(hasNext() ? null : '-1')\">\n          <span aria-hidden=\"true\">&raquo;&raquo;</span>\n        </a>\n      </li>\n    </ul>\n  "
             },] },
@@ -3727,7 +3727,7 @@ var NgbPopoverWindow = (function () {
 NgbPopoverWindow.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-popover-window',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     '[class]': '"popover bs-popover-" + placement.split("-")[0]+" bs-popover-" + placement',
                     'role': 'tooltip',
@@ -3845,7 +3845,7 @@ NgbPopover.ctorParameters = function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ComponentFactoryResolver */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ViewContainerRef */], },
         { type: NgbPopoverConfig, },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* NgZone */], },
     ];
 };
 NgbPopover.propDecorators = {
@@ -3909,7 +3909,7 @@ var NgbProgressbar = (function () {
 NgbProgressbar.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-progressbar',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "\n    <div class=\"progress\">\n      <div class=\"progress-bar{{type ? ' bg-' + type : ''}}{{animated ? ' progress-bar-animated' : ''}}{{striped ?\n    ' progress-bar-striped' : ''}}\" role=\"progressbar\" [style.width.%]=\"getPercentValue()\"\n    [attr.aria-valuenow]=\"getValue()\" aria-valuemin=\"0\" [attr.aria-valuemax]=\"max\">\n        <span *ngIf=\"showValue\">{{getPercentValue()}}%</span><ng-content></ng-content>\n      </div>\n    </div>\n  "
             },] },
 ];
@@ -3967,7 +3967,7 @@ var Key$1;
 })(Key$1 || (Key$1 = {}));
 var NGB_RATING_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbRating; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbRating; }),
     multi: true
 };
 /**
@@ -4083,7 +4083,7 @@ var NgbRating = (function () {
 NgbRating.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-rating',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     'class': 'd-inline-flex',
                     'tabindex': '0',
@@ -4113,7 +4113,7 @@ NgbRating.propDecorators = {
     'rate': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'readonly': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'resettable': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
-    'starTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */],] },],
+    'starTemplate': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] }, { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */],] },],
     'hover': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Output */] },],
     'leave': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Output */] },],
     'rateChange': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Output */] },],
@@ -4163,7 +4163,7 @@ NgbTabTitle.decorators = [
 /** @nocollapse */
 NgbTabTitle.ctorParameters = function () {
     return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */], },
     ];
 };
 /**
@@ -4181,7 +4181,7 @@ NgbTabContent.decorators = [
 /** @nocollapse */
 NgbTabContent.ctorParameters = function () {
     return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* TemplateRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* TemplateRef */], },
     ];
 };
 /**
@@ -4209,8 +4209,8 @@ NgbTab.propDecorators = {
     'id': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'title': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
     'disabled': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Input */] },],
-    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbTabContent,] },],
-    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* ContentChild */], args: [NgbTabTitle,] },],
+    'contentTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbTabContent,] },],
+    'titleTpl': [{ type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* ContentChild */], args: [NgbTabTitle,] },],
 };
 /**
  * A component that makes it easy to create tabbed interface.
@@ -4390,7 +4390,7 @@ NgbTimepickerConfig.decorators = [
 NgbTimepickerConfig.ctorParameters = function () { return []; };
 var NGB_TIMEPICKER_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbTimepicker; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbTimepicker; }),
     multi: true
 };
 /**
@@ -4567,7 +4567,7 @@ var NgbTooltipWindow = (function () {
 NgbTooltipWindow.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-tooltip-window',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 host: {
                     '[class]': '"tooltip show bs-tooltip-" + placement.split("-")[0]+" bs-tooltip-" + placement',
                     'role': 'tooltip',
@@ -4698,7 +4698,7 @@ NgbTooltip.ctorParameters = function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ComponentFactoryResolver */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* ViewContainerRef */], },
         { type: NgbTooltipConfig, },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* NgZone */], },
     ];
 };
 NgbTooltip.propDecorators = {
@@ -4745,7 +4745,7 @@ var NgbHighlight = (function () {
 NgbHighlight.decorators = [
     { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Component */], args: [{
                 selector: 'ngb-highlight',
-                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Q" /* ChangeDetectionStrategy */].OnPush,
+                changeDetection: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* ChangeDetectionStrategy */].OnPush,
                 template: "<ng-template ngFor [ngForOf]=\"parts\" let-part let-isOdd=\"odd\">" +
                     "<span *ngIf=\"isOdd\" class=\"{{highlightClass}}\">{{part}}</span><ng-template [ngIf]=\"!isOdd\">{{part}}</ng-template>" +
                     "</ng-template>",
@@ -4862,7 +4862,7 @@ var Key$2;
 })(Key$2 || (Key$2 = {}));
 var NGB_TYPEAHEAD_VALUE_ACCESSOR = {
     provide: __WEBPACK_IMPORTED_MODULE_8__angular_forms__["a" /* NG_VALUE_ACCESSOR */],
-    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["S" /* forwardRef */])(function () { return NgbTypeahead; }),
+    useExisting: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_16" /* forwardRef */])(function () { return NgbTypeahead; }),
     multi: true
 };
 var nextWindowId = 0;
@@ -5088,7 +5088,7 @@ NgbTypeahead.ctorParameters = function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["y" /* Injector */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ComponentFactoryResolver */], },
         { type: NgbTypeaheadConfig, },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["O" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* NgZone */], },
     ];
 };
 NgbTypeahead.propDecorators = {
