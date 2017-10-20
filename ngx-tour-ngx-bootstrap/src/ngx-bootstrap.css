@@ -1,1 +1,3 @@
-.popover.ngx-bootstrap.bs-popover-auto[x-placement^=bottom] .arrow::before, .popover.ngx-bootstrap.bs-popover-bottom .arrow::before {}
+.popover.ngx-bootstrap.bs-popover-top .arrow::before, .popover.ngx-bootstrap.bs-popover-bottom .arrow::before, .popover.ngx-bootstrap.bs-popover-left .arrow::before, .popover.ngx-bootstrap.bs-popover-right .arrow::before {
+  display: none;
+}
