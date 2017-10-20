@@ -25,4 +25,4 @@ import { OtherRouteComponent } from './other-route.component';
     TourNgxBootstrapModule.forRoot(),
   ],
 })
-export class NgBootstrapModule { }
+export class NgxBootstrapModule { }
