@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "src": "ngx-tour-ngx-bootstrap",
+  "dest": "dist/ngx-tour-ngx-bootstrap",
+  "workingDirectory": ".ng_build",
+  "lib": {
+    "entryFile": "src/public_api.ts",
+    "externals": {
+      "valor-software/ngx-bootstrap": "ngx",
+      "valor-software/ngx-bootstrap/index": "ngx",
+      "rxjs/operator/let": "Rx.Observable.prototype",
+      "rxjs/scheduler/queue": "Rx.Observable.prototype",
+      "withinviewport": "withinviewport"
+    }
+  }
+}
