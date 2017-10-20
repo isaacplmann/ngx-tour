@@ -1,4 +1,4 @@
-import { TourService } from 'ngx-tour-ng-bootstrap';
+import { TourService, IStepOption } from 'ngx-tour-ng-bootstrap';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class NgBootstrapComponent {
     this.tourService.initialize([{
       anchorId: 'start.tour',
       content: 'Welcome to the Ngx-Tour tour!',
-      placement: 'below',
+      placement: 'bottom',
       title: 'Welcome',
     }, {
       anchorId: 'angular-ui-tour',
@@ -46,7 +46,7 @@ export class NgBootstrapComponent {
     }, {
       anchorId: 'config.route',
       content: 'And then back again.',
-      placement: 'below',
+      placement: 'bottom',
       title: 'Route Return',
     }, {
       anchorId: 'config.placement.default',
@@ -65,7 +65,47 @@ export class NgBootstrapComponent {
     }, {
       anchorId: 'config.placement.default',
       content: 'Take it back now y\'all.  One hop this time.',
-      placement: 'below',
+      placement: 'bottom',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - left-top',
+      placement: 'left-top',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - top-left',
+      placement: 'top-left',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - top-right',
+      placement: 'top-right',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - right-top',
+      placement: 'right-top',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - right-bottom',
+      placement: 'right-bottom',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - bottom-right',
+      placement: 'bottom-right',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - bottom-left',
+      placement: 'bottom-left',
+      title: 'Placement',
+    }, {
+      anchorId: 'config.placement.default',
+      content: 'And on the corners - left-bottom',
+      placement: 'left-bottom',
       title: 'Placement',
     }, {
       anchorId: 'hotkeys',

@@ -10,10 +10,12 @@ import {
   Renderer2,
   ViewContainerRef,
 } from '@angular/core';
-import { NgbPopoverConfig, NgbPopover } from '@ng-bootstrap/ng-bootstrap';
-import { IStepOption, TourAnchorDirective, TourService } from 'ngx-tour-core';
+import { NgbPopoverConfig, NgbPopover, Placement } from '@ng-bootstrap/ng-bootstrap';
+import { TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
+import { NgbTourService } from './ng-bootstrap-tour.service';
+import { INgbStepOption } from './step-option.interface';
 import { TourStepTemplateService } from './tour-step-template.service';
 
 @Directive({
@@ -24,7 +26,7 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
   private element: ElementRef;
 
   constructor(
-    private tourService: TourService, private tourStepTemplate: TourStepTemplateService, _elementRef: ElementRef, _renderer: Renderer2,
+    private tourService: NgbTourService, private tourStepTemplate: TourStepTemplateService, _elementRef: ElementRef, _renderer: Renderer2,
     injector: Injector, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef, config: NgbPopoverConfig,
     ngZone: NgZone,
   ) {
@@ -40,28 +42,14 @@ export class TourAnchorNgBootstrapDirective extends NgbPopover implements OnInit
     this.tourService.unregister(this.tourAnchor);
   }
 
-  public showTourStep(step: IStepOption): void {
+  public showTourStep(step: INgbStepOption): void {
     this.ngbPopover = this.tourStepTemplate.template;
     this.popoverTitle = step.title;
     this.container =  'body';
-    switch (step.placement) {
-      case 'above':
-        this.placement = 'top';
-        break;
-      case 'below':
-        this.placement = 'bottom';
-        break;
-      case 'right':
-      case 'after':
-        this.placement = 'right';
-        break;
-      case 'left':
-      case 'before':
-        this.placement = 'left';
-        break;
-      default:
-        this.placement = 'top';
-    }
+    this.placement = <Placement>(step.placement || 'top')
+      .replace('before', 'left').replace('after', 'right')
+      .replace('below', 'bottom').replace('above', 'top');
+
     this.open({ step });
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {

@@ -1,3 +1,12 @@
+<a name="2.0.0-beta.5-1"></a>
+# [2.0.0-beta.5-1](https://github.com/isaacplmann/ngx-tour) (2017-10-17)
+
+
+### Features
+
+* Allow all placement options
+
+
 <a name="2.0.0-beta.5"></a>
 # [2.0.0-beta.5](https://github.com/isaacplmann/ngx-tour) (2017-09-19)
 

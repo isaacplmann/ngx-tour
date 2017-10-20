@@ -18,7 +18,7 @@ export interface IStepOption {
   route?: string | UrlSegment[];
   nextStep?: number | string;
   prevStep?: number | string;
-  placement?: 'above' | 'below' | 'after' | 'before' | 'left' | 'right';
+  placement?: any;
   preventScrolling?: boolean;
 }
 
@@ -29,15 +29,15 @@ export enum TourState {
 }
 
 @Injectable()
-export class TourService {
+export class TourService<T extends IStepOption = IStepOption> {
 
-  public stepShow$: Subject<IStepOption> = new Subject();
-  public stepHide$: Subject<IStepOption> = new Subject();
-  public initialize$: Subject<IStepOption[]> = new Subject();
-  public start$: Subject<IStepOption> = new Subject();
+  public stepShow$: Subject<T> = new Subject();
+  public stepHide$: Subject<T> = new Subject();
+  public initialize$: Subject<T[]> = new Subject();
+  public start$: Subject<T> = new Subject();
   public end$: Subject<any> = new Subject();
-  public pause$: Subject<IStepOption> = new Subject();
-  public resume$: Subject<IStepOption> = new Subject();
+  public pause$: Subject<T> = new Subject();
+  public resume$: Subject<T> = new Subject();
   public anchorRegister$: Subject<string> = new Subject();
   public anchorUnregister$: Subject<string> = new Subject();
   public events$: Observable<{ name: string, value: any }> = mergeStatic(
@@ -52,15 +52,15 @@ export class TourService {
     map.bind(this.anchorUnregister$)(value => ({ name: 'anchorUnregister', value })),
   );
 
-  public steps: IStepOption[] = [];
-  public currentStep: IStepOption;
+  public steps: T[] = [];
+  public currentStep: T;
 
   public anchors: { [anchorId: string]: TourAnchorDirective } = {};
   private status: TourState = TourState.OFF;
 
   constructor(private router: Router) { }
 
-  public initialize(steps: IStepOption[], stepDefaults?: IStepOption): void {
+  public initialize(steps: T[], stepDefaults?: T): void {
     if (steps && steps.length > 0) {
       this.status = TourState.OFF;
       this.steps = steps.map(step => Object.assign({}, stepDefaults, step));
@@ -124,7 +124,7 @@ export class TourService {
     }
   }
 
-  public hasNext(step: IStepOption): boolean {
+  public hasNext(step: T): boolean {
     if (!step) {
       console.warn('Can\'t get next step. No currentStep.');
       return false;
@@ -138,7 +138,7 @@ export class TourService {
     }
   }
 
-  public hasPrev(step: IStepOption): boolean {
+  public hasPrev(step: T): boolean {
     if (!step) {
       console.warn('Can\'t get previous step. No currentStep.');
       return false;
@@ -167,7 +167,7 @@ export class TourService {
     return this.status;
   }
 
-  private goToStep(step: IStepOption): void {
+  private goToStep(step: T): void {
     if (!step) {
       console.warn('Can\'t go to non-existent step');
       this.end();
@@ -186,7 +186,7 @@ export class TourService {
     });
   }
 
-  private loadStep(stepId: number | string): IStepOption {
+  private loadStep(stepId: number | string): T {
     if (typeof (stepId) === 'number') {
       return this.steps[stepId];
     } else {
@@ -194,7 +194,7 @@ export class TourService {
     }
   }
 
-  private setCurrentStep(step: IStepOption): void {
+  private setCurrentStep(step: T): void {
     if (this.currentStep) {
       this.hideStep(this.currentStep);
     }
@@ -207,7 +207,7 @@ export class TourService {
     });
   }
 
-  private showStep(step: IStepOption): void {
+  private showStep(step: T): void {
     const anchor = this.anchors[step && step.anchorId];
     if (!anchor) {
       this.end();
@@ -217,7 +217,7 @@ export class TourService {
     this.stepShow$.next(step);
   }
 
-  private hideStep(step: IStepOption): void {
+  private hideStep(step: T): void {
     const anchor = this.anchors[step && step.anchorId];
     if (!anchor) {
       return;
