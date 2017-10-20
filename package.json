@@ -1,6 +1,6 @@
 {
   "name": "ngx-tour",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "keywords": [],
   "author": "Isaac Mann <isaacplmann@gmail.com>",
@@ -51,10 +51,11 @@
     "@angular/router": "^4.4.2",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
     "core-js": "^2.5.1",
-    "ngx-tour-md-menu": "^1.0.4",
     "ngx-bootstrap": "1.9.1",
+    "ngx-tour-md-menu": "^1.0.4",
     "ngx-tour-ng-bootstrap": "^1.0.0",
     "ngx-tour-ngx-bootstrap": "^1.0.0",
+    "rxjs": "^5.4.3",
     "withinviewport": "^2.0.0",
     "zone.js": "^0.8.12"
   },
