@@ -1,4 +1,4 @@
-webpackJsonp([5],{
+webpackJsonp([6],{
 
 /***/ "../../../../../src async recursive":
 /***/ (function(module, exports, __webpack_require__) {
@@ -6,7 +6,7 @@ webpackJsonp([5],{
 var map = {
 	"./console/console.module": [
 		"../../../../../src/app/console/console.module.ts",
-		3,
+		4,
 		0
 	],
 	"./md-menu/md-menu.module": [
@@ -17,6 +17,11 @@ var map = {
 	"./ng-bootstrap/ng-bootstrap.module": [
 		"../../../../../src/app/ng-bootstrap/ng-bootstrap.module.ts",
 		1,
+		0
+	],
+	"./ngx-bootstrap/ngx-bootstrap.module": [
+		"../../../../../src/app/ngx-bootstrap/ngx-bootstrap.module.ts",
+		3,
 		0
 	]
 };
@@ -71,6 +76,9 @@ var DemoModule = /** @class */ (function () {
                         loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
                         path: 'ng-bootstrap',
                     }, {
+                        loadChildren: './ngx-bootstrap/ngx-bootstrap.module#NgxBootstrapModule',
+                        path: 'ngx-bootstrap',
+                    }, {
                         loadChildren: './console/console.module#ConsoleModule',
                         path: 'console',
                     }, {
@@ -93,7 +101,7 @@ var DemoModule = /** @class */ (function () {
 /***/ "../../../../../src/app/demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"page-header pb-3\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"\">MdMenu</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ng-bootstrap\">NgBootstrap</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"console\">Console</a>\n        </li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<section class=\"page-header pb-3\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"\">MdMenu</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ng-bootstrap\">NgBootstrap</a>\n        </li>\n      <li class=\"nav-item\" role=\"presentation\">\n        <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ngx-bootstrap\">NgxBootstrap</a>\n      </li>\n      <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"console\">Console</a>\n        </li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
