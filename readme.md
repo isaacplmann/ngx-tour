@@ -1,4 +1,6 @@
 # Ng2 Tour
+
+[![Join the chat at https://gitter.im/ngx-tour/Lobby](https://badges.gitter.im/ngx-tour/Lobby.svg)](https://gitter.im/ngx-tour/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Dependency Status](https://david-dm.org/isaacplmann/ng2-tour.svg)](https://david-dm.org/isaacplmann/ngx-tour)
 [![devDependency Status](https://david-dm.org/isaacplmann/ng2-tour/dev-status.svg)](https://david-dm.org/isaacplmann/ngx-tour?type=dev)
 
