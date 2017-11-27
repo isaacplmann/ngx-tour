@@ -57,13 +57,15 @@ export class TourService<T extends IStepOption = IStepOption> {
 
   public anchors: { [anchorId: string]: TourAnchorDirective } = {};
   private status: TourState = TourState.OFF;
+  private isHotKeysEnabled = false;
 
   constructor(private router: Router) { }
 
-  public initialize(steps: T[], stepDefaults?: T): void {
+  public initialize(steps: T[], stepDefaults?: T, isHotkeysEnabled = true): void {
     if (steps && steps.length > 0) {
       this.status = TourState.OFF;
       this.steps = steps.map(step => Object.assign({}, stepDefaults, step));
+      this.isHotKeysEnabled = isHotkeysEnabled;
       this.initialize$.next(this.steps);
     }
   }
@@ -165,6 +167,10 @@ export class TourService<T extends IStepOption = IStepOption> {
 
   public getStatus(): TourState {
     return this.status;
+  }
+
+  public isHotkeysEnanbled(): boolean {
+    return this.isHotKeysEnabled;
   }
 
   private goToStep(step: T): void {
