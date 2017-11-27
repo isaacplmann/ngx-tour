@@ -4,7 +4,7 @@ import {
   Input,
   OnDestroy,
   OnInit,
-  Renderer,
+  Renderer2,
   ViewContainerRef,
 } from '@angular/core';
 import { ComponentLoaderFactory, PopoverConfig, PopoverDirective } from 'ngx-bootstrap';
@@ -24,7 +24,7 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   constructor(private tourService: NgxbTourService,
               private tourStepTemplate: TourStepTemplateService,
               _elementRef: ElementRef,
-              _renderer: Renderer,
+              _renderer: Renderer2,
               viewContainerRef: ViewContainerRef,
               _config: PopoverConfig,
               _cis: ComponentLoaderFactory,
