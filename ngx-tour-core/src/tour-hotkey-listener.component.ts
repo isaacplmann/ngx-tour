@@ -15,7 +15,7 @@ export class TourHotkeyListenerComponent {
   @HostListener('window:keydown.Escape')
   public onEscapeKey(event: KeyboardEvent): void {
     if (this.tourService.getStatus() === TourState.ON
-      && this.tourService.isHotkeysEnanbled()) {
+      && this.tourService.isHotkeysEnabled()) {
       this.tourService.end();
     }
   }
@@ -24,7 +24,7 @@ export class TourHotkeyListenerComponent {
   public onArrowRightKey(event: KeyboardEvent): void {
     if (this.tourService.getStatus() === TourState.ON
       && this.tourService.hasNext(this.tourService.currentStep)
-      && this.tourService.isHotkeysEnanbled()) {
+      && this.tourService.isHotkeysEnabled()) {
       this.tourService.next();
     }
   }
@@ -33,7 +33,7 @@ export class TourHotkeyListenerComponent {
   public onArrowLeftKey(event: KeyboardEvent): void {
     if (this.tourService.getStatus() === TourState.ON
       && this.tourService.hasPrev(this.tourService.currentStep)
-      && this.tourService.isHotkeysEnanbled()) {
+      && this.tourService.isHotkeysEnabled()) {
       this.tourService.prev();
     }
   }

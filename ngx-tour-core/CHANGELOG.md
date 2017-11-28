@@ -1,3 +1,12 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/isaacplmann/ngx-tour) (2017-11-27)
+
+
+### Features
+
+* TourService allows hotkeys to be disabled/enabled
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/isaacplmann/ngx-tour) (2017-10-17)
 
