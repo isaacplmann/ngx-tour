@@ -1,5 +1,10 @@
-<a name="1.2.0"></a>
-# [1.2.0](https://github.com/isaacplmann/ngx-tour) (2017-11-27)
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
+
+
+### BREAKING CHANGES
+
+* Require Angular 5 as peer dependency
 
 
 ### Features
