@@ -1,3 +1,12 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
+
+
+### BEAKING CHANGE
+
+* Update to ngx-tour-core 2.x (Angular 5 and disabling hotkeys)
+
+
 <a name="1.0.2"></a>
 # [1.0.2](https://github.com/isaacplmann/ngx-tour) (2017-07-20)
 
