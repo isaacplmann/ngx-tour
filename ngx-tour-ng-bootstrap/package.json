@@ -1,6 +1,6 @@
 {
   "name": "ngx-tour-ng-bootstrap",
-  "version": "2.0.0-beta.5-1",
+  "version": "2.0.0-beta.5-2",
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5"
   },
   "dependencies": {
-    "ngx-tour-core": "^1.1.0",
+    "ngx-tour-core": "^2.0.0",
     "withinviewport": "^2.0.0"
   }
 }

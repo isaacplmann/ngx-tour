@@ -1,3 +1,16 @@
+<a name="2.0.0-beta.5-2"></a>
+# [2.0.0-beta.5-2](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
+
+
+### BREAKING CHANGE
+
+* Require Angular 5
+
+
+### Features
+
+* Disable/enable hotkeys
+
 <a name="2.0.0-beta.5-1"></a>
 # [2.0.0-beta.5-1](https://github.com/isaacplmann/ngx-tour) (2017-10-17)
 
