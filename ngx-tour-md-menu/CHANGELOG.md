@@ -1,3 +1,13 @@
+<a name="2.0.0-rc.2"></a>
+# [2.0.0-rc.2](https://github.com/isaacplmann/ngx-tour) (2017-10-20)
+
+
+### BREAKING CHANGES
+
+* Update to ngx-tour-core 2.x (Angular 5 and disabling hotkeys)
+* Update @angular/material to 5.0.0-rc.2
+
+
 <a name="2.0.0-beta.12"></a>
 # [2.0.0-beta.12](https://github.com/isaacplmann/ngx-tour) (2017-10-20)
 
