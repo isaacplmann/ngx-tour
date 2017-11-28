@@ -6,7 +6,7 @@
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/isaacplmann/ngx-tour"
   },
   "license": "MIT",
   "engines": {
@@ -39,13 +39,13 @@
   },
   "dependencies": {
     "@angular/animations": "^5.0.3",
-    "@angular/cdk": "^5.0.0-rc.1",
+    "@angular/cdk": "^5.0.0-rc.2",
     "@angular/common": "^5.0.3",
     "@angular/compiler": "^5.0.3",
     "@angular/core": "^5.0.3",
     "@angular/forms": "^5.0.3",
     "@angular/http": "^5.0.3",
-    "@angular/material": "^5.0.0-rc.1",
+    "@angular/material": "^5.0.0-rc.2",
     "@angular/platform-browser": "^5.0.3",
     "@angular/platform-browser-dynamic": "^5.0.3",
     "@angular/router": "^5.0.3",
