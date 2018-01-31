@@ -138,6 +138,30 @@ this.tourService.initialize([{{ '{' }}
         Setting this value to true will disable the scroll behavior.
       </td>
     </tr>
+    <tr tourAnchor="config.buttons.custom">
+      <td>prevBtnTitle</td>
+      <td>string</td>
+      <td>false</td>
+      <td>
+        Sets a custom prev button title for a given step. Default is "Prev"
+      </td>
+    </tr>
+    <tr>
+      <td>nextBtnTitle</td>
+      <td>string</td>
+      <td>false</td>
+      <td>
+        Sets a custom next button title for a given step. Default is "Next"
+      </td>
+    </tr>
+    <tr>
+      <td>endBtnTitle</td>
+      <td>string</td>
+      <td>false</td>
+      <td>
+        Sets a custom end button title for a given step. Default is "End"
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -240,9 +264,9 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
   &lt;ng-template let-step="step"&gt;
     &lt;p class="tour-step-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
     &lt;div class="tour-step-navigation"&gt;
-      &lt;button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()"&gt;« Prev&lt;/button&gt;
-      &lt;button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()"&gt;Next »&lt;/button&gt;
-      &lt;button class="btn btn-sm btn-default" (click)="tourService.end()"&gt;End&lt;/button&gt;
+      &lt;button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()"&gt;« {{ '{{' }}step?.prevBtnTitle}}&lt;/button&gt;
+      &lt;button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()"&gt;{{ '{{' }}step?.nextBtnTitle}} »&lt;/button&gt;
+      &lt;button class="btn btn-sm btn-default" (click)="tourService.end()"&gt;{{ '{{' }}step?.endBtnTitle}}&lt;/button&gt;
     &lt;/div&gt;
   &lt;/ng-template&gt;
 &lt;/tour-step-template&gt;

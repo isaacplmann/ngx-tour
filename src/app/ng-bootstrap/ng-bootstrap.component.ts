@@ -115,6 +115,13 @@ export class NgBootstrapComponent {
       anchorId: 'events',
       content: 'You can subscribe to events',
       title: 'Events',
+    }, {
+      anchorId: 'config.buttons.custom',
+      content: 'You can set custom step button names',
+      title: 'Button Titles',
+      prevBtnTitle: 'My Prev',
+      nextBtnTitle: 'My Next',
+      endBtnTitle: 'My End'
     }],
     {
       route: 'ng-bootstrap',

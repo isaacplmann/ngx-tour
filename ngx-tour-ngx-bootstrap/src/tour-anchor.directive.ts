@@ -48,6 +48,9 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
     this.container =  'body';
     this.containerClass = 'ngx-bootstrap';
     this.placement = step.placement || 'top';
+    step.prevBtnTitle = step.prevBtnTitle || 'Prev';
+    step.nextBtnTitle = step.nextBtnTitle || 'Next';
+    step.endBtnTitle = step.endBtnTitle || 'End';
     this.show();
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
