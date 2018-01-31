@@ -6,30 +6,28 @@ import {
   OnInit,
   Renderer2,
   ViewContainerRef,
+  ChangeDetectorRef,
+  Injector,
+  ComponentFactoryResolver
 } from '@angular/core';
-import { ComponentLoaderFactory, PopoverConfig, PopoverDirective } from 'ngx-no-framework';
+import { NgxPopperModule, PopperController } from 'ngx-popper';
 import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
 import { TourStepTemplateService } from './tour-step-template.service';
-import { NgxbTourService } from './ngx-no-framework-tour.service';
+import { NgxnfTourService } from './ngx-no-framework-tour.service';
 
 @Directive({
   selector: '[tourAnchor]',
 })
-export class TourAnchorNgxNoFrameworkDirective extends PopoverDirective implements OnInit, OnDestroy, TourAnchorDirective {
+export class TourAnchorNgxNoFrameworkDirective extends PopperController implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
   private element: ElementRef;
 
-  constructor(private tourService: NgxbTourService,
-              private tourStepTemplate: TourStepTemplateService,
-              _elementRef: ElementRef,
-              _renderer: Renderer2,
-              viewContainerRef: ViewContainerRef,
-              _config: PopoverConfig,
-              _cis: ComponentLoaderFactory,
+  constructor(private tourService: NgxnfTourService, private tourStepTemplate: TourStepTemplateService, _elementRef: ElementRef, _renderer: Renderer2,
+    injector: Injector, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef, changeDetectorRef: ChangeDetectorRef
   ) {
-    super(_elementRef, _renderer, viewContainerRef, _config, _cis);
+    super(viewContainerRef, changeDetectorRef, componentFactoryResolver, _renderer, {});
     this.element = _elementRef;
   }
 
@@ -42,11 +40,13 @@ export class TourAnchorNgxNoFrameworkDirective extends PopoverDirective implemen
   }
 
   public showTourStep(step: IStepOption): void {
-    this.popover = this.tourStepTemplate.template;
-    this.popoverContext = { step };
-    this.popoverTitle = step.title;
-    this.container =  'body';
-    this.containerClass = 'ngx-no-framework';
+    //this.content = 'Test';
+    //this.content = this.element.nativeElement;
+    //this.content = this.tourStepTemplate.template;
+    //this.popoverContext = { step };
+    //this.popoverTitle = step.title;
+    //this.container =  'body';
+    //this.containerClass = 'ngx-no-framework';
     this.placement = step.placement || 'top';
     this.show();
     if (!step.preventScrolling) {

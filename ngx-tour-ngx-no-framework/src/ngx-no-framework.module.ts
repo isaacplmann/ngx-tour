@@ -3,16 +3,16 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { NgxPopperModule } from 'ngx-popper';
 import { TourModule } from 'ngx-tour-core';
 
-import { TourAnchorNgxBootstrapDirective } from './tour-anchor.directive';
+import { TourAnchorNgxNoFrameworkDirective } from './tour-anchor.directive';
 import { TourStepTemplateComponent } from './tour-step-template.component';
 import { TourStepTemplateService } from './tour-step-template.service';
-import { NgxbTourService } from './ngx-no-framework-tour.service';
+import { NgxnfTourService } from './ngx-no-framework-tour.service';
 
-export { TourAnchorNgxBootstrapDirective, TourStepTemplateComponent, NgxbTourService };
+export { TourAnchorNgxNoFrameworkDirective, TourStepTemplateComponent, NgxnfTourService };
 
 @NgModule({
-  declarations: [TourAnchorNgxBootstrapDirective, TourStepTemplateComponent],
-  exports: [TourAnchorNgxBootstrapDirective, TourStepTemplateComponent],
+  declarations: [TourAnchorNgxNoFrameworkDirective, TourStepTemplateComponent],
+  exports: [TourAnchorNgxNoFrameworkDirective, TourStepTemplateComponent],
   imports: [CommonModule, NgxPopperModule.forRoot()],
 })
 export class TourNgxNoFrameworkModule {
@@ -22,7 +22,7 @@ export class TourNgxNoFrameworkModule {
       providers: [
         TourStepTemplateService,
         ...TourModule.forRoot().providers,
-        NgxbTourService,
+        NgxnfTourService,
       ],
     };
   }

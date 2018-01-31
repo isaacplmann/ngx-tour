@@ -1,5 +1,5 @@
 import { IStepOption } from 'ngx-tour-core';
 
-export interface INgxbStepOption extends IStepOption {
+export interface INgxnfStepOption extends IStepOption {
     placement?: 'top' | 'bottom' | 'left' | 'right' | 'auto';
 }

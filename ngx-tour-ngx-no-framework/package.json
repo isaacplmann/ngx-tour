@@ -5,10 +5,10 @@
   "author": "Damien Murphy",
   "license": "MIT",
   "peerDependencies": {
+    "ngx-popper": "^2.0.1"
   },
   "dependencies": {
     "ngx-tour-core": "^2.0.0",
-    "withinviewport": "^2.0.0",
-    "ngx-popper": "^2.0.1"
+    "withinviewport": "^2.0.0"
   }
 }
