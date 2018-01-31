@@ -26,7 +26,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
           <button mat-icon-button [disabled]="!tourService.hasNext(step)" (click)="tourService.next()">
             <mat-icon>chevron_right</mat-icon>
           </button>
-          <button mat-button (click)="tourService.end()">End</button>
+          <button mat-button (click)="tourService.end()">{{step?.endBtnTitle}}</button>
         </mat-card-actions>
       </mat-card>
     </ng-template>

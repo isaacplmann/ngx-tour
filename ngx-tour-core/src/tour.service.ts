@@ -20,6 +20,9 @@ export interface IStepOption {
   prevStep?: number | string;
   placement?: any;
   preventScrolling?: boolean;
+  prevBtnTitle?: string;
+  nextBtnTitle?: string;
+  endBtnTitle?: string;
 }
 
 export enum TourState {
