@@ -1,3 +1,18 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-01-31)
+
+
+### Features
+
+* Add touranchor-is-active class
+* Add options to set button text
+
+
+### Fixes
+
+* No component factory found for PopoverContainerComponent
+
+
 <a name="2.0.0-beta.9"></a>
 # [2.0.0-beta.9](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
 

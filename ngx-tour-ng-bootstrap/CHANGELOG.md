@@ -1,3 +1,13 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-01-31)
+
+
+### Features
+
+* Add touranchor-is-active class
+* Add options to set button text
+
+
 <a name="2.0.0-beta.5-2"></a>
 # [2.0.0-beta.5-2](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
 
