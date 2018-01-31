@@ -48,6 +48,11 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
     this.opener.trigger.menu = this.tourStepTemplate.templateComponent.tourStep;
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
+
+    step.prevBtnTitle = step.prevBtnTitle || 'Prev';
+    step.nextBtnTitle = step.nextBtnTitle || 'Next';
+    step.endBtnTitle = step.endBtnTitle || 'End';
+    
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }
