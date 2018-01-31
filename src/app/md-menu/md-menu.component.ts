@@ -56,6 +56,13 @@ export class MdMenuComponent {
       anchorId: 'events',
       content: 'You can subscribe to events',
       title: 'Events',
+    }, {
+      anchorId: 'config.buttons.custom',
+      content: 'You can set cutom step button names',
+      title: 'Button Titles',
+      prevBtnTitle: 'My Prev',
+      nextBtnTitle: 'My Next',
+      endBtnTitle: 'My End'
     }], {
       route: 'md-menu',
     });
