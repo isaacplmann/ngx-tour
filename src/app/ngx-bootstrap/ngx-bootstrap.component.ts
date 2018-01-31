@@ -75,7 +75,7 @@ export class NgxBootstrapComponent {
       title: 'Events',
     }, {
       anchorId: 'config.buttons.custom',
-      content: 'You can set cutom step button names',
+      content: 'You can set custom step button names',
       title: 'Button Titles',
       prevBtnTitle: 'My Prev',
       nextBtnTitle: 'My Next',
