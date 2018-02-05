@@ -1,7 +1,7 @@
-import { AfterContentInit, Component, ContentChild, Input, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { IStepOption, TourHotkeyListenerComponent } from 'ngx-tour-core';
-import { NgxPopperModule } from 'ngx-popper';
-import { NgxnfTourService } from './ngx-no-framework-tour.service';
+import { NgxPopperModule, PopperContent } from 'ngx-popper';
+import { NgxpTourService } from './ngx-popper-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
   selector: 'tour-step-template',
   template: `
     <ng-template #tourStep let-step="step">
-      <div     [popper]="tourStep"
+      <div  [popper]="tourStep"
             [popperShowOnStart]="true"
             [popperTrigger]="'click'"
             [popperPlacement]="'bottom'">
@@ -25,13 +25,13 @@ import { TourStepTemplateService } from './tour-step-template.service';
   `,
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterContentInit {
-  @ViewChild('tourStep', { read: TemplateRef }) public defaultTourStepTemplate: TemplateRef<any>;
+  @ViewChild('tourStep', { read: PopperContent }) public defaultTourStepTemplate: PopperContent;
 
   @Input()
-  @ContentChild(TemplateRef)
-  public stepTemplate: TemplateRef<{ step: IStepOption }>;
+  @ContentChild(PopperContent)
+  public stepTemplate: PopperContent;
 
-  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: NgxnfTourService) {
+  constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: NgxpTourService) {
     super(tourService);
   }
 

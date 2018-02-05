@@ -18,8 +18,8 @@ import { DemoComponent } from './demo.component';
       loadChildren: './ngx-bootstrap/ngx-bootstrap.module#NgxBootstrapModule',
       path: 'ngx-bootstrap',
     }, {
-      loadChildren: './ngx-no-framework/ngx-no-framework.module#NgxNoFrameworkModule',
-      path: 'ngx-no-framework',
+      loadChildren: './ngx-popper/ngx-popper.module#NgxpPopperModule',
+      path: 'ngx-popper',
     }, {
       loadChildren: './console/console.module#ConsoleModule',
       path: 'console',

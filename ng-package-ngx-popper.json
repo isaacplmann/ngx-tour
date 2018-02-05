@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-  "src": "ngx-tour-ngx-no-framework",
-  "dest": "dist/ngx-tour-ngx-no-framework",
+  "src": "ngx-tour-ngx-popper",
+  "dest": "dist/ngx-tour-ngx-popper",
   "workingDirectory": ".ng_build",
   "lib": {
     "entryFile": "src/public_api.ts",

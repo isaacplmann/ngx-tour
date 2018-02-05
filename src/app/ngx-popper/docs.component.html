@@ -2,22 +2,13 @@
 
 <p>This is a product tour library built with Angular (2+). It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
 
-<p><code>TourNgxBootstrapModule</code> is an implementation of the tour UI that uses <a href="https://github.com/valor-software/ngx-bootstrap" rel="nofollow" target="_blank">NgxBootstrap</a> popovers to display tour steps.</p>
+<p><code>TourNgxPopperModule</code> is an implementation of the tour UI that uses <a href="https://github.com/valor-software/ngx-popper" rel="nofollow" target="_blank">NgxPopper</a> popovers to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
-  <li><code>npm install ngx-tour-ngx-bootstrap ngx-bootstrap</code></li>
-  <li>Import <code>TourNgxBootstrapModule.forRoot()</code> into your app module</li>
+  <li><code>npm install ngx-tour-ngx-popper ngx-popper</code></li>
+  <li>Import <code>TourNgxPopperModule.forRoot()</code> into your app module</li>
   <li>Make sure <code>RouterModule</code> is imported in your app module</li>
-  <li>Include bootstrap 4 CSS somehow - i.e. in your <code>index.html</code> add this line:<br>
-      <code>
-        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-      </code>
-  </li>
-  <li>Or for Bootstrap 3:</li><br>
-  <code>
-    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </code>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
@@ -41,7 +32,7 @@ this.tourService.initialize([{{ '{' }}
 }]);</pre>
   </li>
   <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
-  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ngx-bootstrap">demo source code</a> for an example.</li>
+  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ngx-popper">demo source code</a> for an example.</li>
 </ol>
 
 <h2>TourService</h2>
@@ -125,8 +116,6 @@ this.tourService.initialize([{{ '{' }}
       <td>'top' | 'bottom' | 'left' | 'right' | 'auto'</td>
       <td><span tourAnchor="config.placement.default">'top'</span></td>
       <td>
-        Placement of a popover.
-        See the <a href="https://valor-software.com/ngx-bootstrap/index-bs4.html#/popover#popover-directive">ngx-bootstrap docs</a>.
       </td>
     </tr>
     <tr>

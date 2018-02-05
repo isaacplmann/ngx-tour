@@ -1,12 +1,12 @@
-import { TourService } from 'ngx-tour-ngx-no-framework';
+import { TourService } from 'ngx-tour-ngx-popper';
 import { Component } from '@angular/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'ngx-no-framework-route',
-  templateUrl: './ngx-no-framework.component.html',
+  selector: 'ngx-popper-route',
+  templateUrl: './ngx-popper.component.html',
 })
-export class NgxNoFrameworkComponent {
+export class NgxPopperComponent {
   constructor(public tourService: TourService) {
     this.tourService.initialize([{
       anchorId: 'start.tour',
@@ -39,7 +39,7 @@ export class NgxNoFrameworkComponent {
     }, {
       anchorId: 'another.route',
       content: 'Like this!',
-      route: 'ngx-no-framework/other',
+      route: 'ngx-popper/other',
       title: 'Another Route',
     }, {
       anchorId: 'config.route',
@@ -82,7 +82,7 @@ export class NgxNoFrameworkComponent {
       endBtnTitle: 'My End'
     }],
       {
-        route: 'ngx-no-framework',
+        route: 'ngx-popper',
       }
     );
     this.tourService.start();
