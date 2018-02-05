@@ -1,11 +1,11 @@
 {
   "name": "ngx-tour-ngx-bootstrap",
-  "version": "2.0.0-beta.9",
+  "version": "2.0.0",
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
-  "author": "Rachel Yordán <rachelyordan@gmail.com>",
+  "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "ngx-bootstrap": "^2.0.0-beta.9"
+    "ngx-bootstrap": "^2.0.2"
   },
   "dependencies": {
     "ngx-tour-core": "^2.0.0",

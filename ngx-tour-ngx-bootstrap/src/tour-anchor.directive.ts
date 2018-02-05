@@ -1,36 +1,28 @@
-import {
-  Directive,
-  ElementRef,
-  Input,
-  OnDestroy,
-  OnInit,
-  Renderer2,
-  ViewContainerRef,
-} from '@angular/core';
-import { ComponentLoaderFactory, PopoverConfig, PopoverDirective } from 'ngx-bootstrap';
+import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
+import { PopoverDirective } from 'ngx-bootstrap';
 import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
-import { TourStepTemplateService } from './tour-step-template.service';
 import { NgxbTourService } from './ngx-bootstrap-tour.service';
+import { TourStepTemplateService } from './tour-step-template.service';
+
+@Directive({ selector: '[tourAnchor]'})
+export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {}
 
 @Directive({
   selector: '[tourAnchor]',
 })
-export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements OnInit, OnDestroy, TourAnchorDirective {
+export class TourAnchorNgxBootstrapDirective implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
-  private element: ElementRef;
+
+  @HostBinding('class.touranchor--is-active')
+  public isActive: boolean;
 
   constructor(private tourService: NgxbTourService,
               private tourStepTemplate: TourStepTemplateService,
-              _elementRef: ElementRef,
-              _renderer: Renderer2,
-              viewContainerRef: ViewContainerRef,
-              _config: PopoverConfig,
-              _cis: ComponentLoaderFactory,
+              private element: ElementRef,
+              @Host() private popoverDirective: TourAnchorNgxBootstrapPopoverDirective,
   ) {
-    super(_elementRef, _renderer, viewContainerRef, _config, _cis);
-    this.element = _elementRef;
   }
 
   public ngOnInit(): void {
@@ -42,13 +34,17 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   }
 
   public showTourStep(step: IStepOption): void {
-    this.popover = this.tourStepTemplate.template;
-    this.popoverContext = { step };
-    this.popoverTitle = step.title;
-    this.container =  'body';
-    this.containerClass = 'ngx-bootstrap';
-    this.placement = step.placement || 'top';
-    this.show();
+    this.isActive = true;
+    this.popoverDirective.popover = this.tourStepTemplate.template;
+    this.popoverDirective.popoverContext = { step };
+    this.popoverDirective.popoverTitle = step.title;
+    this.popoverDirective.container =  'body';
+    this.popoverDirective.containerClass = 'ngx-bootstrap';
+    this.popoverDirective.placement = step.placement || 'top';
+    step.prevBtnTitle = step.prevBtnTitle || 'Prev';
+    step.nextBtnTitle = step.nextBtnTitle || 'Next';
+    step.endBtnTitle = step.endBtnTitle || 'End';
+    this.popoverDirective.show();
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
         (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
@@ -59,6 +55,7 @@ export class TourAnchorNgxBootstrapDirective extends PopoverDirective implements
   }
 
   public hideTourStep(): void {
-    this.hide();
+    this.isActive = false;
+    this.popoverDirective.hide();
   }
 }

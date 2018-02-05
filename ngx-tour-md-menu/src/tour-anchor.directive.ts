@@ -1,4 +1,14 @@
-import { ComponentFactoryResolver, Directive, ElementRef, Injector, Input, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
+import {
+  ComponentFactoryResolver,
+  Directive,
+  ElementRef,
+  HostBinding,
+  Injector,
+  Input,
+  OnDestroy,
+  OnInit,
+  ViewContainerRef,
+} from '@angular/core';
 import { IStepOption, TourAnchorDirective, TourService, TourState } from 'ngx-tour-core';
 import { Subscription } from 'rxjs/Rx';
 import withinviewport from 'withinviewport';
@@ -13,6 +23,9 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
   @Input() public tourAnchor: string;
   public opener: TourAnchorOpenerComponent;
   public menuCloseSubscription: Subscription;
+
+  @HostBinding('class.touranchor--is-active')
+  public isActive: boolean;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
@@ -35,6 +48,7 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
   }
 
   public showTourStep(step: IStepOption): void {
+    this.isActive = true;
     this.tourStepTemplate.templateComponent.step = step;
     // Ignore step.placement
     if (!step.preventScrolling) {
@@ -48,6 +62,11 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
     this.opener.trigger.menu = this.tourStepTemplate.templateComponent.tourStep;
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
+
+    step.prevBtnTitle = step.prevBtnTitle || 'Prev';
+    step.nextBtnTitle = step.nextBtnTitle || 'Next';
+    step.endBtnTitle = step.endBtnTitle || 'End';
+
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }
@@ -59,6 +78,7 @@ export class TourAnchorMatMenuDirective implements OnInit, OnDestroy, TourAnchor
   }
 
   public hideTourStep(): void {
+    this.isActive = false;
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }

@@ -49,6 +49,13 @@ export class MdMenuComponent {
       placement: 'below',
       title: 'Route Return',
     }, {
+      anchorId: 'config.buttons.custom',
+      content: 'You can set custom step button names',
+      title: 'Button Titles',
+      prevBtnTitle: 'My Prev',
+      nextBtnTitle: 'My Next',
+      endBtnTitle: 'My End'
+    }, {
       anchorId: 'hotkeys',
       content: 'Try using the hotkeys to navigate through the tour.',
       title: 'Hotkeys',
@@ -56,13 +63,6 @@ export class MdMenuComponent {
       anchorId: 'events',
       content: 'You can subscribe to events',
       title: 'Events',
-    }, {
-      anchorId: 'config.buttons.custom',
-      content: 'You can set cutom step button names',
-      title: 'Button Titles',
-      prevBtnTitle: 'My Prev',
-      nextBtnTitle: 'My Next',
-      endBtnTitle: 'My End'
     }], {
       route: 'md-menu',
     });
