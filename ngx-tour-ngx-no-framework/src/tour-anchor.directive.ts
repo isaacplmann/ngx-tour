@@ -14,6 +14,7 @@ import { NgxPopperModule, PopperController } from 'ngx-popper';
 import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
+import { INgxnfStepOption } from './step-option.interface';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { NgxnfTourService } from './ngx-no-framework-tour.service';
 
@@ -40,13 +41,7 @@ export class TourAnchorNgxNoFrameworkDirective extends PopperController implemen
   }
 
   public showTourStep(step: IStepOption): void {
-    //this.content = 'Test';
-    //this.content = this.element.nativeElement;
-    //this.content = this.tourStepTemplate.template;
-    //this.popoverContext = { step };
-    //this.popoverTitle = step.title;
-    //this.container =  'body';
-    //this.containerClass = 'ngx-no-framework';
+    this.content = this.tourStepTemplate.template;
     this.placement = step.placement || 'top';
     this.show();
     if (!step.preventScrolling) {

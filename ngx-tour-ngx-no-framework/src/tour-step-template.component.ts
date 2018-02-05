@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, ContentChild, Input, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { IStepOption, TourHotkeyListenerComponent } from 'ngx-tour-core';
-
+import { NgxPopperModule } from 'ngx-popper';
 import { NgxnfTourService } from './ngx-no-framework-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
@@ -9,11 +9,17 @@ import { TourStepTemplateService } from './tour-step-template.service';
   selector: 'tour-step-template',
   template: `
     <ng-template #tourStep let-step="step">
-      <p class="tour-step-content">{{step?.content}}</p>
-      <div class="tour-step-navigation">
-        <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
-        <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
-        <button class="btn btn-sm btn-default" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
+      <div     [popper]="tourStep"
+            [popperShowOnStart]="true"
+            [popperTrigger]="'click'"
+            [popperPlacement]="'bottom'">
+        <p class="bold">{{step?.title}}</p>
+        <p class="thin">{{step?.content}}</p>
+        <div class="tour-step-navigation">
+          <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
+          <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
+          <button class="btn btn-sm btn-default" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
+        </div>         
       </div>
     </ng-template>
   `,
