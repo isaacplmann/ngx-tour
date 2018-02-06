@@ -8,22 +8,15 @@ import { TourStepTemplateService } from './tour-step-template.service';
   encapsulation: ViewEncapsulation.None,
   selector: 'tour-step-template',
   template: `
-    <ng-template #defaultTemplate let-step="step">
-      <popper-content #tourStep>
-        <div  [popper]="tourStep"
-              [popperShowOnStart]="true"
-              [popperTrigger]="'click'"
-              [popperPlacement]="'bottom'">
-          <p class="bold">{{step?.title}}</p>
-          <p class="thin">{{step?.content}}</p>
-          <div class="tour-step-navigation">
-            <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
-            <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
-            <button class="btn btn-sm btn-default" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
-          </div>         
-        </div>
-      </popper-content>
-    </ng-template>
+    <popper-content #tourStep>
+        <p class="bold">{{step?.title}}</p>
+        <p class="thin">{{step?.content}}</p>
+        <div class="tour-step-navigation">
+          <button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
+          <button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
+          <button class="btn btn-sm btn-default" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
+        </div>         
+    </popper-content>
   `,
 })
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterContentInit {
@@ -33,11 +26,13 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent imple
   @ContentChild(PopperContent)
   public stepTemplate: PopperContent;
 
+  public step: IStepOption = {};
+
   constructor(private tourStepTemplateService: TourStepTemplateService, public tourService: NgxpTourService) {
     super(tourService);
   }
 
   public ngAfterContentInit(): void {
-    this.tourStepTemplateService.template = this.stepTemplate || this.defaultTourStepTemplate;
+    this.tourStepTemplateService.template = this.defaultTourStepTemplate;
   }
 }
