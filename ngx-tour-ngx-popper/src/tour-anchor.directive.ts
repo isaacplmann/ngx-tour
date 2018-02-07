@@ -7,7 +7,15 @@ import { NgxpTourService } from './ngx-popper-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
 @Directive({ selector: '[tourAnchor]'})
-export class TourAnchorNgxPopperPopoverDirective extends PopperController {}
+export class TourAnchorNgxPopperPopoverDirective extends PopperController implements OnInit {
+  // Overwrite parent ngOnInit to do nothing since the content property isn't set yet.
+  ngOnInit() {}
+
+  // Call this to initialize the popover once the content has been set
+  initialize() {
+    super.ngOnInit();
+  }
+}
 
 @Directive({
   selector: '[tourAnchor]',
@@ -41,6 +49,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     // this.popoverDirective.container =  'body';
     // this.popoverDirective.containerClass = 'ngx-bootstrap';
     this.popoverDirective.placement = step.placement || 'top';
+    this.popoverDirective.initialize();
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
