@@ -43,17 +43,20 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
 
   public showTourStep(step: IStepOption): void {
     this.isActive = true;
-    this.popoverDirective.content = this.tourStepTemplate.template;
-    // this.popoverDirective.popoverContext = { step };
-    // this.popoverDirective.popoverTitle = step.title;
-    // this.popoverDirective.container =  'body';
-    // this.popoverDirective.containerClass = 'ngx-bootstrap';
-    this.popoverDirective.placement = step.placement || 'top';
-    this.popoverDirective.initialize();
+    this.tourStepTemplate.templateComponent.step = step;
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
+    
+
+    this.popoverDirective.content = this.tourStepTemplate.template;
+    this.popoverDirective.targetElement = this.tourStepTemplate.template.referenceObject;
+    this.popoverDirective.placement = step.placement || 'top';
+    this.popoverDirective.showTrigger = 'none';
+
+    this.popoverDirective.initialize();
     this.popoverDirective.show();
+
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
         (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
