@@ -50,7 +50,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     
 
     this.popoverDirective.content = this.tourStepTemplate.template;
-    this.popoverDirective.targetElement = this.tourStepTemplate.template.referenceObject;
+    this.popoverDirective.targetElement = this.element.nativeElement;
     this.popoverDirective.placement = step.placement || 'top';
     this.popoverDirective.showTrigger = 'none';
 
