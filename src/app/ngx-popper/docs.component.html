@@ -251,11 +251,13 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
 </p>
 <pre><code>&lt;tour-step-template&gt;
   &lt;ng-template let-step="step"&gt;
-    &lt;p class="tour-step-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
+    &lt;p class="ngxp-title"&gt;{{ '{{' }}step?.title}}&lt;/p&gt;
+    &lt;p class="ngxp-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
     &lt;div class="tour-step-navigation"&gt;
-      &lt;button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()"&gt;« {{ '{{' }}step?.prevBtnTitle}}&lt;/button&gt;
-      &lt;button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()"&gt;{{ '{{' }}step?.nextBtnTitle}} »&lt;/button&gt;
-      &lt;button class="btn btn-sm btn-default" (click)="tourService.end()"&gt;{{ '{{' }}step?.endBtnTitle}}&lt;/button&gt;
+    &lt;button [disabled]="!tourService.hasPrev(step)" class="ngxp-btn" (click)="tourService.prev()"&gt;« {{ '{{' }}step?.prevBtnTitle}}&lt;/button&gt;
+    
+      &lt;button [disabled]="!tourService.hasNext(step)" class="ngxp-btn" (click)="tourService.next()"&gt;{{ '{{' }}step?.nextBtnTitle}} »&lt;/button&gt;
+      &lt;button class="ngxp-btn" (click)="tourService.end()"&gt;{{ '{{' }}step?.endBtnTitle}}&lt;/button&gt;
     &lt;/div&gt;
   &lt;/ng-template&gt;
 &lt;/tour-step-template&gt;
