@@ -1,8 +1,7 @@
-import { AfterViewInit, Component, ContentChild, Input, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, AfterContentInit, Component, ContentChild, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { IStepOption, TourHotkeyListenerComponent, TourService } from 'ngx-tour-core';
 import { NgxPopperModule, PopperContent } from 'ngx-popper';
 import { TourStepTemplateService } from './tour-step-template.service';
-import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
