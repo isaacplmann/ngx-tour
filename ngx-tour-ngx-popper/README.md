@@ -1,4 +1,4 @@
-# Ngx-Tour Ngx-Bootstrap
+# Ngx-Tour Ngx-Popper
 [![Dependency Status](https://david-dm.org/isaacplmann/ngx-tour-ngx-popper.svg)](https://david-dm.org/isaacplmann/ngx-tour-ngx-popper)
 [![devDependency Status](https://david-dm.org/isaacplmann/ngx-tour-ngx-popper/dev-status.svg)](https://david-dm.org/isaacplmann/ngx-tour-ngx-popper?type=dev)
 
