@@ -1,10 +1,11 @@
 import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
-import { NgxPopperModule, PopperController } from 'ngx-popper';
-import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
+import { NgxPopperModule, PopperController, Placements, Triggers } from 'ngx-popper';
+import { TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
 import { NgxpTourService } from './ngx-popper-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
+import { INgxpStepOption as IStepOption } from './step-option.interface';
 
 @Directive({ selector: '[tourAnchor]'})
 export class TourAnchorNgxPopperPopoverDirective extends PopperController implements OnInit {
@@ -48,11 +49,32 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
     
-
     this.popoverDirective.content = this.tourStepTemplate.template;
     this.popoverDirective.targetElement = this.element.nativeElement;
-    this.popoverDirective.placement = step.placement || 'top';
-    this.popoverDirective.showTrigger = 'none';
+    this.popoverDirective.placement = step.placement || Placements.Auto;
+    this.popoverDirective.showTrigger = Triggers.NONE;
+
+    if(step.popperSettings){
+      this.popoverDirective.boundariesElement = step.popperSettings.boundariesElement || undefined;
+      this.popoverDirective.closeOnClickOutside = step.popperSettings.closeOnClickOutside || false;
+      this.popoverDirective.disableAnimation = step.popperSettings.disableAnimation || false;
+      this.popoverDirective.disabled = step.popperSettings.disabled || false;
+      this.popoverDirective.disableStyle = step.popperSettings.disableStyle || false;
+      this.popoverDirective.forceDetection = step.popperSettings.forceDetection || false;
+      this.popoverDirective.hideOnClickOutside = step.popperSettings.hideOnClickOutside || true;
+      this.popoverDirective.hideOnScroll = step.popperSettings.hideOnScroll || false;
+      this.popoverDirective.hideTimeout = step.popperSettings.hideTimeout || 0;
+      this.popoverDirective.positionFixed = step.popperSettings.positionFixed || false;
+      this.popoverDirective.showDelay = step.popperSettings.showDelay || 0;
+      this.popoverDirective.showOnStart = step.popperSettings.showOnStart || false;
+      this.popoverDirective.showTrigger = step.popperSettings.showTrigger || Triggers.NONE;
+      this.popoverDirective.timeoutAfterShow = step.popperSettings.timeoutAfterShow || 0;
+
+      //TODO: Can these even get passed in via json?
+      this.popoverDirective.popperModifiers = step.popperSettings.popperModifiers || undefined;
+      this.popoverDirective.popperOnHidden = step.popperSettings.popperOnHidden || undefined;
+      this.popoverDirective.popperOnShown = step.popperSettings.popperOnShown || undefined;
+    }
 
     this.popoverDirective.initialize();
     this.popoverDirective.show();

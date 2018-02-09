@@ -25,11 +25,38 @@ this.tourService.initialize([{{ '{' }}
   anchorId: 'some.anchor.id',
   content: 'Some content',
   title: 'First',
+  popperSettings:{{ '{' }}
+    showDelay: 1000
+  }
 }, {{ '{' }}
   anchorId: 'another.anchor.id',
   content: 'Other content',
   title: 'Second',
 }]);</pre>
+  </li>
+  <li>
+    Possible popperSettings to control ngx-popper. (popperSettings are optional) See: <a href="https://www.npmjs.com/package/ngx-popper">ngx-popper</a> for more details and default settings
+    <pre>
+      popperSettings?:{{ '{' }}
+        boundariesElement?: string;
+        closeOnClickOutside?: boolean;
+        disableAnimation?: boolean;
+        disabled?: boolean;
+        disableStyle?: boolean;
+        forceDetection?: boolean;
+        hideOnClickOutside?: boolean;
+        hideOnScroll?: boolean;
+        hideTimeout?: number;
+        popperModifiers?: any;
+        popperOnHidden?: any;
+        popperOnShown?: any;
+        positionFixed?: boolean;
+        showDelay?: number;
+        showOnStart?: boolean;
+        showTrigger?: 'click' | 'mousedown' | 'hover' | 'none';
+        timeoutAfterShow?: number;
+      }
+    </pre>
   </li>
   <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
   <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ngx-popper">demo source code</a> for an example.</li>
@@ -113,8 +140,8 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'top' | 'bottom' | 'left' | 'right' | 'auto'</td>
-      <td><span tourAnchor="config.placement.default">'top'</span></td>
+      <td>'top' | 'bottom' | 'left' | 'right' | 'top-start' | 'bottom-start' | 'left-start' | 'right-start' | 'top-end' | 'bottom-end' | 'left-end' | 'right-end' | 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right' | function</td>
+      <td><span tourAnchor="config.placement.default">'auto'</span></td>
       <td>
       </td>
     </tr>
