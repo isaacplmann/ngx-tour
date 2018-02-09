@@ -14,11 +14,11 @@ import { TourStepTemplateService } from './tour-step-template.service';
 
     <ng-template #defaultTemplate let-step="step">
       <p class="ngxp-title">{{step?.title}}</p>
-      <p class="ngxp-content">{{step?.content}}</p>
+      <p class="ngxp-content" [innerHTML]="step?.content"></p>
       <div class="tour-step-navigation">
-        <button [disabled]="!tourService.hasPrev(step)" class="ngxp-btn" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
-        <button [disabled]="!tourService.hasNext(step)" class="ngxp-btn" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
-        <button class="ngxp-btn" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
+        <button [hidden]="!tourService.hasPrev(step)" class="ngxp-btn btn-prev" (click)="tourService.prev()">« {{step?.prevBtnTitle}}</button>
+        <button [hidden]="!tourService.hasNext(step)" class="ngxp-btn btn-next" (click)="tourService.next()">{{step?.nextBtnTitle}} »</button>
+        <button class="ngxp-btn btn-end" (click)="tourService.end()">{{step?.endBtnTitle}}</button>
       </div>
     </ng-template>
   `,
