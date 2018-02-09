@@ -2,22 +2,13 @@
 
 <p>This is a product tour library built with Angular (2+). It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
 
-<p><code>TourNgxBootstrapModule</code> is an implementation of the tour UI that uses <a href="https://github.com/valor-software/ngx-bootstrap" rel="nofollow" target="_blank">NgxBootstrap</a> popovers to display tour steps.</p>
+<p><code>TourNgxPopperModule</code> is an implementation of the tour UI that uses <a href="https://github.com/valor-software/ngx-popper" rel="nofollow" target="_blank">NgxPopper</a> popovers to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
-  <li><code>npm install ngx-tour-ngx-bootstrap ngx-bootstrap</code></li>
-  <li>Import <code>TourNgxBootstrapModule.forRoot()</code> into your app module</li>
+  <li><code>npm install ngx-tour-ngx-popper ngx-popper</code></li>
+  <li>Import <code>TourNgxPopperModule.forRoot()</code> into your app module</li>
   <li>Make sure <code>RouterModule</code> is imported in your app module</li>
-  <li>Include bootstrap 4 CSS somehow - i.e. in your <code>index.html</code> add this line:<br>
-      <code>
-        &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-      </code>
-  </li>
-  <li>Or for Bootstrap 3:</li><br>
-  <code>
-    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </code>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
@@ -34,14 +25,41 @@ this.tourService.initialize([{{ '{' }}
   anchorId: 'some.anchor.id',
   content: 'Some content',
   title: 'First',
+  popperSettings:{{ '{' }}
+    showDelay: 1000
+  }
 }, {{ '{' }}
   anchorId: 'another.anchor.id',
   content: 'Other content',
   title: 'Second',
 }]);</pre>
   </li>
+  <li>
+    Possible popperSettings to control ngx-popper. (popperSettings are optional) See: <a href="https://www.npmjs.com/package/ngx-popper">ngx-popper</a> for more details and default settings
+    <pre>
+      popperSettings?:{{ '{' }}
+        boundariesElement?: string;
+        closeOnClickOutside?: boolean;
+        disableAnimation?: boolean;
+        disabled?: boolean;
+        disableStyle?: boolean;
+        forceDetection?: boolean;
+        hideOnClickOutside?: boolean;
+        hideOnScroll?: boolean;
+        hideTimeout?: number;
+        popperModifiers?: any;
+        popperOnHidden?: any;
+        popperOnShown?: any;
+        positionFixed?: boolean;
+        showDelay?: number;
+        showOnStart?: boolean;
+        showTrigger?: 'click' | 'mousedown' | 'hover' | 'none';
+        timeoutAfterShow?: number;
+      }
+    </pre>
+  </li>
   <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
-  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ngx-bootstrap">demo source code</a> for an example.</li>
+  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/ngx-popper">demo source code</a> for an example.</li>
 </ol>
 
 <h2>TourService</h2>
@@ -122,11 +140,9 @@ this.tourService.initialize([{{ '{' }}
     </tr>
     <tr>
       <td>placement</td>
-      <td>'top' | 'bottom' | 'left' | 'right' | 'auto'</td>
-      <td><span tourAnchor="config.placement.default">'top'</span></td>
+      <td>'top' | 'bottom' | 'left' | 'right' | 'top-start' | 'bottom-start' | 'left-start' | 'right-start' | 'top-end' | 'bottom-end' | 'left-end' | 'right-end' | 'auto' | 'auto-top' | 'auto-bottom' | 'auto-left' | 'auto-right' | function</td>
+      <td><span tourAnchor="config.placement.default">'auto'</span></td>
       <td>
-        Placement of a popover.
-        See the <a href="https://valor-software.com/ngx-bootstrap/index-bs4.html#/popover#popover-directive">ngx-bootstrap docs</a>.
       </td>
     </tr>
     <tr>
@@ -262,22 +278,14 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
 </p>
 <pre><code>&lt;tour-step-template&gt;
   &lt;ng-template let-step="step"&gt;
-    &lt;p class="tour-step-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
+    &lt;p class="ngxp-title"&gt;{{ '{{' }}step?.title}}&lt;/p&gt;
+    &lt;p class="ngxp-content"&gt;{{ '{{' }}step?.content}}&lt;/p&gt;
     &lt;div class="tour-step-navigation"&gt;
-      &lt;button *ngIf="tourService.hasPrev(step)" class="btn btn-sm btn-default" (click)="tourService.prev()"&gt;« {{ '{{' }}step?.prevBtnTitle}}&lt;/button&gt;
-      &lt;button *ngIf="tourService.hasNext(step)" class="btn btn-sm btn-default" (click)="tourService.next()"&gt;{{ '{{' }}step?.nextBtnTitle}} »&lt;/button&gt;
-      &lt;button class="btn btn-sm btn-default" (click)="tourService.end()"&gt;{{ '{{' }}step?.endBtnTitle}}&lt;/button&gt;
+    &lt;button [disabled]="!tourService.hasPrev(step)" class="ngxp-btn" (click)="tourService.prev()"&gt;« {{ '{{' }}step?.prevBtnTitle}}&lt;/button&gt;
+    
+      &lt;button [disabled]="!tourService.hasNext(step)" class="ngxp-btn" (click)="tourService.next()"&gt;{{ '{{' }}step?.nextBtnTitle}} »&lt;/button&gt;
+      &lt;button class="ngxp-btn" (click)="tourService.end()"&gt;{{ '{{' }}step?.endBtnTitle}}&lt;/button&gt;
     &lt;/div&gt;
   &lt;/ng-template&gt;
 &lt;/tour-step-template&gt;
 </code></pre>
-
-<h2>Styling ngx-popper</h2>
-<p>
-  For the minimum required styles see: <a href="https://github.com/isaacplmann/ngx-tour/blob/master/src/styles.css">style.css</a>
-</p>
-
-<h2>Styling Active Tour Anchor</h2>
-<p>
-  The currently active tour anchor element has a <code>touranchor--is-active</code> class applied to it, so you can apply your own custom styles to that class to highlight the element being referenced.
-</p>
