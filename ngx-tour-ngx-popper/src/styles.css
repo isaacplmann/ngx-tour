@@ -1,0 +1,42 @@
+/* ngx-popper internal classes */
+.ngxp__container {
+  width: 240px;
+  background: #FFF;
+  color: black;
+  text-align: center;
+  padding: 10px !important;
+  border: none !important;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2) !important;
+}
+
+.ngxp__container[x-placement^="top"] .ngxp__arrow {
+  border-color: rgba(0,0,0,0.2) transparent transparent transparent!important;
+}
+
+.ngxp__container[x-placement^="bottom"] .ngxp__arrow {
+  border-color: transparent transparent rgba(0,0,0,0.2) transparent!important;
+}
+
+.ngxp__container[x-placement^="right"] .ngxp__arrow {
+  border-color: transparent rgba(0,0,0,0.2) transparent transparent!important;
+}
+
+.ngxp__container[x-placement^="left"] .ngxp__arrow {
+  border-color: transparent transparent transparent rgba(0,0,0,0.2)!important;
+}
+
+/* ngxp-popper template classes */
+.ngxp-title{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ngxp-content{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.ngxp-btn{
+  border: none;
+  background: none;
+}
