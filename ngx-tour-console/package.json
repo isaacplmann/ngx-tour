@@ -5,6 +5,6 @@
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ngx-tour-core": "^2.0.0"
+    "ngx-tour-core": "^2.1.0"
   }
 }
