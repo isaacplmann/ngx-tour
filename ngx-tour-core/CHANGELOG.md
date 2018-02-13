@@ -1,3 +1,12 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/isaacplmann/ngx-tour) (2018-02-13)
+
+
+### Features
+
+* Add options to set button text
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-11-28)
 
