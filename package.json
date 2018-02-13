@@ -19,7 +19,7 @@
     "start": "ng serve --aot=true",
     "prebuild": "npm run link",
     "build": "ng build",
-    "build:lib:all": "npm run build:lib:core && ng-packagr -p ng-package-console.json && ng-packagr -p ng-package-md-menu.json && ng-packagr -p ng-package-ng-bootstrap.json && ng-packagr -p ng-package-ngx-bootstrap.json && ng-packagr -p ng-package-ngx-popper.json",
+    "build:lib:all": "npm run build:lib:core && ng-packagr -p ng-package-console.json && ng-packagr -p ng-package-md-menu.json && ng-packagr -p ng-package-ng-bootstrap.json && ng-packagr -p ng-package-ngx-bootstrap.json && ng-packagr -p ng-package-ngx-popper.json && cpx ngx-tour-ngx-popper/src/styles.css dist/ngx-tour-ngx-popper",
     "build:lib:core": "ng-packagr -p ng-package-core.json && cd dist/ngx-tour-core && npm link && cd ../.. && npm link ngx-tour-core",
     "build:lib:console": "npm run build:lib:core && ng-packagr -p ng-package-console.json",
     "build:lib:md-menu": "npm run build:lib:core && ng-packagr -p ng-package-md-menu.json",
