@@ -71,9 +71,9 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
       this.popoverDirective.timeoutAfterShow = step.popperSettings.timeoutAfterShow || 0;
 
       //TODO: Can these even get passed in via json?
-      this.popoverDirective.popperModifiers = step.popperSettings.popperModifiers || undefined;
-      this.popoverDirective.popperOnHidden = step.popperSettings.popperOnHidden || undefined;
-      this.popoverDirective.popperOnShown = step.popperSettings.popperOnShown || undefined;
+      // this.popoverDirective.popperModifiers = step.popperSettings.popperModifiers || undefined;
+      // this.popoverDirective.popperOnHidden = step.popperSettings.popperOnHidden || undefined;
+      // this.popoverDirective.popperOnShown = step.popperSettings.popperOnShown || undefined;
     }
 
     this.popoverDirective.initialize();

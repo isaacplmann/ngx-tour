@@ -10,7 +10,7 @@
     "@angular/material": "^5.0.0-rc.1 || ^5.0.0-rc.2 || ^5.0.0"
   },
   "dependencies": {
-    "ngx-tour-core": "^2.0.0",
+    "ngx-tour-core": "^2.1.0",
     "withinviewport": "^2.0.0"
   }
 }

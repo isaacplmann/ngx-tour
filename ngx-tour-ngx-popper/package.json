@@ -8,7 +8,7 @@
     "ngx-popper": "^2.0.1"
   },
   "dependencies": {
-    "ngx-tour-core": "^2.0.0",
+    "ngx-tour-core": "^2.1.0",
     "withinviewport": "^2.0.0"
   }
 }
