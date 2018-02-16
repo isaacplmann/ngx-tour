@@ -23,6 +23,11 @@ var map = {
 		"../../../../../src/app/ngx-bootstrap/ngx-bootstrap.module.ts",
 		"ngx-bootstrap.module",
 		"common"
+	],
+	"./ngx-popper/ngx-popper.module": [
+		"../../../../../src/app/ngx-popper/ngx-popper.module.ts",
+		"common",
+		"ngx-popper.module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -79,6 +84,9 @@ var DemoModule = /** @class */ (function () {
                         loadChildren: './ngx-bootstrap/ngx-bootstrap.module#NgxBootstrapModule',
                         path: 'ngx-bootstrap',
                     }, {
+                        loadChildren: './ngx-popper/ngx-popper.module#NgxpPopperModule',
+                        path: 'ngx-popper',
+                    }, {
                         loadChildren: './console/console.module#ConsoleModule',
                         path: 'console',
                     }, {
@@ -101,7 +109,7 @@ var DemoModule = /** @class */ (function () {
 /***/ "../../../../../src/app/demo.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"page-header pb-3\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"\">MdMenu</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ng-bootstrap\">NgBootstrap</a>\n        </li>\n      <li class=\"nav-item\" role=\"presentation\">\n        <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ngx-bootstrap\">NgxBootstrap</a>\n      </li>\n      <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"console\">Console</a>\n        </li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n\n<h2>One on One Help</h2>\n\nI'm available for (paid) one on one sessions through Code Mentor. I'd love to help you with your app or library.\n<script data-codementor=\"isaacplmann\" data-style=\"button\" data-theme=\"dark\" src=\"https://cdn.codementor.io/assets/badge.js\"></script>\n"
+module.exports = "<section class=\"page-header pb-3\">\n    <h1 class=\"project-name\">Ngx Tour</h1>\n    <h2 class=\"project-tagline\">Product tour using Angular (2+)</h2>\n    <ul class=\"nav nav-pills\">\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"\">MdMenu</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ng-bootstrap\">NgBootstrap</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ngx-bootstrap\">NgxBootstrap</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"ngx-popper\">NgxPopper</a>\n        </li>\n        <li class=\"nav-item\" role=\"presentation\">\n            <a class=\"nav-link\" [routerLinkActive]=\"['active']\" routerLink=\"console\">Console</a>\n        </li>\n    </ul>\n</section>\n\n<router-outlet></router-outlet>\n\n<h2>One on One Help</h2>\n\nI'm available for (paid) one on one sessions through Code Mentor. I'd love to help you with your app or library.\n<script data-codementor=\"isaacplmann\" data-style=\"button\" data-theme=\"dark\" src=\"https://cdn.codementor.io/assets/badge.js\"></script>\n"
 
 /***/ }),
 
