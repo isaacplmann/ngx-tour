@@ -61,7 +61,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
       this.popoverDirective.disabled = step.popperSettings.disabled || false;
       this.popoverDirective.disableStyle = step.popperSettings.disableStyle || false;
       this.popoverDirective.forceDetection = step.popperSettings.forceDetection || false;
-      this.popoverDirective.hideOnClickOutside = step.popperSettings.hideOnClickOutside || true;
+      this.popoverDirective.hideOnClickOutside = step.popperSettings.hideOnClickOutside || false;
       this.popoverDirective.hideOnScroll = step.popperSettings.hideOnScroll || false;
       this.popoverDirective.hideTimeout = step.popperSettings.hideTimeout || 0;
       this.popoverDirective.positionFixed = step.popperSettings.positionFixed || false;
