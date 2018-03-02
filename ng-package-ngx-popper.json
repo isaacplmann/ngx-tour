@@ -6,7 +6,7 @@
   "lib": {
     "entryFile": "src/public_api.ts",
     "externals": {
-      "MrFrankel/ngx-popper": "ngx",
+      "MrFrankel/ngx-popper": "ngx-popper",
       "rxjs/operator/let": "Rx.Observable.prototype",
       "rxjs/scheduler/queue": "Rx.Observable.prototype",
       "withinviewport": "withinviewport"
