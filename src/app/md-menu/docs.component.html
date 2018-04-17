@@ -1,24 +1,38 @@
 <h2>About</h2>
-<p>This is a product tour library built with Angular (2+).  It's inspired by <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
-<p><code>TourMatMenuModule</code> is an implementation of the tour ui that uses <a href="http://material.angular.io">Angular Material</a> MatMenu to display tour steps.</p>
+<p>This is a product tour library built with Angular (2+). It's inspired by
+  <a tourAnchor="angular-ui-tour" href="http://benmarch.github.io/angular-ui-tour">angular-ui-tour</a>.</p>
+<p>
+  <code>TourMatMenuModule</code> is an implementation of the tour ui that uses
+  <a href="http://material.angular.io">Angular Material</a> MatMenu to display tour steps.</p>
 
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
-  <li><code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code></li>
-  <li>import <code>TourMatMenuModule.forRoot()</code> into your app module</li>
-  <li>Make sure <code>RouterModule</code> is imported in your app module</li>
-  <li>Make sure Angular Material is <a href="https://material.angular.io/guide/getting-started">installed correctly</a></li>
+  <li>
+    <code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code>
+  </li>
+  <li>Import
+    <code>TourMatMenuModule.forRoot()</code> into your app module</li>
+  <li>Make sure
+    <code>RouterModule</code> is imported in your app module</li>
+  <li>Make sure Angular Material is
+    <a href="https://material.angular.io/guide/getting-started">installed correctly</a>
+  </li>
 </ol>
 
 <h2 tourAnchor="usage">Usage</h2>
+
+<h4>Simple project</h4>
 <ol>
-  <li>Add <code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code> to your root app component</li>
+  <li>Add
+    <code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code> to your root app component</li>
   <li>
-    Define anchor points for the tour steps by adding the <code>tourAnchor</code> directive throughout your app.
+    Define anchor points for the tour steps by adding the
+    <code>tourAnchor</code> directive throughout your app.
     <pre><code>&lt;div tourAnchor="some.anchor.id"&gt;...&lt;/div&gt;</code></pre>
   </li>
   <li>
-    Define your tour steps using <code>tourService.initialize(steps)</code>
+    Define your tour steps using
+    <code>tourService.initialize(steps)</code>
     <pre>
 this.tourService.initialize([{{ '{' }}
   anchorId: 'some.anchor.id',
@@ -30,12 +44,46 @@ this.tourService.initialize([{{ '{' }}
   title: 'Second',
 }]);</pre>
   </li>
-  <li>Start the tour with <code tourAnchor="tourService.start">tourService.start()</code></li>
-  <li>Check out the <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu">demo source code</a> for an example.</li>
+  <li>Start the tour with
+    <code tourAnchor="tourService.start">tourService.start()</code>
+  </li>
+  <li>Check out the
+    <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu">demo source code</a> for an example.</li>
+</ol>
+
+<h4>Lazy loaded modules</h4>
+
+<ol>
+
+  <li>
+    Add <pre><code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code></pre> to your root app component.
+  </li>
+  <li>
+    Import <pre><code>TourMatMenuModule.forRoot()</code></pre> into your app module.
+  </li>
+  <li>
+    Import <pre><code>TourMatMenuModule</code></pre> into all lazy loaded modules needing the tour.
+  </li>
+  <li>
+    Import the <pre><code>TourService</code></pre> in your highest level eagerly loaded component and initialize all your steps there (even the ones in the lazy loaded modules). <strong>Note:</strong>
+    Make sure every step object contains its route. For example, if the route to a step is '/home' then your step object should have <code>route: '/home'</code> as a member.
+  </li>
+  <li>
+    Define anchor points for your steps by adding the <pre><code>tourAnchor</code></pre> directive throughout your modules (any component that requires it at any level).
+    <pre><code>&lt;div tourAnchor="some.anchor.id"&gt;...&lt;/div&gt;</code></pre>
+  </li>
+  <li>
+    Start the tour with <pre><code tourAnchor="tourService.start">tourService.start()</code></pre> in the same component you initialized your steps. Call this right after the initialization.
+  </li>
+  <li>Check out the
+    <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu/mat-lazy-menu">demo source code</a> for an example.
+  </li>
+
 </ol>
 
 <h2>TourService</h2>
-<p>The <code>TourService</code> controls the tour.  Some key functions include:</p>
+<p>The
+  <code>TourService</code> controls the tour. Some key functions include:</p>
 <dl>
   <dt>start()</dt>
   <dd>Starts the tour</dd>
@@ -94,28 +142,30 @@ this.tourService.initialize([{{ '{' }}
       <td>string | UrlSegment[]</td>
       <td>undefined</td>
       <td>
-        The route to which the tour should navigate before attempting to show this tour step.
-        If undefined, no navigation is attempted.
+        The route to which the tour should navigate before attempting to show this tour step. If undefined, no navigation is attempted.
       </td>
     </tr>
     <tr tourAnchor="config.nextStep">
       <td>nextStep</td>
       <td>number | string</td>
       <td>undefined</td>
-      <td>The step index or stepId of the next step.  If undefined, the next step in the steps array is used.</td>
+      <td>The step index or stepId of the next step. If undefined, the next step in the steps array is used.</td>
     </tr>
     <tr>
       <td>prevStep</td>
       <td>number | string</td>
       <td>undefined</td>
-      <td>The step index or stepId of the previous step.  If undefined, the previous step in the steps array is used.</td>
+      <td>The step index or stepId of the previous step. If undefined, the previous step in the steps array is used.</td>
     </tr>
     <tr>
-      <td><del>placement</del></td>
+      <td>
+        <del>placement</del>
+      </td>
       <td>N/A</td>
       <td>N/A</td>
       <td>
-        Ignored by <code>TourMatMenuModule</code>
+        Ignored by
+        <code>TourMatMenuModule</code>
       </td>
     </tr>
     <tr>
@@ -123,8 +173,8 @@ this.tourService.initialize([{{ '{' }}
       <td>boolean</td>
       <td>false</td>
       <td>
-        Tour steps automatically scroll to the middle of the screen, if they are off the screen when shown.
-        Setting this value to true will disable the scroll behavior.
+        Tour steps automatically scroll to the middle of the screen, if they are off the screen when shown. Setting this value to
+        true will disable the scroll behavior.
       </td>
     </tr>
     <tr tourAnchor="config.buttons.custom">
@@ -155,7 +205,8 @@ this.tourService.initialize([{{ '{' }}
 </table>
 
 <h2>Defaults</h2>
-<p>You can set default values in the <code>TourService.initialize</code> function.</p>
+<p>You can set default values in the
+  <code>TourService.initialize</code> function.</p>
 <pre>
 this.tourService.initialize(steps, {{ '{' }}
   route: '',
@@ -166,19 +217,32 @@ this.tourService.initialize(steps, {{ '{' }}
 
 <h2 tourAnchor="hotkeys">Hotkeys</h2>
 <p>
-  Hotkeys are provided using Angular's <code>@HostListener</code> decorator.  Hotkeys are enabled when the tour starts and disabled when the tour ends.
+  Hotkeys are provided using Angular's
+  <code>@HostListener</code> decorator. Hotkeys are enabled when the tour starts and disabled when the tour ends.
 </p>
 <ul>
-  <li><strong>left arrow</strong><span> - previous step</span></li>
-  <li><strong>right arrow</strong><span> - next step</span></li>
-  <li><strong>esc</strong><span> - end tour</span></li>
+  <li>
+    <strong>left arrow</strong>
+    <span> - previous step</span>
+  </li>
+  <li>
+    <strong>right arrow</strong>
+    <span> - next step</span>
+  </li>
+  <li>
+    <strong>esc</strong>
+    <span> - end tour</span>
+  </li>
 </ul>
 <p>
-  You can disable hotkeys by calling <code>tourService.disableHotkeys()</code> or re-enable with <code>tourService.enableHotkeys()</code>
+  You can disable hotkeys by calling
+  <code>tourService.disableHotkeys()</code> or re-enable with
+  <code>tourService.enableHotkeys()</code>
 </p>
 
 <h2 tourAnchor="events">Event Observables</h2>
-<p>The <code>TourService</code> emits events that can be subscribed to like this:</p>
+<p>The
+  <code>TourService</code> emits events that can be subscribed to like this:</p>
 <pre>
 this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
   console.log('tour configured with these steps:', steps);
@@ -243,7 +307,9 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
 
 <h2 tourAnchor="template">Custom template</h2>
 <p>
-  You can also customize the tour step template by providing an <code>&lt;ng-template let-step="step" &gt;</code> inside the <code>&lt;tour-step-template&gt;</code>
+  You can also customize the tour step template by providing an
+  <code>&lt;ng-template let-step="step" &gt;</code> inside the
+  <code>&lt;tour-step-template&gt;</code>
 </p>
 <p>
   The default template is equivalent to this:
@@ -273,5 +339,6 @@ this.tourService.initialize$.subscribe((steps: IStepOption[]) => {{ '{' }}
 
 <h2>Styling Active Tour Anchor</h2>
 <p>
-  The currently active tour anchor element has a <code>touranchor--is-active</code> class applied to it, so you can apply your own custom styles to that class to highlight the element being referenced.
+  The currently active tour anchor element has a
+  <code>touranchor--is-active</code> class applied to it, so you can apply your own custom styles to that class to highlight the element being referenced.
 </p>

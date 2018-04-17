@@ -12,6 +12,9 @@ import { DemoComponent } from './demo.component';
     BrowserAnimationsModule,
     BrowserModule,
     RouterModule.forRoot([{
+      loadChildren: './md-menu/md-menu/mat-lazy-tour/app.module#AppModule',
+      path: 'mat-lazy-tour',
+    }, {
       loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
       path: 'ng-bootstrap',
     }, {
