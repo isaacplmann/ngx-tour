@@ -1,5 +1,5 @@
-import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
-import { NgbPopover, Placement } from '@ng-bootstrap/ng-bootstrap';
+import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit, ComponentFactoryResolver, Injector, NgZone, Renderer2, ViewContainerRef } from '@angular/core';
+import { NgbPopover, Placement, NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
 import { TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';
 
@@ -7,8 +7,28 @@ import { NgbTourService } from './ng-bootstrap-tour.service';
 import { INgbStepOption } from './step-option.interface';
 import { TourStepTemplateService } from './tour-step-template.service';
 
+
 @Directive({ selector: '[tourAnchor]' })
-export class TourAnchorNgBootstrapPopoverDirective extends NgbPopover {}
+export class TourAnchorNgBootstrapPopoverDirective extends NgbPopover {
+
+  private elementRef: ElementRef;
+
+  constructor(_elementRef: ElementRef, _renderer: Renderer2, injector: Injector, componentFactoryResolver: ComponentFactoryResolver,
+  viewContainerRef: ViewContainerRef, config: NgbPopoverConfig, ngZone: NgZone) {
+    super(_elementRef, _renderer, injector, componentFactoryResolver, viewContainerRef, config, ngZone);
+    this.elementRef = _elementRef;
+    config.container = 'router-outlet';
+  }
+
+  close() {
+    // Fix bug with popupbox closing
+    super.close();
+  }
+
+  toggle() {
+    // Fix bug with popupbox closing
+  }
+}
 
 @Directive({
   selector: '[tourAnchor]',
