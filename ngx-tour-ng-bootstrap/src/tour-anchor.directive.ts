@@ -7,8 +7,9 @@ import { NgbTourService } from './ng-bootstrap-tour.service';
 import { INgbStepOption } from './step-option.interface';
 import { TourStepTemplateService } from './tour-step-template.service';
 
+
 @Directive({ selector: '[tourAnchor]' })
-export class TourAnchorNgBootstrapPopoverDirective extends NgbPopover {}
+export class TourAnchorNgBootstrapPopoverDirective extends NgbPopover { }
 
 @Directive({
   selector: '[tourAnchor]',
@@ -25,6 +26,8 @@ export class TourAnchorNgBootstrapDirective implements OnInit, OnDestroy, TourAn
     private element: ElementRef,
     @Host() private popoverDirective: TourAnchorNgBootstrapPopoverDirective,
   ) {
+
+    this.popoverDirective.toggle = () => { };
   }
 
   public ngOnInit(): void {
