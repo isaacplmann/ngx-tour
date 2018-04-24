@@ -1,3 +1,12 @@
+<a name="2.0.1"></a>
+# [2.0.1](https://github.com/isaacplmann/ngx-tour) (2017-04-24)
+
+
+### Bug Fixes
+
+* Clicking tourAnchor closed and re-opened the tour
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-01-31)
 
