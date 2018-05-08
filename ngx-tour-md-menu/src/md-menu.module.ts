@@ -15,7 +15,7 @@ export { TourAnchorMatMenuDirective, TourStepTemplateComponent, TourService };
   entryComponents: [TourAnchorOpenerComponent],
   exports: [TourAnchorMatMenuDirective, TourStepTemplateComponent, TourModule],
   imports: [CommonModule, TourModule,
-    MatMenuModule, MatCardModule, MatButtonModule, MatIconModule
+    MatMenuModule, MatCardModule, MatButtonModule, MatIconModule,
   ],
 })
 export class TourMatMenuModule {

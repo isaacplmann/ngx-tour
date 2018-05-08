@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { DemoComponent } from './demo.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   bootstrap: [DemoComponent],
@@ -11,6 +12,7 @@ import { DemoComponent } from './demo.component';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    OverlayModule,
     RouterModule.forRoot([{
       loadChildren: './md-menu/mat-lazy-tour/app.module#AppModule',
       path: 'mat-lazy-tour',

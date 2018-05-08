@@ -3,12 +3,14 @@ import 'rxjs/add/operator/first';
 
 import { Injectable } from '@angular/core';
 import { NavigationStart, Router, UrlSegment } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/operator/map';
-import { mergeStatic } from 'rxjs/operator/merge';
-import { Subject } from 'rxjs/Subject';
 
 import { TourAnchorDirective } from './tour-anchor.directive';
+import { Subject } from 'rxjs';
+import { first } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { merge as mergeStatic} from 'rxjs/observable/merge';
+import { map } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 
 export interface IStepOption {
   stepId?: string;
@@ -88,7 +90,10 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.status = TourState.ON;
     this.goToStep(this.loadStep(stepId));
     this.start$.next();
-    this.router.events.filter(event => event instanceof NavigationStart).first().subscribe(() => {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationStart),
+      first()
+    ).subscribe(() => {
       if (this.currentStep) {
         this.hideStep(this.currentStep);
       }
@@ -216,7 +221,10 @@ export class TourService<T extends IStepOption = IStepOption> {
     }
     this.currentStep = step;
     this.showStep(this.currentStep);
-    this.router.events.filter(event => event instanceof NavigationStart).first().subscribe(() => {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationStart),
+      first()
+    ).subscribe(() => {
       if (this.currentStep) {
         this.hideStep(this.currentStep);
       }
