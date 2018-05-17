@@ -31,7 +31,7 @@
     "build:lib:ngx-bootstrap": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ngx-bootstrap && npm link ngx-tour-core && cd ../.. && npm run build:lib:ngx-bootstrap:base",
     "build:lib:ngx-bootstrap:base": "ng build ngx-tour-ngx-bootstrap --prod && cpx projects/ngx-tour-ngx-bootstrap/CHANGELOG.md dist/ngx-tour-ngx-bootstrap/",
     "build:lib:ngx-popper": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ngx-popper && npm link ngx-tour-core && cd ../.. && npm run build:lib:ngx-popper:base",
-    "build:lib:ngx-popper:base": "ng build ngx-tour-ngx-popper --prod && cpx projects/ngx-tour-ngx-popper/src/lib/styles.css dist/ngx-tour-ngx-popper/ && cpx projects/ngx-tour-ngx-popper/CHANGELOG.md dist/ngx-tour-ngx-popper/",
+    "build:lib:ngx-popper:base": "ng build ngx-tour-ngx-popper --prod && cpx projects/ngx-tour-ngx-popper/src/styles.css dist/ngx-tour-ngx-popper/ && cpx projects/ngx-tour-ngx-popper/CHANGELOG.md dist/ngx-tour-ngx-popper/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
