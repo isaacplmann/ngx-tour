@@ -1,0 +1,75 @@
+<a name="3.0.0"></a>
+
+# [3.0.0](https://github.com/isaacplmann/ngx-tour) (2018-05-17)
+
+### BREAKING CHANGES
+
+* Require Angular 6 as peer dependency
+* Require Angular Material 6 as peer dependency
+
+<a name="2.0.0"></a>
+
+# [2.0.0](https://github.com/isaacplmann/ngx-tour) (2017-01-31)
+
+### Features
+
+* Add touranchor-is-active class
+* Add options to set button text
+
+<a name="2.0.0-rc.2"></a>
+
+# [2.0.0-rc.2](https://github.com/isaacplmann/ngx-tour) (2017-10-20)
+
+### BREAKING CHANGES
+
+* Update to ngx-tour-core 2.x (Angular 5 and disabling hotkeys)
+* Update @angular/material to 5.0.0-rc.2
+
+<a name="2.0.0-beta.12"></a>
+
+# [2.0.0-beta.12](https://github.com/isaacplmann/ngx-tour) (2017-10-20)
+
+### BREAKING CHANGES
+
+* Update @angular/material to 2.0.0-beta.12
+* Except for the library name, all 'md-' strings have been changed to 'mat-'
+
+<a name="1.0.4"></a>
+
+# [1.0.4](https://github.com/isaacplmann/ngx-tour) (2017-08-30)
+
+### Bug fixes
+
+* Update @angular/material to 2.0.0-beta.10
+
+<a name="1.0.3"></a>
+
+# [1.0.3](https://github.com/isaacplmann/ngx-tour) (2017-07-31)
+
+### Bug fixes
+
+* Fix aot build
+
+<a name="1.0.2"></a>
+
+# [1.0.2](https://github.com/isaacplmann/ngx-tour) (2017-07-19)
+
+### Docs
+
+* Add readme
+
+<a name="1.0.1"></a>
+
+# [1.0.1](https://github.com/isaacplmann/ngx-tour) (2017-07-18)
+
+### Bug fixes
+
+* Export all of core exports
+
+<a name="1.0.0"></a>
+
+# [1.0.0](https://github.com/isaacplmann/ngx-tour) (2017-07-18)
+
+### BREAKING CHANGES
+
+* Split out to a separate package

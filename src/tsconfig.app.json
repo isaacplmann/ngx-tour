@@ -1,21 +1,12 @@
 {
   "extends": "../tsconfig.json",
-  "angularCompilerOptions": {
-    "paths": {
-      "ngx-tour": [ "../dist/ngx-tour" ]
-    }
-  },
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "baseUrl": "",
-    "types": [],
-    "paths": {
-      "ngx-tour": [ "../dist/ngx-tour" ]
-    }
+    "types": []
   },
   "exclude": [
-    "test.ts",
+    "src/test.ts",
     "**/*.spec.ts"
   ]
 }

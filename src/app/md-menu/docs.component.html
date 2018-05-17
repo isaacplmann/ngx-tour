@@ -8,7 +8,7 @@
 <h2 tourAnchor="installation">Installation</h2>
 <ol>
   <li>
-    <code>npm install ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code>
+    <code>npm install ngx-tour-core ngx-tour-md-menu @angular/animations @angular/cdk @angular/http @angular/material</code>
   </li>
   <li>Import
     <code>TourMatMenuModule.forRoot()</code> into your app module</li>
@@ -56,24 +56,34 @@ this.tourService.initialize([{{ '{' }}
 <ol>
 
   <li>
-    Add <pre><code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code></pre> to your root app component.
+    Add
+    <pre><code>&lt;tour-step-template&gt;&lt;/tour-step-template&gt;</code></pre> to your root app component.
   </li>
   <li>
-    Import <pre><code>TourMatMenuModule.forRoot()</code></pre> into your app module.
+    Import
+    <pre><code>TourMatMenuModule.forRoot()</code></pre> into your app module.
   </li>
   <li>
-    Import <pre><code>TourMatMenuModule</code></pre> into all lazy loaded modules needing the tour.
+    Import
+    <pre><code>TourMatMenuModule</code></pre> into all lazy loaded modules needing the tour.
   </li>
   <li>
-    Import the <pre><code>TourService</code></pre> in your highest level eagerly loaded component and initialize all your steps there (even the ones in the lazy loaded modules). <strong>Note:</strong>
-    Make sure every step object contains its route. For example, if the route to a step is '/home' then your step object should have <code>route: '/home'</code> as a member.
+    Import the
+    <pre><code>TourService</code></pre> in your highest level eagerly loaded component and initialize all your steps there (even the ones in the lazy loaded
+    modules).
+    <strong>Note:</strong>
+    Make sure every step object contains its route. For example, if the route to a step is '/home' then your step object should
+    have
+    <code>route: '/home'</code> as a member.
   </li>
   <li>
-    Define anchor points for your steps by adding the <pre><code>tourAnchor</code></pre> directive throughout your modules (any component that requires it at any level).
+    Define anchor points for your steps by adding the
+    <pre><code>tourAnchor</code></pre> directive throughout your modules (any component that requires it at any level).
     <pre><code>&lt;div tourAnchor="some.anchor.id"&gt;...&lt;/div&gt;</code></pre>
   </li>
   <li>
-    Start the tour with <pre><code tourAnchor="tourService.start">tourService.start()</code></pre> in the same component you initialized your steps. Call this right after the initialization.
+    Start the tour with
+    <pre><code>tourService.start()</code></pre> in the same component you initialized your steps. Call this right after the initialization.
   </li>
   <li>Check out the
     <a href="https://github.com/isaacplmann/ngx-tour/tree/master/src/app/md-menu/mat-lazy-menu">demo source code</a> for an example.
