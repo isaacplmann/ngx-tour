@@ -21,6 +21,7 @@ import withinviewport from 'withinviewport';
 import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { first } from 'rxjs/operators';
+import {TourBackdropService} from './tour-backdrop.service';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -39,7 +40,8 @@ export class TourAnchorMatMenuDirective
     private viewContainer: ViewContainerRef,
     private element: ElementRef,
     private tourService: TourService,
-    private tourStepTemplate: TourStepTemplateService
+    private tourStepTemplate: TourStepTemplateService,
+    private tourBackdrop: TourBackdropService
   ) {
     this.opener = this.viewContainer.createComponent(
       this.componentFactoryResolver.resolveComponentFactory(
@@ -74,6 +76,8 @@ export class TourAnchorMatMenuDirective
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
 
+    this.tourBackdrop.show(this.element);
+
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
@@ -81,12 +85,13 @@ export class TourAnchorMatMenuDirective
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }
-    this.menuCloseSubscription = this.opener.trigger.onMenuClose
+    this.menuCloseSubscription = this.opener.trigger.menuClosed
       .pipe(first())
-      .subscribe(event => {
+      .subscribe(() => {
         if (this.tourService.getStatus() !== TourState.OFF) {
           this.tourService.end();
         }
+        this.tourBackdrop.close();
       });
   }
 
@@ -96,5 +101,8 @@ export class TourAnchorMatMenuDirective
       this.menuCloseSubscription.unsubscribe();
     }
     this.opener.trigger.closeMenu();
+    if (this.tourService.getStatus() === TourState.OFF) {
+      this.tourBackdrop.close();
+    }
   }
 }

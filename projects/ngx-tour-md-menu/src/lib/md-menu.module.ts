@@ -7,6 +7,7 @@ import { TourModule, TourService } from 'ngx-tour-core';
 import { TourAnchorMatMenuDirective } from './tour-anchor.directive';
 import { TourStepTemplateComponent } from './tour-step-template.component';
 import { TourStepTemplateService } from './tour-step-template.service';
+import {TourBackdropService} from './tour-backdrop.service';
 
 export { TourAnchorMatMenuDirective, TourStepTemplateComponent, TourService };
 
@@ -24,6 +25,7 @@ export class TourMatMenuModule {
       ngModule: TourMatMenuModule,
       providers: [
         TourStepTemplateService,
+        TourBackdropService,
         ...TourModule.forRoot().providers,
       ],
     };
