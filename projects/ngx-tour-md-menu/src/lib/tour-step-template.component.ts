@@ -6,7 +6,11 @@ import { TourStepTemplateService } from './tour-step-template.service';
 
 @Component({
   selector: 'tour-step-template',
-  styles: ['/deep/ .tour-step .mat-menu-content { padding: 0px }'],
+  styles: [`
+      ::ng-deep .tour-step .mat-menu-content { 
+          padding: 0 !important; 
+      }
+  `],
   template: `
     <mat-menu [overlapTrigger]="false" class="tour-step">
       <ng-container *ngTemplateOutlet="stepTemplate || defaultTemplate; context: { step: step }"></ng-container>
