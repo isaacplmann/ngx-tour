@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, OnChanges, SimpleChanges, ViewChild, Input } from '@angular/core';
+import { Component, ViewChild, Input } from '@angular/core';
 import { MatMenuTrigger, MatMenu } from '@angular/material';
 
 @Component({
   selector: 'tourAnchorOpener',
+  styles: [`:host { display: none; }`],
   template: `<span [matMenuTriggerFor]="menu" #trigger="matMenuTrigger"></span>`
 })
 export class TourAnchorOpenerComponent {
