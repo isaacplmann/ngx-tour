@@ -10,9 +10,7 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import {
-  IStepOption,
   TourAnchorDirective,
-  TourService,
   TourState
 } from 'ngx-tour-core';
 import { Subscription } from 'rxjs';
@@ -22,6 +20,8 @@ import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { first } from 'rxjs/operators';
 import {TourBackdropService} from './tour-backdrop.service';
+import { INgxmStepOption as IStepOption } from './step-option.interface';
+import {NgxmTourService} from './ngx-md-menu-tour.service';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -39,7 +39,7 @@ export class TourAnchorMatMenuDirective
     private injector: Injector,
     private viewContainer: ViewContainerRef,
     private element: ElementRef,
-    private tourService: TourService,
+    private tourService: NgxmTourService,
     private tourStepTemplate: TourStepTemplateService,
     private tourBackdrop: TourBackdropService
   ) {
@@ -76,7 +76,11 @@ export class TourAnchorMatMenuDirective
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
 
-    this.tourBackdrop.show(this.element);
+    if (step.enableBackdrop) {
+      this.tourBackdrop.show(this.element);
+    } else {
+      this.tourBackdrop.close();
+    }
 
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';

@@ -35,6 +35,11 @@ export class MdMenuComponent {
       content: 'Every step needs an anchor.',
       title: 'Anchor',
     }, {
+      anchorId: 'config.enableBackdrop',
+      content: 'You can enable backdrop to highlight active element.',
+      title: 'Backdrop',
+      enableBackdrop: true
+    }, {
       anchorId: 'config.route',
       content: 'Tours can span multiple routes.',
       title: 'Route',
