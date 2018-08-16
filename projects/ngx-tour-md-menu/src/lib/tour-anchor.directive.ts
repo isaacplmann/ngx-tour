@@ -10,9 +10,7 @@ import {
   ViewContainerRef
 } from '@angular/core';
 import {
-  IStepOption,
   TourAnchorDirective,
-  TourService,
   TourState
 } from 'ngx-tour-core';
 import { Subscription } from 'rxjs';
@@ -21,6 +19,9 @@ import withinviewport from 'withinviewport';
 import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { first } from 'rxjs/operators';
+import {TourBackdropService} from './tour-backdrop.service';
+import { INgxmStepOption as IStepOption } from './step-option.interface';
+import {NgxmTourService} from './ngx-md-menu-tour.service';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -38,8 +39,9 @@ export class TourAnchorMatMenuDirective
     private injector: Injector,
     private viewContainer: ViewContainerRef,
     private element: ElementRef,
-    private tourService: TourService,
-    private tourStepTemplate: TourStepTemplateService
+    private tourService: NgxmTourService,
+    private tourStepTemplate: TourStepTemplateService,
+    private tourBackdrop: TourBackdropService
   ) {
     this.opener = this.viewContainer.createComponent(
       this.componentFactoryResolver.resolveComponentFactory(
@@ -74,6 +76,12 @@ export class TourAnchorMatMenuDirective
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
 
+    if (step.enableBackdrop) {
+      this.tourBackdrop.show(this.element);
+    } else {
+      this.tourBackdrop.close();
+    }
+
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
@@ -81,12 +89,13 @@ export class TourAnchorMatMenuDirective
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }
-    this.menuCloseSubscription = this.opener.trigger.onMenuClose
+    this.menuCloseSubscription = this.opener.trigger.menuClosed
       .pipe(first())
-      .subscribe(event => {
+      .subscribe(() => {
         if (this.tourService.getStatus() !== TourState.OFF) {
           this.tourService.end();
         }
+        this.tourBackdrop.close();
       });
   }
 
@@ -96,5 +105,8 @@ export class TourAnchorMatMenuDirective
       this.menuCloseSubscription.unsubscribe();
     }
     this.opener.trigger.closeMenu();
+    if (this.tourService.getStatus() === TourState.OFF) {
+      this.tourBackdrop.close();
+    }
   }
 }
