@@ -6002,7 +6002,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/isaac/Documents/Work/Contributions/ng2-tour/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/isaac/Documents/Contributions/ngx-tour/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

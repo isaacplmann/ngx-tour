@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/isaac/Documents/Work/Contributions/ng2-tour/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/isaac/Documents/Contributions/ngx-tour/src/styles.css */"./src/styles.css");
 
 
 /***/ })
