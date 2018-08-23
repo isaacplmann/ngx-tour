@@ -1,3 +1,11 @@
+<a name="3.1.1"></a>
+
+# [3.1.1](https://github.com/isaacplmann/ngx-tour) (2018-08-23)
+
+### Bug fixes
+
+- Add class to backdrop element
+
 <a name="3.1.0"></a>
 
 # [3.1.0](https://github.com/isaacplmann/ngx-tour) (2018-08-16)
