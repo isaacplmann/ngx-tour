@@ -77,7 +77,11 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     }
 
     this.popoverDirective.initialize();
-    this.popoverDirective.show();
+    if (step.hasOwnProperty('popperSettings') && step.popperSettings.hasOwnProperty('showDelay')) {
+      this.popoverDirective.scheduledShow();
+    } else {
+      this.popoverDirective.show();
+    }
 
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
