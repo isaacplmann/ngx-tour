@@ -1,3 +1,10 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-21)
+
+### BREAKING CHANGES
+
+* Require Angular 7 as peer dependency
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/isaacplmann/ngx-tour) (2018-05-17)
 
