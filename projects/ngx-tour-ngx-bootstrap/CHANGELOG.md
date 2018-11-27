@@ -1,11 +1,11 @@
 <a name="4.0.0"></a>
 
-# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-21)
+# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-27)
 
 ### BREAKING CHANGES
 
-* Require Angular 7 as peer dependency
-* Require ngx-bootstrap 3.1 as peer dependency
+- Require Angular 7 as peer dependency
+- Require ngx-bootstrap 3.1 as peer dependency
 
 <a name="3.0.0"></a>
 
@@ -13,8 +13,8 @@
 
 ### BREAKING CHANGES
 
-* Require Angular 6 as peer dependency
-* Require ngx-bootstrap 3 as peer dependency
+- Require Angular 6 as peer dependency
+- Require ngx-bootstrap 3 as peer dependency
 
 <a name="2.0.0"></a>
 
@@ -22,12 +22,12 @@
 
 ### Features
 
-* Add touranchor-is-active class
-* Add options to set button text
+- Add touranchor-is-active class
+- Add options to set button text
 
 ### Fixes
 
-* No component factory found for PopoverContainerComponent
+- No component factory found for PopoverContainerComponent
 
 <a name="2.0.0-beta.9"></a>
 
@@ -35,12 +35,12 @@
 
 ### BREAKING CHANGES
 
-* Require Angular 5
-* Require ngx-bootstrap ^2.0.0-beta.9
+- Require Angular 5
+- Require ngx-bootstrap ^2.0.0-beta.9
 
 ### Features
 
-* Disable/enable hotkeys
+- Disable/enable hotkeys
 
 <a name="1.0.4"></a>
 
@@ -48,4 +48,4 @@
 
 ### BREAKING CHANGES
 
-* Create plugin for ngx-bootstrap
+- Create plugin for ngx-bootstrap

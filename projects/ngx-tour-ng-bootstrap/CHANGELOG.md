@@ -1,11 +1,11 @@
 <a name="4.0.0"></a>
 
-# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-21)
+# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-27)
 
 ### BREAKING CHANGES
 
-* Require Angular 7 as peer dependency
-* Require ng-bootstrap 4 as peer dependency
+- Require Angular 7 as peer dependency
+- Require ng-bootstrap 4 as peer dependency
 
 <a name="3.0.0"></a>
 
@@ -13,8 +13,8 @@
 
 ### BREAKING CHANGES
 
-* Require Angular 6 as peer dependency
-* Require ng-bootstrap 2 as peer dependency
+- Require Angular 6 as peer dependency
+- Require ng-bootstrap 2 as peer dependency
 
 <a name="2.0.1"></a>
 
@@ -22,7 +22,7 @@
 
 ### Bug Fixes
 
-* Clicking tourAnchor closed and re-opened the tour
+- Clicking tourAnchor closed and re-opened the tour
 
 <a name="2.0.0"></a>
 
@@ -30,8 +30,8 @@
 
 ### Features
 
-* Add touranchor-is-active class
-* Add options to set button text
+- Add touranchor-is-active class
+- Add options to set button text
 
 <a name="2.0.0-beta.5-2"></a>
 
@@ -39,11 +39,11 @@
 
 ### BREAKING CHANGE
 
-* Require Angular 5
+- Require Angular 5
 
 ### Features
 
-* Disable/enable hotkeys
+- Disable/enable hotkeys
 
 <a name="2.0.0-beta.5-1"></a>
 
@@ -51,7 +51,7 @@
 
 ### Features
 
-* Allow all placement options
+- Allow all placement options
 
 <a name="2.0.0-beta.5"></a>
 
@@ -59,7 +59,7 @@
 
 ### BREAKING CHANGES
 
-* Update to ng-bootstrap@1.0.0-beta.5 and bootstrap 4
+- Update to ng-bootstrap@1.0.0-beta.5 and bootstrap 4
 
 <a name="1.0.6"></a>
 
@@ -67,7 +67,7 @@
 
 ### Bug fixes
 
-* Fix bundling for real this time
+- Fix bundling for real this time
 
 <a name="1.0.5"></a>
 
@@ -75,7 +75,7 @@
 
 ### Bug fixes
 
-* Fix bundling to not include ng-bootstrap library
+- Fix bundling to not include ng-bootstrap library
 
 <a name="1.0.4"></a>
 
@@ -83,7 +83,7 @@
 
 ### Bug fixes
 
-* Export TourService
+- Export TourService
 
 <a name="1.0.3"></a>
 
@@ -91,7 +91,7 @@
 
 ### Bug fixes
 
-* Remove max-height style
+- Remove max-height style
 
 <a name="1.0.2"></a>
 
@@ -99,7 +99,7 @@
 
 ### Docs
 
-* Add readme
+- Add readme
 
 <a name="1.0.1"></a>
 
@@ -107,7 +107,7 @@
 
 ### Bug fixes
 
-* Export all of core exports
+- Export all of core exports
 
 <a name="1.0.0"></a>
 
@@ -115,4 +115,4 @@
 
 ### BREAKING CHANGES
 
-* Split out to a separate package
+- Split out to a separate package

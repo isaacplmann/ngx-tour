@@ -1,10 +1,10 @@
 <a name="4.0.0"></a>
 
-# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-21)
+# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-27)
 
 ### BREAKING CHANGES
 
-* Require Angular 7 as peer dependency
+- Require Angular 7 as peer dependency
 
 <a name="3.0.0"></a>
 
@@ -12,7 +12,7 @@
 
 ### BREAKING CHANGES
 
-* Require Angular 6 as peer dependency
+- Require Angular 6 as peer dependency
 
 <a name="2.0.0"></a>
 
@@ -20,7 +20,7 @@
 
 ### BEAKING CHANGE
 
-* Update to ngx-tour-core 2.x (Angular 5 and disabling hotkeys)
+- Update to ngx-tour-core 2.x (Angular 5 and disabling hotkeys)
 
 <a name="1.0.2"></a>
 
@@ -28,7 +28,7 @@
 
 ### Bug fixes
 
-* Fix AoT build
+- Fix AoT build
 
 <a name="1.0.1"></a>
 
@@ -36,7 +36,7 @@
 
 ### Bug fixes
 
-* Export all of core exports
+- Export all of core exports
 
 <a name="1.0.0"></a>
 
@@ -44,4 +44,4 @@
 
 ### BREAKING CHANGES
 
-* Split out to a separate package
+- Split out to a separate package

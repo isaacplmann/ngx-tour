@@ -1,6 +1,6 @@
 <a name="4.0.0"></a>
 
-# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-21)
+# [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-27)
 
 ### BREAKING CHANGES
 
