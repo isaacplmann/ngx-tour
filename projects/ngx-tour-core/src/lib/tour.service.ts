@@ -95,7 +95,7 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart), first())
       .subscribe(() => {
-        if (this.currentStep) {
+        if (this.currentStep && this.currentStep.hasOwnProperty('route')) {
           this.hideStep(this.currentStep);
         }
       });
@@ -237,8 +237,8 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.showStep(this.currentStep);
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart), first())
-      .subscribe(() => {
-        if (this.currentStep) {
+      .subscribe((event) => {
+        if (this.currentStep && this.currentStep.hasOwnProperty('route')) {
           this.hideStep(this.currentStep);
         }
       });
