@@ -6,25 +6,26 @@ import withinviewport from 'withinviewport';
 import { NgxbTourService } from './ngx-bootstrap-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
-@Directive({ selector: '[tourAnchor]'})
-export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {
-  triggers = '';
-}
+@Directive({ selector: '[tourAnchor]' })
+export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {}
 
 @Directive({
-  selector: '[tourAnchor]',
+  selector: '[tourAnchor]'
 })
-export class TourAnchorNgxBootstrapDirective implements OnInit, OnDestroy, TourAnchorDirective {
+export class TourAnchorNgxBootstrapDirective
+  implements OnInit, OnDestroy, TourAnchorDirective {
   @Input() public tourAnchor: string;
 
   @HostBinding('class.touranchor--is-active')
   public isActive: boolean;
 
-  constructor(private tourService: NgxbTourService,
-              private tourStepTemplate: TourStepTemplateService,
-              private element: ElementRef,
-              @Host() private popoverDirective: TourAnchorNgxBootstrapPopoverDirective,
+  constructor(
+    private tourService: NgxbTourService,
+    private tourStepTemplate: TourStepTemplateService,
+    private element: ElementRef,
+    @Host() private popoverDirective: TourAnchorNgxBootstrapPopoverDirective
   ) {
+    this.popoverDirective.triggers = '';
   }
 
   public ngOnInit(): void {
@@ -40,10 +41,9 @@ export class TourAnchorNgxBootstrapDirective implements OnInit, OnDestroy, TourA
     this.popoverDirective.popover = this.tourStepTemplate.template;
     this.popoverDirective.popoverContext = { step };
     this.popoverDirective.popoverTitle = step.title;
-    this.popoverDirective.container =  'body';
+    this.popoverDirective.container = 'body';
     this.popoverDirective.containerClass = 'ngx-bootstrap';
     this.popoverDirective.placement = step.placement || 'top';
-    this.popoverDirective.triggers = '';
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
@@ -51,7 +51,9 @@ export class TourAnchorNgxBootstrapDirective implements OnInit, OnDestroy, TourA
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
         (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (!withinviewport(this.element.nativeElement, { sides: 'left top right' })) {
+      } else if (
+        !withinviewport(this.element.nativeElement, { sides: 'left top right' })
+      ) {
         (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
       }
     }

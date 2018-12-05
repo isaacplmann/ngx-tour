@@ -1,3 +1,12 @@
+<a name="4.0.1"></a>
+
+# [4.0.1](https://github.com/isaacplmann/ngx-tour) (2018-12-05)
+
+### Fixes
+
+- NavigationStart only hide currentStep if route is specified eg. routing used
+- Fix clicking on attached element issue for ngx-bootstrap
+
 <a name="4.0.0"></a>
 
 # [4.0.0](https://github.com/isaacplmann/ngx-tour) (2018-11-27)

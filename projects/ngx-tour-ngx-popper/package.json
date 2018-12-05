@@ -1,6 +1,6 @@
 {
   "name": "ngx-tour-ngx-popper",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "repository": "https://github.com/isaacplmann/ngx-tour.git",
   "author": "Damien Murphy",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
     "ngx-popper": "^2.0.1",
-    "ngx-tour-core": "^4.0.0"
+    "ngx-tour-core": "^4.0.1"
   },
   "dependencies": {
     "withinviewport": "^2.0.0"
