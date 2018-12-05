@@ -7,7 +7,9 @@ import { NgxbTourService } from './ngx-bootstrap-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
 @Directive({ selector: '[tourAnchor]'})
-export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {}
+export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {
+  triggers = '';
+}
 
 @Directive({
   selector: '[tourAnchor]',
@@ -41,6 +43,7 @@ export class TourAnchorNgxBootstrapDirective implements OnInit, OnDestroy, TourA
     this.popoverDirective.container =  'body';
     this.popoverDirective.containerClass = 'ngx-bootstrap';
     this.popoverDirective.placement = step.placement || 'top';
+    this.popoverDirective.triggers = '';
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
