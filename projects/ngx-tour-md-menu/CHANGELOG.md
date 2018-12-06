@@ -1,3 +1,11 @@
+<a name="4.1.0"></a>
+
+# [4.1.0](https://github.com/isaacplmann/ngx-tour) (2018-12-06)
+
+### Features
+
+- Add custom containerClass for step popover (only for ngx-bootstrap version)
+
 <a name="4.0.1"></a>
 
 # [4.0.1](https://github.com/isaacplmann/ngx-tour) (2018-12-05)
