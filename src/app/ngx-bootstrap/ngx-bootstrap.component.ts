@@ -1,10 +1,13 @@
 import { TourService } from 'ngx-tour-ngx-bootstrap';
 import { Component } from '@angular/core';
+import { ViewEncapsulation } from '@angular/compiler/src/core';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'ngx-bootstrap-route',
   templateUrl: './ngx-bootstrap.component.html',
+  styleUrls: ['./ngx-bootstrap.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NgxBootstrapComponent {
   constructor(public tourService: TourService) {
@@ -36,6 +39,11 @@ export class NgxBootstrapComponent {
       anchorId: 'config.route',
       content: 'Tours can span multiple routes. No placement.',
       title: 'Route',
+    }, {
+      anchorId: 'config.containerClass',
+      content: 'You can add custom container class.',
+      title: 'Custom CSS Class',
+      containerClass: 'custom-tour-class'
     }, {
       anchorId: 'another.route',
       content: 'Like this!',

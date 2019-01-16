@@ -1,13 +1,14 @@
 import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { PopoverDirective } from 'ngx-bootstrap';
-import { IStepOption, TourAnchorDirective } from 'ngx-tour-core';
+import { TourAnchorDirective } from 'ngx-tour-core';
+import { INgxbStepOption as IStepOption } from './step-option.interface';
 import withinviewport from 'withinviewport';
 
 import { NgxbTourService } from './ngx-bootstrap-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 
 @Directive({ selector: '[tourAnchor]' })
-export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective {}
+export class TourAnchorNgxBootstrapPopoverDirective extends PopoverDirective { }
 
 @Directive({
   selector: '[tourAnchor]'
@@ -43,6 +44,9 @@ export class TourAnchorNgxBootstrapDirective
     this.popoverDirective.popoverTitle = step.title;
     this.popoverDirective.container = 'body';
     this.popoverDirective.containerClass = 'ngx-bootstrap';
+    if (step.containerClass) {
+      this.popoverDirective.containerClass += ` ${step.containerClass}`;
+    }
     this.popoverDirective.placement = step.placement || 'top';
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';

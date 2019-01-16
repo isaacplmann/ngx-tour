@@ -1,0 +1,11 @@
+.custom-tour-class,
+.custom-tour-class .popover-header,
+.custom-tour-class .popover-body {
+  color: #eee;
+  background-color: #333;
+  border-color: #333;
+}
+.custom-tour-class .popover-arrow:before,
+.custom-tour-class .popover-arrow:after {
+  border-top-color: #333 !important;
+}
