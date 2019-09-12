@@ -26,6 +26,11 @@ export enum TourState {
   PAUSED
 }
 
+export enum TourDirection {
+  FORWARDS,
+  BACKWARDS
+}
+
 @Injectable()
 export class TourService<T extends IStepOption = IStepOption> {
   public stepShow$: Subject<T> = new Subject();
@@ -37,6 +42,8 @@ export class TourService<T extends IStepOption = IStepOption> {
   public resume$: Subject<T> = new Subject();
   public anchorRegister$: Subject<string> = new Subject();
   public anchorUnregister$: Subject<string> = new Subject();
+  public next$: Subject<T> = new Subject();
+  public prev$: Subject<T> = new Subject();
   public events$: Observable<{ name: string; value: any }> = mergeStatic(
     this.stepShow$.pipe(map(value => ({ name: 'stepShow', value }))),
     this.stepHide$.pipe(map(value => ({ name: 'stepHide', value }))),
@@ -45,6 +52,8 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.end$.pipe(map(value => ({ name: 'end', value }))),
     this.pause$.pipe(map(value => ({ name: 'pause', value }))),
     this.resume$.pipe(map(value => ({ name: 'resume', value }))),
+    this.next$.pipe(map(value => ({ name: 'next', value }))),
+    this.prev$.pipe(map(value => ({ name: 'prev', value }))),
     this.anchorRegister$.pipe(
       map(value => ({
         name: 'anchorRegister',
@@ -64,9 +73,10 @@ export class TourService<T extends IStepOption = IStepOption> {
 
   public anchors: { [anchorId: string]: TourAnchorDirective } = {};
   private status: TourState = TourState.OFF;
+  private direction: TourDirection = TourDirection.FORWARDS;
   private isHotKeysEnabled = true;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   public initialize(steps: T[], stepDefaults?: T): void {
     if (steps && steps.length > 0) {
@@ -143,6 +153,8 @@ export class TourService<T extends IStepOption = IStepOption> {
           this.currentStep.nextStep || this.steps.indexOf(this.currentStep) + 1
         )
       );
+      this.direction = TourDirection.FORWARDS;
+      this.next$.next(this.currentStep);
     }
   }
 
@@ -164,6 +176,8 @@ export class TourService<T extends IStepOption = IStepOption> {
           this.currentStep.prevStep || this.steps.indexOf(this.currentStep) - 1
         )
       );
+      this.direction = TourDirection.BACKWARDS;
+      this.prev$.next(this.currentStep);
     }
   }
 
@@ -194,6 +208,10 @@ export class TourService<T extends IStepOption = IStepOption> {
 
   public getStatus(): TourState {
     return this.status;
+  }
+
+  public getDirection(): TourDirection {
+    return this.direction;
   }
 
   public isHotkeysEnabled(): boolean {

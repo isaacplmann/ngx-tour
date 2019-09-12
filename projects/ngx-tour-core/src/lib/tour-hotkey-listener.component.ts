@@ -7,7 +7,7 @@ import { TourService, TourState } from './tour.service';
   template: `<ng-content></ng-content>`
 })
 export class TourHotkeyListenerComponent {
-  constructor(public tourService: TourService) {}
+  constructor(public tourService: TourService) { }
 
   /**
    * Configures hot keys for controlling the tour with the keyboard
@@ -26,10 +26,13 @@ export class TourHotkeyListenerComponent {
   public onArrowRightKey(): void {
     if (
       this.tourService.getStatus() === TourState.ON &&
-      this.tourService.hasNext(this.tourService.currentStep) &&
       this.tourService.isHotkeysEnabled()
     ) {
-      this.tourService.next();
+      if (this.tourService.hasNext(this.tourService.currentStep)) {
+        this.tourService.next();
+      } else if (!this.tourService.hasNext(this.tourService.currentStep)) {
+        this.tourService.end();
+      }
     }
   }
 

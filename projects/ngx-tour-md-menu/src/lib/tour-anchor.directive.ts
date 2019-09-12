@@ -19,9 +19,10 @@ import withinviewport from 'withinviewport';
 import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { first } from 'rxjs/operators';
-import {TourBackdropService} from './tour-backdrop.service';
+import { TourBackdropService } from './tour-backdrop.service';
 import { INgxmStepOption as IStepOption } from './step-option.interface';
-import {NgxmTourService} from './ngx-md-menu-tour.service';
+import { NgxmTourService } from './ngx-md-menu-tour.service';
+import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -64,22 +65,32 @@ export class TourAnchorMatMenuDirective
     // Ignore step.placement
     if (!step.preventScrolling) {
       if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
+        (this.element.nativeElement as HTMLElement).scrollIntoView(false);
       } else if (
         !withinviewport(this.element.nativeElement, { sides: 'left top right' })
       ) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+        (this.element.nativeElement as HTMLElement).scrollIntoView(true);
       }
     }
-    (<any>this.opener.trigger)._element = this.element;
+    (this.opener.trigger as any)._element = this.element;
     this.opener.trigger.menu = this.tourStepTemplate.templateComponent.tourStep;
     this.opener.trigger.ngAfterContentInit();
     this.opener.trigger.openMenu();
 
+    step.enableBackdrop = (step.toClick && !step.enableBackdrop) ? true : step.enableBackdrop;
+
     if (step.enableBackdrop) {
+      // So removing scroll bar does not move content to right and breaks overlay
       this.tourBackdrop.show(this.element);
+      disableBodyScroll(undefined, { reserveScrollBarGap: true });
     } else {
       this.tourBackdrop.close();
+      enableBodyScroll();
+    }
+
+    if (step.toClick) {
+      console.log('Click anywhere to go to the next step.');
+      // TODO Snackbar / Toast with 'Click anywhere to go to the next step' so the User knows
     }
 
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
@@ -89,14 +100,56 @@ export class TourAnchorMatMenuDirective
     if (this.menuCloseSubscription) {
       this.menuCloseSubscription.unsubscribe();
     }
+
+    // When the next step is called, if a toClick was defined force click it.
+    // Works for buttons, links, etc if you provide the right element, otherwise just go to next step
+    this.tourService.stepShow$
+      .pipe(first())
+      .subscribe(() => {
+        if (step.toClick) {
+          // If user provided String, queryselect it, otherwise just save the HTMLElement
+          const element: HTMLElement = (typeof step.toClick === 'string')
+            ? document.querySelector(step.toClick) as HTMLElement
+            : step.toClick as HTMLElement;
+
+          if (!element) {
+            console.error('Element toClick not found: ', step.toClick);
+          } else {
+            element.click();
+          }
+        }
+      });
+
     this.menuCloseSubscription = this.opener.trigger.menuClosed
       .pipe(first())
       .subscribe(() => {
-        if (this.tourService.getStatus() !== TourState.OFF) {
-          this.tourService.end();
+        if (step.toClick) {
+          // If user provided String, queryselect it, otherwise just save the HTMLElement
+          const element: HTMLElement = (typeof step.toClick === 'string')
+            ? document.querySelector(step.toClick) as HTMLElement
+            : step.toClick as HTMLElement;
+
+          if (!element) {
+            console.error('Element toClick not found: ', step.toClick);
+          } else {
+            element.click();
+          }
+          this.tourService.callback$.next(step);
+          this.tourService.next();
+        } else {
+          if (this.tourService.getStatus() !== TourState.OFF) {
+            this.tourService.end();
+          }
         }
         this.tourBackdrop.close();
       });
+    // Reload and align backdrop on window resize
+    window.addEventListener('resize', () => {
+      this.tourBackdrop.close();
+      if (step.enableBackdrop && this.tourService.getStatus() === TourState.ON) {
+        this.tourBackdrop.show(this.element);
+      }
+    });
   }
 
   public hideTourStep(): void {
@@ -107,6 +160,7 @@ export class TourAnchorMatMenuDirective
     this.opener.trigger.closeMenu();
     if (this.tourService.getStatus() === TourState.OFF) {
       this.tourBackdrop.close();
+      enableBodyScroll();
     }
   }
 }

@@ -57,6 +57,7 @@
     "@angular/platform-browser-dynamic": "^7.0.4",
     "@angular/router": "^7.0.4",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
+    "body-scroll-lock": "^2.6.4",
     "core-js": "^2.5.7",
     "ngx-bootstrap": "^3.1.2",
     "ngx-popper": "^2.7.1",

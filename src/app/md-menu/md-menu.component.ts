@@ -38,11 +38,13 @@ export class MdMenuComponent {
       anchorId: 'config.enableBackdrop',
       content: 'You can enable backdrop to highlight active element.',
       title: 'Backdrop',
-      enableBackdrop: true
+      enableBackdrop: true,
+      toClick: 'none'
     }, {
       anchorId: 'config.route',
       content: 'Tours can span multiple routes.',
       title: 'Route',
+      enableBackdrop: true
     }, {
       anchorId: 'another.route',
       content: 'Like this!',
