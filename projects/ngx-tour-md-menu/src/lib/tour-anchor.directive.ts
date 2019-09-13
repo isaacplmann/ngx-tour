@@ -22,7 +22,6 @@ import { first } from 'rxjs/operators';
 import { TourBackdropService } from './tour-backdrop.service';
 import { INgxmStepOption as IStepOption } from './step-option.interface';
 import { NgxmTourService } from './ngx-md-menu-tour.service';
-import { enableBodyScroll, disableBodyScroll } from 'body-scroll-lock';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -80,12 +79,9 @@ export class TourAnchorMatMenuDirective
     step.enableBackdrop = (step.toClick && !step.enableBackdrop) ? true : step.enableBackdrop;
 
     if (step.enableBackdrop) {
-      // So removing scroll bar does not move content to right and breaks overlay
       this.tourBackdrop.show(this.element);
-      disableBodyScroll(undefined, { reserveScrollBarGap: true });
     } else {
       this.tourBackdrop.close();
-      enableBodyScroll();
     }
 
     if (step.toClick) {
@@ -146,6 +142,15 @@ export class TourAnchorMatMenuDirective
     // Reload and align backdrop on window resize
     window.addEventListener('resize', () => {
       this.tourBackdrop.close();
+      if (!step.preventScrolling) {
+        if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
+          (this.element.nativeElement as HTMLElement).scrollIntoView(false);
+        } else if (
+          !withinviewport(this.element.nativeElement, { sides: 'left top right' })
+        ) {
+          (this.element.nativeElement as HTMLElement).scrollIntoView(true);
+        }
+      }
       if (step.enableBackdrop && this.tourService.getStatus() === TourState.ON) {
         this.tourBackdrop.show(this.element);
       }
@@ -160,7 +165,6 @@ export class TourAnchorMatMenuDirective
     this.opener.trigger.closeMenu();
     if (this.tourService.getStatus() === TourState.OFF) {
       this.tourBackdrop.close();
-      enableBodyScroll();
     }
   }
 }

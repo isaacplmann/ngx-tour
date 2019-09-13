@@ -1,3 +1,4 @@
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { ElementRef, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable()
@@ -19,6 +20,8 @@ export class TourBackdropService {
     }
 
     this.setStyles(boundingRect);
+    // So removing scroll bar does not move content to right and breaks overlay
+    disableBodyScroll(undefined, { reserveScrollBarGap: true });
   }
 
   public close() {
@@ -26,6 +29,7 @@ export class TourBackdropService {
       this.renderer.removeChild(document.body, this.backdropElement);
       this.backdropElement = null;
     }
+    enableBodyScroll();
   }
 
   private setStyles(boundingRect: DOMRect) {
