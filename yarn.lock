@@ -126,10 +126,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@^7.1.0":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.3.7.tgz#ce1ad53ba04beb9c8e950acc5691ea0143753764"
-  integrity sha512-xbXxhHHKGkVuW6K7pzPmvpJXIwpl0ykBnvA2g+/7Sgy5Pd35wCC+UtHD9RYczDM/mkygNxMQtagyCErwFnDtQA==
+"@angular/cdk@^8.2.3":
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.2.3.tgz#16b96ffa935cbf5a646757ecaf2b19c434678f72"
+  integrity sha512-ZwO5Sn720RA2YvBqud0JAHkZXjmjxM0yNzCO8RVtRE9i8Gl26Wk0j0nQeJkVm4zwv2QO8MwbKUKGTMt8evsokA==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -205,10 +205,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/material@^7.1.0":
-  version "7.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-7.3.7.tgz#dcd95e6618ba6254c5880efee1aad349cf5b9140"
-  integrity sha512-Eq+7frkeNGkLOfEtmkmJgR+AgoWajOipXZWWfCSamNfpCcPof82DwvGOpAmgGni9FuN2XFQdqP5MoaffQzIvUA==
+"@angular/material@^8.2.3":
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-8.2.3.tgz#16543e4e06a3fde2651a25cfe126e88e714ae105"
+  integrity sha512-SOczkIaqes+r+9XF/UUiokidfFKBpHkOPIaFK857sFD0FBNPvPEpOr5oHKCG3feERRwAFqHS7Wo2ohVEWypb5A==
   dependencies:
     tslib "^1.7.1"
 
@@ -5852,10 +5852,10 @@ ng-packagr@^5.7.0:
     terser "^4.1.2"
     update-notifier "^3.0.0"
 
-ngx-bootstrap@^3.1.2:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-3.3.0.tgz#91f1644a6fff8a493bc58a16bd9d02db7320bd6a"
-  integrity sha512-eGKjMPM4XhYVCr/NdGnQ3SCOSUGMe00lytOmuDAgHf2JwMGfMD3EE7hX9KAONfNbUEuHzRfsjDAuQhWbCvZ8xg==
+ngx-bootstrap@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-5.2.0.tgz#3b8fc064a2830af014292070066ac6e64749ba14"
+  integrity sha512-fh+OmaEdxCZnVLQFLqexdw4Xv0Lp2Ueq7un52gF26lTENhTAypGWgf2c92HXzbp4W/B0tnwIZ9mzQPwdDMH91w==
 
 ngx-popper@^2.7.1:
   version "2.8.2"

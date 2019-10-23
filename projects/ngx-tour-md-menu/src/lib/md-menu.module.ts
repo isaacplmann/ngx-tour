@@ -1,7 +1,10 @@
 import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { MatMenuModule, MatButtonModule, MatCardModule, MatIconModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { TourModule } from 'ngx-tour-core';
 import { TourAnchorMatMenuDirective } from './tour-anchor.directive';

@@ -44,7 +44,7 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
   @ViewChild('tourStep', { read: TemplateRef, static: true })
   public defaultTourStepTemplate: TemplateRef<any>;
 
-  @ContentChild(TemplateRef)
+  @ContentChild(TemplateRef, { static: false })
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
 
   constructor(
