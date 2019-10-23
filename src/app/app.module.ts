@@ -14,22 +14,22 @@ import { OverlayModule } from '@angular/cdk/overlay';
     BrowserModule,
     OverlayModule,
     RouterModule.forRoot([{
-      loadChildren: './md-menu/mat-lazy-tour/app.module#AppModule',
+      loadChildren: () => import('./md-menu/mat-lazy-tour/app.module').then(m => m.AppModule),
       path: 'mat-lazy-tour',
     }, {
-      loadChildren: './ng-bootstrap/ng-bootstrap.module#NgBootstrapModule',
+      loadChildren: () => import('./ng-bootstrap/ng-bootstrap.module').then(m => m.NgBootstrapModule),
       path: 'ng-bootstrap',
     }, {
-      loadChildren: './ngx-bootstrap/ngx-bootstrap.module#NgxBootstrapModule',
+      loadChildren: () => import('./ngx-bootstrap/ngx-bootstrap.module').then(m => m.NgxBootstrapModule),
       path: 'ngx-bootstrap',
     }, {
-      loadChildren: './ngx-popper/ngx-popper.module#NgxpPopperModule',
+      loadChildren: () => import('./ngx-popper/ngx-popper.module').then(m => m.NgxpPopperModule),
       path: 'ngx-popper',
     }, {
-      loadChildren: './console/console.module#ConsoleModule',
+      loadChildren: () => import('./console/console.module').then(m => m.ConsoleModule),
       path: 'console',
     }, {
-      loadChildren: './md-menu/md-menu.module#MdMenuModule',
+      loadChildren: () => import('./md-menu/md-menu.module').then(m => m.MdMenuModule),
       path: '',
     }, {
       redirectTo: '',

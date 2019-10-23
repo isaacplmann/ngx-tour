@@ -15,11 +15,11 @@ const routes: Routes = [
   },
   {
     path: 'module-a',
-    loadChildren: './modules/module-a/module-a.module#ModuleAModule'
+    loadChildren: () => import('./modules/module-a/module-a.module').then(m => m.ModuleAModule)
   },
   {
     path: 'module-b',
-    loadChildren: './modules/module-b/module-b.module#ModuleBModule'
+    loadChildren: () => import('./modules/module-b/module-b.module').then(m => m.ModuleBModule)
   }
 ];
 
