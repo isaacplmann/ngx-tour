@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "ng": "ng",
@@ -46,15 +46,15 @@
     "pub:lib:md-menu": "cd dist/ngx-tour-md-menu && npm publish"
   },
   "dependencies": {
-    "@angular/animations": "^7.0.4",
+    "@angular/animations": "^8.2.11",
     "@angular/cdk": "^7.1.0",
-    "@angular/common": "^7.0.4",
-    "@angular/core": "^7.0.4",
-    "@angular/forms": "^7.0.4",
+    "@angular/common": "^8.2.11",
+    "@angular/core": "^8.2.11",
+    "@angular/forms": "^8.2.11",
     "@angular/material": "^7.1.0",
-    "@angular/platform-browser": "^7.0.4",
-    "@angular/platform-browser-dynamic": "^7.0.4",
-    "@angular/router": "^7.0.4",
+    "@angular/platform-browser": "^8.2.11",
+    "@angular/platform-browser-dynamic": "^8.2.11",
+    "@angular/router": "^8.2.11",
     "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "core-js": "^2.5.7",
     "ngx-bootstrap": "^3.1.2",
@@ -67,8 +67,8 @@
     "@angular-devkit/build-angular": "~0.803.13",
     "@angular-devkit/build-ng-packagr": "~0.803.13",
     "@angular/cli": "^8.3.13",
-    "@angular/compiler": "^7.0.4",
-    "@angular/compiler-cli": "^7.0.4",
+    "@angular/compiler": "^8.2.11",
+    "@angular/compiler-cli": "^8.2.11",
     "@types/jasmine": "^2.8.12",
     "@types/node": "^10.12.9",
     "codelyzer": "^5.0.1",
@@ -82,13 +82,13 @@
     "karma-coverage-istanbul-reporter": "^2.0.4",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "ng-packagr": "^5.4.0",
+    "ng-packagr": "^5.7.0",
     "protractor": "^5.4.1",
     "ts-node": "^7.0.1",
     "tsickle": "^0.37.0",
     "tslib": "^1.10.0",
     "tslint": "^5.11.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "~3.1.6"
+    "typescript": "~3.5.3"
   }
 }
