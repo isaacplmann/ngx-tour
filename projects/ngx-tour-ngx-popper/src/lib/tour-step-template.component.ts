@@ -26,7 +26,6 @@ import { TourStepTemplateService } from './tour-step-template.service';
 export class TourStepTemplateComponent extends TourHotkeyListenerComponent implements AfterViewInit, AfterContentInit {
   @ViewChild(PopperContent) public popperContent: PopperContent;
 
-  @Input()
   @ContentChild(TemplateRef)
   public stepTemplate: TemplateRef<{step: IStepOption}>;
 
