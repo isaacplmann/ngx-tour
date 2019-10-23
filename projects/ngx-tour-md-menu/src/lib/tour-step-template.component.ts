@@ -25,7 +25,7 @@ import { NgxmTourService } from './ngx-md-menu-tour.service';
     <mat-menu [overlapTrigger]="false" class="tour-step">
       <ng-container
         *ngTemplateOutlet="
-          stepTemplate || defaultTemplate;
+          stepTemplate || stepTemplateContent || defaultTemplate;
           context: { step: step }
         "
       ></ng-container>
@@ -65,8 +65,11 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
   implements AfterViewInit {
   @ViewChild(MatMenu, { static: false }) public tourStep: MatMenu;
 
-  @ContentChild(TemplateRef, { static: false })
+  @Input()
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
+
+  @ContentChild(TemplateRef, { static: false })
+  public stepTemplateContent: TemplateRef<{ step: IStepOption }>;
 
   public step: IStepOption = {};
 

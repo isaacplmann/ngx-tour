@@ -45,8 +45,11 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
   @ViewChild('tourStep', { read: TemplateRef, static: true })
   public defaultTourStepTemplate: TemplateRef<any>;
 
-  @ContentChild(TemplateRef, { static: false })
+  @Input()
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
+
+  @ContentChild(TemplateRef, { static: false })
+  public stepTemplateContent: TemplateRef<{ step: IStepOption }>;
 
   constructor(
     private tourStepTemplateService: TourStepTemplateService,
@@ -57,6 +60,8 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
 
   public ngAfterContentInit(): void {
     this.tourStepTemplateService.template =
-      this.stepTemplate || this.defaultTourStepTemplate;
+      this.stepTemplate ||
+      this.stepTemplateContent ||
+      this.defaultTourStepTemplate;
   }
 }

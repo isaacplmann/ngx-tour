@@ -20,7 +20,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
     <popper-content class="popper-content">
       <ng-container
         *ngTemplateOutlet="
-          stepTemplate || defaultTemplate;
+          stepTemplate || stepTemplateContent || defaultTemplate;
           context: { step: step }
         "
       ></ng-container>
@@ -56,8 +56,11 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
   @ViewChild(PopperContent, { static: true })
   public popperContent: PopperContent;
 
-  @ContentChild(TemplateRef, { static: false })
+  @Input()
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
+
+  @ContentChild(TemplateRef, { static: false })
+  public stepTemplateContent: TemplateRef<{ step: IStepOption }>;
 
   public step: IStepOption = {};
 
