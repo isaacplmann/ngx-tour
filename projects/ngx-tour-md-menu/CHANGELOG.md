@@ -1,3 +1,11 @@
+<a name="4.1.1"></a>
+
+# [4.1.1](https://github.com/isaacplmann/ngx-tour) (2019-12-07)
+
+### Fixes
+
+- Skip undefined tourAnchors
+
 <a name="4.1.0"></a>
 
 # [4.1.0](https://github.com/isaacplmann/ngx-tour) (2019-10-23)
