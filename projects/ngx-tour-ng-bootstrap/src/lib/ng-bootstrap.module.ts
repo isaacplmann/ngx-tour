@@ -16,7 +16,7 @@ export { TourAnchorNgBootstrapDirective, TourAnchorNgBootstrapPopoverDirective, 
   imports: [CommonModule, NgbPopoverModule.forRoot()],
 })
 export class TourNgBootstrapModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<TourNgBootstrapModule> {
     return {
       ngModule: TourNgBootstrapModule,
       providers: [

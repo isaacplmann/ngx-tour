@@ -11,7 +11,7 @@ import { TourService } from './tour.service';
     imports: [CommonModule, RouterModule],
 })
 export class TourModule {
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders<TourModule> {
         return {
             ngModule: TourModule,
             providers: [

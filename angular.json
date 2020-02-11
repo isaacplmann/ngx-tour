@@ -11,6 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,6 +28,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -129,7 +136,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-console/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-console/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -169,7 +177,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-core/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-core/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -209,7 +218,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-md-menu/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-md-menu/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -249,7 +259,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-ng-bootstrap/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-ng-bootstrap/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -289,7 +300,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-ngx-bootstrap/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-ngx-bootstrap/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -329,7 +341,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-tour-ngx-popper/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-tour-ngx-popper/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {

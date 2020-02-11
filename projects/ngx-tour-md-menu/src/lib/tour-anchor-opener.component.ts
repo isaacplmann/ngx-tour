@@ -22,5 +22,5 @@ export class TourAnchorOpenerComponent {
     backdropClass: ''
   });
 
-  @ViewChild(MatMenuTrigger, { static: false }) public trigger: MatMenuTrigger;
+  @ViewChild(MatMenuTrigger) public trigger: MatMenuTrigger;
 }

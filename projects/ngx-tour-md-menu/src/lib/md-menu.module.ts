@@ -24,7 +24,7 @@ export { TourAnchorMatMenuDirective, TourStepTemplateComponent, NgxmTourService 
   ],
 })
 export class TourMatMenuModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<TourMatMenuModule> {
     return {
       ngModule: TourMatMenuModule,
       providers: [
