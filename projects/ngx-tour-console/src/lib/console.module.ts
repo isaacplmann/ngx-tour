@@ -10,7 +10,7 @@ export { TourAnchorConsoleDirective, TourService };
 @NgModule({
   declarations: [TourAnchorConsoleDirective],
   exports: [TourAnchorConsoleDirective, TourHotkeyListenerComponent],
-  imports: [TourModule, CommonModule, NgbPopoverModule.forRoot()],
+  imports: [TourModule, CommonModule, NgbPopoverModule],
 })
 export class TourConsoleModule {
   public static forRoot(): ModuleWithProviders {

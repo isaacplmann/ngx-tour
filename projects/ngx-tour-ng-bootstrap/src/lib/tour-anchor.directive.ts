@@ -26,7 +26,8 @@ export class TourAnchorNgBootstrapDirective implements OnInit, OnDestroy, TourAn
     private element: ElementRef,
     @Host() private popoverDirective: TourAnchorNgBootstrapPopoverDirective,
   ) {
-
+    this.popoverDirective.autoClose = false;
+    this.popoverDirective.triggers = '';
     this.popoverDirective.toggle = () => { };
   }
 
