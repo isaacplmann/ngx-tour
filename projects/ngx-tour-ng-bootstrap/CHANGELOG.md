@@ -1,3 +1,11 @@
+<a name="5.0.0"></a>
+
+# [5.0.0](https://github.com/isaacplmann/ngx-tour) (2020-02-19)
+
+### BREAKING CHANGES
+
+- Require ng-bootstrap ^5.0.0
+
 <a name="4.1.1"></a>
 
 # [4.1.1](https://github.com/isaacplmann/ngx-tour) (2019-12-07)
