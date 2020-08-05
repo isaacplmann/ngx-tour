@@ -1,7 +1,6 @@
 # Ng2 Tour
 
-[![Dependency Status](https://david-dm.org/isaacplmann/ng2-tour.svg)](https://david-dm.org/isaacplmann/ngx-tour)
-[![devDependency Status](https://david-dm.org/isaacplmann/ng2-tour/dev-status.svg)](https://david-dm.org/isaacplmann/ngx-tour?type=dev)
+This is a fork of https://github.com/isaacplmann/ngx-tour that adds support for Angular 9+.
 
 Check out the [documentation/demo page](https://isaacplmann.github.io/ngx-tour).
 
