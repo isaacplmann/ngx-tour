@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TourService } from 'ngx-tour-core';
+import { TourService } from '@semioticlabs/ngx-tour-core';
 
 import { INgxbStepOption } from './step-option.interface';
 

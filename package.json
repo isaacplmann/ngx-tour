@@ -1,12 +1,12 @@
 {
-  "name": "ngx-tour",
-  "version": "0.0.1",
+  "name": "@semioticlabs/ngx-tour",
+  "version": "9.0.0",
   "description": "",
   "keywords": [],
-  "author": "Isaac Mann <isaacplmann@gmail.com>",
+  "author": "Development Team <development@semioticlabs.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isaacplmann/ngx-tour"
+    "url": "https://github.com/semioticlabs/ngx-tour"
   },
   "license": "MIT",
   "engines": {
@@ -28,7 +28,7 @@
     "build:lib:md-menu:base": "ng build ngx-tour-md-menu --prod && cpx projects/ngx-tour-md-menu/CHANGELOG.md dist/ngx-tour-md-menu/",
     "build:lib:ng-bootstrap": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ng-bootstrap && npm link ngx-tour-core && cd ../.. && npm run build:lib:ng-bootstrap:base",
     "build:lib:ng-bootstrap:base": "ng build ngx-tour-ng-bootstrap --prod && cpx projects/ngx-tour-ng-bootstrap/CHANGELOG.md dist/ngx-tour-ng-bootstrap/",
-    "build:lib:ngx-bootstrap": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ngx-bootstrap && npm link ngx-tour-core && cd ../.. && npm run build:lib:ngx-bootstrap:base",
+    "build:lib:ngx-bootstrap": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ngx-bootstrap && npm link @semioticlabs/ngx-tour-core && cd ../.. && npm run build:lib:ngx-bootstrap:base",
     "build:lib:ngx-bootstrap:base": "ng build ngx-tour-ngx-bootstrap --prod && cpx projects/ngx-tour-ngx-bootstrap/CHANGELOG.md dist/ngx-tour-ngx-bootstrap/",
     "build:lib:ngx-popper": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-ngx-popper && npm link ngx-tour-core && cd ../.. && npm run build:lib:ngx-popper:base",
     "build:lib:ngx-popper:base": "ng build ngx-tour-ngx-popper --prod && cpx projects/ngx-tour-ngx-popper/src/styles.css dist/ngx-tour-ngx-popper/ && cpx projects/ngx-tour-ngx-popper/CHANGELOG.md dist/ngx-tour-ngx-popper/",
