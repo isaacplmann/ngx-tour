@@ -60,3 +60,9 @@ typings/
 
 dist/
 .ng_build/
+
+# IDE
+.idea
+
+# package lock
+package-lock.json
