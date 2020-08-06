@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
-import { PopoverDirective } from 'ngx-bootstrap';
-import { TourAnchorDirective } from 'ngx-tour-core';
+import { PopoverDirective } from 'ngx-bootstrap/popover';
+import { TourAnchorDirective } from '@semioticlabs/ngx-tour-core';
 import { INgxbStepOption as IStepOption } from './step-option.interface';
 import withinviewport from 'withinviewport';
 

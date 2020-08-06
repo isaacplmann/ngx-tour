@@ -1,8 +1,8 @@
 {
-  "name": "ngx-tour-core",
-  "version": "4.1.1",
-  "repository": "https://github.com/isaacplmann/ngx-tour.git",
-  "author": "Isaac Mann <isaacplmann@gmail.com>",
+  "name": "@semioticlabs/ngx-tour-core",
+  "version": "9.0.0",
+  "repository": "https://github.com/semioticlabs/ngx-tour.git",
+  "author": "Development Team <development@semioticlabs.com>",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": ">=7.0.0 <9.0.0",

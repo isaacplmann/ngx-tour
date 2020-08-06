@@ -7,7 +7,7 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { IStepOption, TourHotkeyListenerComponent } from 'ngx-tour-core';
+import { IStepOption, TourHotkeyListenerComponent } from '@semioticlabs/ngx-tour-core';
 
 import { NgxbTourService } from './ngx-bootstrap-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
