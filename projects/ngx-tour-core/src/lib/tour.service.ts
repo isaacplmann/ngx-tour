@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {NavigationStart, Router} from '@angular/router';
-import {UrlSegment} from '@angular/router';
+import type {UrlSegment} from '@angular/router';
 
 import { TourAnchorDirective } from './tour-anchor.directive';
 import { Subject, Observable, merge as mergeStatic } from 'rxjs';

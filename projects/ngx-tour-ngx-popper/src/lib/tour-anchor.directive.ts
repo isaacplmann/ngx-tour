@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Host, HostBinding, Input } from '@angular/core';
-import {OnDestroy, OnInit} from '@angular/core';
+import type {OnDestroy, OnInit} from '@angular/core';
 import { PopperController, Placements, Triggers } from 'ngx-popper';
 import { TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';

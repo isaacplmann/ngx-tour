@@ -1,5 +1,5 @@
 import { ElementRef, Injectable, RendererFactory2 } from '@angular/core';
-import { Renderer2 } from '@angular/core';
+import type { Renderer2 } from '@angular/core';
 
 @Injectable()
 export class TourBackdropService {
