@@ -5,6 +5,7 @@
   "author": "Isaac Mann <isaacplmann@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "tslib": "^2.0.0",
     "withinviewport": "^2.0.0"
   },
   "peerDependencies": {
