@@ -6701,12 +6701,12 @@ ngx-bootstrap@^6.0.0:
   resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-6.0.0.tgz#58078243c30ab967c47bd0830703033480eb3f3e"
   integrity sha512-uxDt9AZgh4mbVfgDJxLwBbcEEdQdYXrKvurrbuVuWpUnmUkHMi1Mvcb0RdBO2jcbWngKPb+Xokh7sn5Soy7TIQ==
 
-ngx-popper@^2.7.1:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/ngx-popper/-/ngx-popper-2.8.2.tgz#d56227aab42a31a308fcf8b7d60d90856dd6d623"
-  integrity sha512-b6WVh4Qh2/xgYURz/0aPdTdiItKHBvKSnJfjstCLXD4e2PhXbtQMRvWgi+XMaRSclChiQzgbzmANlOGLNozAvA==
+ngx-popper@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-popper/-/ngx-popper-7.0.0.tgz#4a46557f27384680a0298b395b2f296016cf3f78"
+  integrity sha512-YEp5defNRRs/vq3OaF5aosvfDQEXw0ZJytlfcEfWUu43gxs6AoQIHD82EC41MfQi6impvRie+M1ZO5KpEBH43Q==
   dependencies:
-    popper.js "^1.14.1"
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -7466,10 +7466,10 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.1:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.0.tgz#2e1816bcbbaa518ea6c2e15a466f4cb9c6e2fbb3"
-  integrity sha512-+G+EkOPoE5S/zChTpmBSSDYmhXJ5PsW8eMhH8cP/CQHMFPBG/kC9Y5IIw6qNYgdJ+/COf0ddY2li28iHaZRSjw==
+popper.js@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 portfinder@^1.0.26:
   version "1.0.28"
