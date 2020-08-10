@@ -16,7 +16,7 @@ export { TourAnchorNgxPopperDirective, TourAnchorNgxPopperPopoverDirective, Tour
   imports: [CommonModule, NgxPopperModule.forRoot()],
 })
 export class TourNgxPopperModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<TourNgxPopperModule> {
     return {
       ngModule: TourNgxPopperModule,
       providers: [
