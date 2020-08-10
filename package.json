@@ -55,11 +55,11 @@
     "@angular/platform-browser": "^9.1.12",
     "@angular/platform-browser-dynamic": "^9.1.12",
     "@angular/router": "^9.1.12",
-    "@ng-bootstrap/ng-bootstrap": "^5.1.4",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "core-js": "^2.5.7",
     "ngx-bootstrap": "^5.2.0",
     "ngx-popper": "^2.7.1",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.6.2",
     "tslib": "^1.10.0",
     "withinviewport": "^2.1.0",
     "zone.js": "~0.10.2"
