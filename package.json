@@ -17,7 +17,7 @@
     "link:core": "cd dist/ngx-tour-core && npm link && cd ../..",
     "link": "cd dist/ngx-tour-console && npm link ngx-tour-core && cd ../ngx-tour-md-menu && npm link ngx-tour-core && cd ../ngx-tour-ng-bootstrap && npm link ngx-tour-core && cd ../ngx-tour-ngx-bootstrap && npm link ngx-tour-core && cd ../ngx-tour-ngx-popper && npm link ngx-tour-core && cd ../..",
     "prestart": "npm run link",
-    "start": "ng serve --aot=true",
+    "start": "ng serve",
     "prebuild": "npm run link",
     "build": "ng build --prod",
     "build:lib:all": "npm run build:lib:core && npm run build:lib:console:base && npm run build:lib:md-menu:base && npm run build:lib:ng-bootstrap:base && npm run build:lib:ngx-bootstrap:base && npm run build:lib:ngx-popper:base",
