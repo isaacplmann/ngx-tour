@@ -1,3 +1,15 @@
+<a name="6.0.0"></a>
+
+# [6.0.0](https://github.com/isaacplmann/ngx-tour) (2020-08-10)
+
+### Features
+
+- Support Angular 10
+
+### BREAKING CHANGES
+
+- Require ng-bootstrap ^7.0.0
+
 <a name="5.0.0"></a>
 
 # [5.0.0](https://github.com/isaacplmann/ngx-tour) (2020-02-19)
