@@ -9,14 +9,15 @@ This is a product tour library built with Angular. It's inspired by [angular-ui-
 # Development
 
 ## Release
-
-To build and publish the semioticlabs versions of `ngx-tour` and `ngx-tour-ngx-bootstrap`:
+To build and publish `ngx-tour` and `ngx-tour-ngx-bootstrap`:
 ```bash
-ng build:lib:core
-ng pub:lib:core --release
+npm run build:lib:core
+npm run pub:lib:core --access public
 ``` 
 
 ```bash
-ng build:lib:ngx-bootstrap
-ng pub:lib:ngx-bootstrap --release
+npm run build:lib:ngx-bootstrap
+npm run pub:lib:ngx-bootstrap --access public
 ``` 
+
+The other packages are not supported by this fork.
