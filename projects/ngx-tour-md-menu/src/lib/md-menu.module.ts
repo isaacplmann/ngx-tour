@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { TourModule } from 'ngx-tour-core';
+import {TourModule, TourService} from 'ngx-tour-core';
 import { TourAnchorMatMenuDirective } from './tour-anchor.directive';
 import { TourStepTemplateComponent } from './tour-step-template.component';
 import { TourStepTemplateService } from './tour-step-template.service';
@@ -30,9 +30,9 @@ export class TourMatMenuModule {
       providers: [
         TourStepTemplateService,
         TourBackdropService,
-        ...TourModule.forRoot().providers,
-          NgxmTourService
-      ],
+        TourService,
+        NgxmTourService
+      ]
     };
   }
 }

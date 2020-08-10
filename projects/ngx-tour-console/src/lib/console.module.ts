@@ -17,7 +17,7 @@ export class TourConsoleModule {
     return {
       ngModule: TourConsoleModule,
       providers: [
-        ...TourModule.forRoot().providers,
+        TourService
       ],
     };
   }
