@@ -57,7 +57,7 @@
     "@angular/router": "^10.0.8",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "core-js": "^2.5.7",
-    "ngx-bootstrap": "^5.2.0",
+    "ngx-bootstrap": "^6.0.0",
     "ngx-popper": "^2.7.1",
     "rxjs": "^6.6.2",
     "tslib": "^2.0.0",

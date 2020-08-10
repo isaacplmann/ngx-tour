@@ -6696,10 +6696,10 @@ ng-packagr@^10.0.0:
     terser "^4.3.8"
     update-notifier "^4.0.0"
 
-ngx-bootstrap@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-5.2.0.tgz#3b8fc064a2830af014292070066ac6e64749ba14"
-  integrity sha512-fh+OmaEdxCZnVLQFLqexdw4Xv0Lp2Ueq7un52gF26lTENhTAypGWgf2c92HXzbp4W/B0tnwIZ9mzQPwdDMH91w==
+ngx-bootstrap@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-6.0.0.tgz#58078243c30ab967c47bd0830703033480eb3f3e"
+  integrity sha512-uxDt9AZgh4mbVfgDJxLwBbcEEdQdYXrKvurrbuVuWpUnmUkHMi1Mvcb0RdBO2jcbWngKPb+Xokh7sn5Soy7TIQ==
 
 ngx-popper@^2.7.1:
   version "2.8.2"
