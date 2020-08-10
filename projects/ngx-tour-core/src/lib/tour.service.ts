@@ -241,7 +241,7 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.showStep(this.currentStep);
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart), first())
-      .subscribe((event) => {
+      .subscribe(() => {
         if (this.currentStep && this.currentStep.hasOwnProperty('route')) {
           this.hideStep(this.currentStep);
         }

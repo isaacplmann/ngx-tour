@@ -19,6 +19,6 @@ export class TourModule {
             ],
         };
     }
-};
+}
 
 export { TourService };
