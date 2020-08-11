@@ -64,7 +64,6 @@
     "ngx-bootstrap": "^5.2.0",
     "ngx-popper": "^2.7.1",
     "rxjs": "^6.2.2",
-    "withinviewport": "^2.1.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

@@ -11257,11 +11257,6 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
-withinviewport@^2.1.0:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/withinviewport/-/withinviewport-2.1.2.tgz#7b09a5e566be15e51211ebfd4afb9aad6bc5dc12"
-  integrity sha512-bOZt20QiBkAroXwCAVnb+ajYNPAzVrTKCKuVAuWtLbXlOk3e5cAS5diZMWhYP4Cpyq3GS47jk+fsb5tQqhIxtg==
-
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
