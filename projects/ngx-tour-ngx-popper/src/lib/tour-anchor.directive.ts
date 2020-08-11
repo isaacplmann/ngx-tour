@@ -1,11 +1,11 @@
 import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
-import { NgxPopperModule, PopperController, Placements, Triggers } from 'ngx-popper';
+import { PopperController, Placements, Triggers } from 'ngx-popper';
 import { TourAnchorDirective } from 'ngx-tour-core';
-import withinviewport from 'withinviewport';
 
 import { NgxpTourService } from './ngx-popper-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
 import { INgxpStepOption as IStepOption } from './step-option.interface';
+import {ElementSides, isInviewport} from 'is-inviewport';
 
 @Directive({ selector: '[tourAnchor]'})
 export class TourAnchorNgxPopperPopoverDirective extends PopperController implements OnInit {
@@ -43,6 +43,8 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
   }
 
   public showTourStep(step: IStepOption): void {
+    const htmlElement: HTMLElement = this.element.nativeElement;
+
     this.isActive = true;
     this.tourStepTemplate.templateComponent.step = step;
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
@@ -50,7 +52,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     step.endBtnTitle = step.endBtnTitle || 'End';
     
     this.popoverDirective.content = this.tourStepTemplate.template;
-    this.popoverDirective.targetElement = this.element.nativeElement;
+    this.popoverDirective.targetElement = htmlElement;
     this.popoverDirective.placement = step.placement || Placements.Auto;
     this.popoverDirective.showTrigger = Triggers.NONE;
 
@@ -84,10 +86,10 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     }
 
     if (!step.preventScrolling) {
-      if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (!withinviewport(this.element.nativeElement, { sides: 'left top right' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+      if (!isInviewport(htmlElement, ElementSides.Bottom)) {
+        htmlElement.scrollIntoView(false);
+      } else if (!isInviewport(htmlElement, ElementSides.Top)) {
+        htmlElement.scrollIntoView(true);
       }
     }
   }

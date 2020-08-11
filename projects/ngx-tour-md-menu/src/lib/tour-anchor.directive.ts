@@ -9,19 +9,16 @@ import {
   OnInit,
   ViewContainerRef
 } from '@angular/core';
-import {
-  TourAnchorDirective,
-  TourState
-} from 'ngx-tour-core';
-import { Subscription } from 'rxjs';
-import withinviewport from 'withinviewport';
+import {TourAnchorDirective, TourState} from 'ngx-tour-core';
+import {Subscription} from 'rxjs';
 
-import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
-import { TourStepTemplateService } from './tour-step-template.service';
-import { first } from 'rxjs/operators';
+import {TourAnchorOpenerComponent} from './tour-anchor-opener.component';
+import {TourStepTemplateService} from './tour-step-template.service';
+import {first} from 'rxjs/operators';
 import {TourBackdropService} from './tour-backdrop.service';
-import { INgxmStepOption as IStepOption } from './step-option.interface';
+import {INgxmStepOption as IStepOption} from './step-option.interface';
 import {NgxmTourService} from './ngx-md-menu-tour.service';
+import {ElementSides, isInviewport} from 'is-inviewport';
 
 @Directive({
   selector: '[tourAnchor]'
@@ -59,16 +56,16 @@ export class TourAnchorMatMenuDirective
   }
 
   public showTourStep(step: IStepOption): void {
+    const htmlElement: HTMLElement = this.element.nativeElement;
+
     this.isActive = true;
     this.tourStepTemplate.templateComponent.step = step;
     // Ignore step.placement
     if (!step.preventScrolling) {
-      if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (
-        !withinviewport(this.element.nativeElement, { sides: 'left top right' })
-      ) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+      if (!isInviewport(htmlElement, ElementSides.Bottom)) {
+        htmlElement.scrollIntoView(false);
+      } else if (!isInviewport(htmlElement, ElementSides.Top)) {
+        htmlElement.scrollIntoView(true);
       }
     }
     (<any>this.opener.trigger)._element = this.element;

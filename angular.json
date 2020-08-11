@@ -353,6 +353,40 @@
           }
         }
       }
+    },
+    "is-inviewport": {
+      "projectType": "library",
+      "root": "projects/is-inviewport",
+      "sourceRoot": "projects/is-inviewport/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/is-inviewport/tsconfig.lib.json",
+            "project": "projects/is-inviewport/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "configPath": "jest.config.js",
+            "tsConfig": "tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/is-inviewport/tsconfig.lib.json",
+              "projects/is-inviewport/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-tour",
