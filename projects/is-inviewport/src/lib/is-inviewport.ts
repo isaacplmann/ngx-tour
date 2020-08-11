@@ -4,7 +4,7 @@ export enum ElementSides {
     All
 }
 
-export function isInviewport(htlmElement: HTMLElement, sidesToCheck: ElementSides = ElementSides.All) {
+export function isInviewport(htlmElement: HTMLElement, sidesToCheck: ElementSides = ElementSides.All): boolean {
     const viewportWidth = window.innerWidth,
         viewportHeight = window.innerHeight,
         boundingRectangle = htlmElement.getBoundingClientRect(),
