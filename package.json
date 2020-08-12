@@ -20,7 +20,7 @@
     "start": "ng serve",
     "prebuild": "npm run link",
     "build": "ng build --prod",
-    "build:lib:all": "npm run build:lib:core && npm run build:lib:console:base && npm run build:lib:md-menu:base && npm run build:lib:ng-bootstrap:base && npm run build:lib:ngx-bootstrap:base && npm run build:lib:ngx-popper:base",
+    "build:lib:all": "npm run build:lib:core && npm run build:lib:console:base && npm run build:lib:md-menu:base && npm run build:lib:ng-bootstrap:base && npm run build:lib:ngx-bootstrap:base",
     "build:lib:core": "ng build ngx-tour-core --prod && cpx projects/ngx-tour-core/CHANGELOG.md dist/ngx-tour-core/",
     "build:lib:console": "npm run build:lib:core && npm run link:core && cd projects/ngx-tour-console && npm link ngx-tour-core && cd ../.. && npm run build:lib:console:base",
     "build:lib:console:base": "ng build ngx-tour-console --prod && cpx projects/ngx-tour-console/CHANGELOG.md dist/ngx-tour-console/",
