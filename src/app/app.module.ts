@@ -23,9 +23,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
       loadChildren: () => import('./ngx-bootstrap/ngx-bootstrap.module').then(m => m.NgxBootstrapModule),
       path: 'ngx-bootstrap',
     }, {
-      loadChildren: () => import('./ngx-popper/ngx-popper.module').then(m => m.NgxpPopperModule),
-      path: 'ngx-popper',
-    }, {
       loadChildren: () => import('./console/console.module').then(m => m.ConsoleModule),
       path: 'console',
     }, {

@@ -13,11 +13,11 @@ export { TourAnchorConsoleDirective, TourService };
   imports: [TourModule, CommonModule, NgbPopoverModule],
 })
 export class TourConsoleModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<TourConsoleModule> {
     return {
       ngModule: TourConsoleModule,
       providers: [
-        ...TourModule.forRoot().providers,
+        TourService
       ],
     };
   }

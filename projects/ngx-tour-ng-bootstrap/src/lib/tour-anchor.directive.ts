@@ -1,4 +1,5 @@
-import { Directive, ElementRef, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
+import { Directive, ElementRef, Host, HostBinding, Input } from '@angular/core';
+import type {OnDestroy, OnInit} from '@angular/core';
 import { NgbPopover, Placement } from '@ng-bootstrap/ng-bootstrap';
 import { TourAnchorDirective } from 'ngx-tour-core';
 import withinviewport from 'withinviewport';

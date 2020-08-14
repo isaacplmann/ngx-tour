@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "module": "es2020",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "paths": {
+      "ngx-tour-core": ["dist/ngx-tour-core"],
+      "ngx-tour-console": ["dist/ngx-tour-console"],
+      "ngx-tour-md-menu": ["dist/ngx-tour-md-menu"],
+      "ngx-tour-ng-bootstrap": ["dist/ngx-tour-ng-bootstrap"],
+      "ngx-tour-ngx-bootstrap": ["dist/ngx-tour-ngx-bootstrap"],
+      "ngx-tour-ngx-popper": ["dist/ngx-tour-ngx-popper"]
+    }
+  }
+}

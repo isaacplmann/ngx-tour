@@ -48,7 +48,7 @@ export class TourStepTemplateComponent extends TourHotkeyListenerComponent
   @Input()
   public stepTemplate: TemplateRef<{ step: IStepOption }>;
 
-  @ContentChild(TemplateRef, { static: false })
+  @ContentChild(TemplateRef)
   public stepTemplateContent: TemplateRef<{ step: IStepOption }>;
 
   constructor(

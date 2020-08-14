@@ -1,26 +1,53 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "downlevelIteration": true,
-    "importHelpers": true,
-    "module": "esnext",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es2015",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
-    "paths": {
-      "ngx-tour-core": ["dist/ngx-tour-core"],
-      "ngx-tour-console": ["dist/ngx-tour-console"],
-      "ngx-tour-md-menu": ["dist/ngx-tour-md-menu"],
-      "ngx-tour-ng-bootstrap": ["dist/ngx-tour-ng-bootstrap"],
-      "ngx-tour-ngx-bootstrap": ["dist/ngx-tour-ngx-bootstrap"],
-      "ngx-tour-ngx-popper": ["dist/ngx-tour-ngx-popper"]
+  "files": [],
+  "references": [
+    {
+      "path": "./src/tsconfig.app.json"
+    },
+    {
+      "path": "./src/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-console/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-console/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-core/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-core/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-md-menu/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-md-menu/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ng-bootstrap/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ng-bootstrap/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ngx-bootstrap/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ngx-bootstrap/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ngx-popper/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ngx-tour-ngx-popper/tsconfig.spec.json"
     }
-  }
+  ]
 }

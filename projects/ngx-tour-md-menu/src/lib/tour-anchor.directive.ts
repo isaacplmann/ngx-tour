@@ -5,10 +5,9 @@ import {
   HostBinding,
   Injector,
   Input,
-  OnDestroy,
-  OnInit,
   ViewContainerRef
 } from '@angular/core';
+import type {OnDestroy, OnInit} from '@angular/core';
 import {
   TourAnchorDirective,
   TourState

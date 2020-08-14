@@ -1,3 +1,12 @@
+<a name="4.3.0"></a>
+
+# [4.3.0](https://github.com/isaacplmann/ngx-tour) (2020-08-10)
+
+### Features
+
+- Support Angular 10
+- Support ngx-bootstrap 6
+
 <a name="4.2.1"></a>
 
 # [4.2.1](https://github.com/isaacplmann/ngx-tour) (2019-12-07)

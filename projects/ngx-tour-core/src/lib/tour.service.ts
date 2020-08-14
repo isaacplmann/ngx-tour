@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { NavigationStart, Router, UrlSegment } from '@angular/router';
+import {NavigationStart, Router} from '@angular/router';
+import type {UrlSegment} from '@angular/router';
 
 import { TourAnchorDirective } from './tour-anchor.directive';
 import { Subject, Observable, merge as mergeStatic } from 'rxjs';
@@ -241,7 +242,7 @@ export class TourService<T extends IStepOption = IStepOption> {
     this.showStep(this.currentStep);
     this.router.events
       .pipe(filter(event => event instanceof NavigationStart), first())
-      .subscribe((event) => {
+      .subscribe(() => {
         if (this.currentStep && this.currentStep.hasOwnProperty('route')) {
           this.hideStep(this.currentStep);
         }
