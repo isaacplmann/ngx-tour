@@ -3,7 +3,7 @@ import { Placement, Trigger } from 'ngx-popper';
 
 export interface INgxpStepOption extends IStepOption {
     placement?: Placement;
-    popperSettings?:{
+    popperSettings?: {
         boundariesElement?: string;
         closeOnClickOutside?: boolean;
         disableAnimation?: boolean;
@@ -22,5 +22,5 @@ export interface INgxpStepOption extends IStepOption {
         showTrigger?: Trigger;
         targetElement?: HTMLElement;
         timeoutAfterShow?: number;
-    }
+    };
 }

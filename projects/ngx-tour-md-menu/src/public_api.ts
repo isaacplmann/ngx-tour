@@ -8,4 +8,4 @@ export {
   TourMatMenuModule,
   TourAnchorMatMenuDirective,
   TourStepTemplateComponent
-} from "./lib/md-menu.module";
+} from './lib/md-menu.module';
