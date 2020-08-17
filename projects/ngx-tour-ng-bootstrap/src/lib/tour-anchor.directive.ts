@@ -1,8 +1,7 @@
 import { Directive, ElementRef, Host, HostBinding, Input } from '@angular/core';
 import type {OnDestroy, OnInit} from '@angular/core';
 import { NgbPopover, Placement } from '@ng-bootstrap/ng-bootstrap';
-import { TourAnchorDirective } from 'ngx-tour-core';
-import withinviewport from 'withinviewport';
+import {ElementSides, isInViewport, TourAnchorDirective} from 'ngx-tour-core';
 
 import { NgbTourService } from './ng-bootstrap-tour.service';
 import { INgbStepOption } from './step-option.interface';
@@ -41,6 +40,8 @@ export class TourAnchorNgBootstrapDirective implements OnInit, OnDestroy, TourAn
   }
 
   public showTourStep(step: INgbStepOption): void {
+    const htmlElement: HTMLElement = this.element.nativeElement;
+
     this.isActive = true;
     this.popoverDirective.ngbPopover = this.tourStepTemplate.template;
     this.popoverDirective.popoverTitle = step.title;
@@ -54,10 +55,10 @@ export class TourAnchorNgBootstrapDirective implements OnInit, OnDestroy, TourAn
 
     this.popoverDirective.open({ step });
     if (!step.preventScrolling) {
-      if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (!withinviewport(this.element.nativeElement, { sides: 'left top right' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+      if (!isInViewport(htmlElement, ElementSides.Bottom)) {
+        htmlElement.scrollIntoView(false);
+      } else if (!isInViewport(htmlElement, ElementSides.Top)) {
+        htmlElement.scrollIntoView(true);
       }
     }
   }

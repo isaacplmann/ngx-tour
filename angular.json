@@ -24,8 +24,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "allowedCommonJsDependencies": ["withinviewport"]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -183,11 +182,10 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "projects/ngx-tour-core/src/test.ts",
-            "tsConfig": "projects/ngx-tour-core/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-tour-core/karma.conf.js"
+            "configPath": "jest.config.js",
+            "tsConfig": "tsconfig.spec.json"
           }
         },
         "lint": {

@@ -3,6 +3,5 @@
   "dest": "../../dist/ngx-tour-md-menu",
   "lib": {
     "entryFile": "src/public_api.ts"
-  },
-  "whitelistedNonPeerDependencies": ["withinviewport"]
+  }
 }
