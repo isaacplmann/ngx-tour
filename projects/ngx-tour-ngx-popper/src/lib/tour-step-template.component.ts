@@ -28,7 +28,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
 
     <ng-template #defaultTemplate let-step="step">
       <p class="ngxp-title">{{ step?.title }}</p>
-      <p class="ngxp-content">{{ step?.content }}</p>
+      <p class="ngxp-content" [innerHTML]="step?.content"></p>
       <div class="tour-step-navigation">
         <button
           [hidden]="!tourService.hasPrev(step)"

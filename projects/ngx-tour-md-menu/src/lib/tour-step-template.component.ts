@@ -35,8 +35,7 @@ import { NgxmTourService } from './ngx-md-menu-tour.service';
         <mat-card-title>
           {{ step?.title }}
         </mat-card-title>
-        <mat-card-content>
-          {{ step?.content }}
+        <mat-card-content [innerHTML]="step?.content">
         </mat-card-content>
         <mat-card-actions>
           <button
