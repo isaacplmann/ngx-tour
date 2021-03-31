@@ -57,7 +57,6 @@
     "@angular/platform-browser-dynamic": "^10.0.8",
     "@angular/router": "^10.0.8",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
-    "core-js": "^2.5.7",
     "ngx-bootstrap": "^6.0.0",
     "ngx-popper": "^7.0.0",
     "popper.js": "^1.16.1",
