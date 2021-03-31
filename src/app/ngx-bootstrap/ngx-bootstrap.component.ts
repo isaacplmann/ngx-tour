@@ -33,7 +33,7 @@ export class NgxBootstrapComponent {
         },
         {
           anchorId: 'tourService.start',
-          content: "Don't forget to actually start the tour.",
+          content: 'Don\'t forget to actually start the tour.',
           placement: 'top',
           title: 'Start the tour'
         },
@@ -85,7 +85,7 @@ export class NgxBootstrapComponent {
         },
         {
           anchorId: 'config.placement.default',
-          content: "Take it back now y'all.  One hop this time.",
+          content: 'Take it back now y\'all.  One hop this time.',
           placement: 'bottom',
           title: 'Bottom Placement'
         },

@@ -2,8 +2,8 @@
  * Public API Surface of ngx-tour-console
  */
 
-export * from "ngx-tour-core";
+export * from 'ngx-tour-core';
 export {
   TourConsoleModule,
   TourAnchorConsoleDirective
-} from "./lib/console.module";
+} from './lib/console.module';

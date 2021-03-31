@@ -50,13 +50,13 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
     step.nextBtnTitle = step.nextBtnTitle || 'Next';
     step.endBtnTitle = step.endBtnTitle || 'End';
-    
+
     this.popoverDirective.content = this.tourStepTemplate.template;
     this.popoverDirective.targetElement = htmlElement;
     this.popoverDirective.placement = step.placement || Placements.Auto;
     this.popoverDirective.showTrigger = Triggers.NONE;
 
-    if(step.popperSettings){
+    if (step.popperSettings) {
       this.popoverDirective.boundariesElement = step.popperSettings.boundariesElement || undefined;
       this.popoverDirective.closeOnClickOutside = step.popperSettings.closeOnClickOutside || false;
       this.popoverDirective.disableAnimation = step.popperSettings.disableAnimation || false;
@@ -71,7 +71,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
       this.popoverDirective.showTrigger = step.popperSettings.showTrigger || Triggers.NONE;
       this.popoverDirective.timeoutAfterShow = step.popperSettings.timeoutAfterShow || 0;
 
-      //TODO: Can these even get passed in via json?
+      // TODO: Can these even get passed in via json?
       // this.popoverDirective.popperModifiers = step.popperSettings.popperModifiers || undefined;
       // this.popoverDirective.popperOnHidden = step.popperSettings.popperOnHidden || undefined;
       // this.popoverDirective.popperOnShown = step.popperSettings.popperOnShown || undefined;

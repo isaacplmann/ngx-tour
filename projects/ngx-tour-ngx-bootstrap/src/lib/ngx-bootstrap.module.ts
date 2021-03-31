@@ -9,7 +9,7 @@ import { TourStepTemplateService } from './tour-step-template.service';
 import { NgxbTourService } from './ngx-bootstrap-tour.service';
 
 export { TourAnchorNgxBootstrapDirective, TourAnchorNgxBootstrapPopoverDirective, TourStepTemplateComponent, NgxbTourService };
-export const popoverForRoot: ModuleWithProviders<PopoverModule> = PopoverModule.forRoot()
+export const popoverForRoot: ModuleWithProviders<PopoverModule> = PopoverModule.forRoot();
 
 @NgModule({
   declarations: [TourAnchorNgxBootstrapDirective, TourAnchorNgxBootstrapPopoverDirective, TourStepTemplateComponent],
