@@ -1,3 +1,12 @@
+<a name="6.1.0"></a>
+
+# [6.1.0](https://github.com/isaacplmann/ngx-tour) (2020-08-17)
+
+### Features
+
+- Replaced `withinviewport()` function from 3rd party library with our own custom `isInViewport()` function to fix 
+CommonJS warning in Angular 10, reduce bundle size and to remove non-peer dependency
+
 <a name="6.0.0"></a>
 
 # [6.0.0](https://github.com/isaacplmann/ngx-tour) (2020-08-10)

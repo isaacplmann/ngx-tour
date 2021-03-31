@@ -3,6 +3,5 @@
   "dest": "../../dist/ngx-tour-ngx-bootstrap",
   "lib": {
     "entryFile": "src/public_api.ts"
-  },
-  "whitelistedNonPeerDependencies": ["withinviewport"]
+  }
 }

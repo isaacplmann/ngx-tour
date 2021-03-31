@@ -9,11 +9,12 @@ import {
 } from '@angular/core';
 import type {OnDestroy, OnInit} from '@angular/core';
 import {
+  ElementSides,
+  isInViewport,
   TourAnchorDirective,
   TourState
 } from 'ngx-tour-core';
 import { Subscription } from 'rxjs';
-import withinviewport from 'withinviewport';
 
 import { TourAnchorOpenerComponent } from './tour-anchor-opener.component';
 import { TourStepTemplateService } from './tour-step-template.service';
@@ -58,16 +59,16 @@ export class TourAnchorMatMenuDirective
   }
 
   public showTourStep(step: IStepOption): void {
+    const htmlElement: HTMLElement = this.element.nativeElement;
+
     this.isActive = true;
     this.tourStepTemplate.templateComponent.step = step;
     // Ignore step.placement
     if (!step.preventScrolling) {
-      if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (
-        !withinviewport(this.element.nativeElement, { sides: 'left top right' })
-      ) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+      if (!isInViewport(htmlElement, ElementSides.Bottom)) {
+        htmlElement.scrollIntoView(false);
+      } else if (!isInViewport(htmlElement, ElementSides.Top)) {
+        htmlElement.scrollIntoView(true);
       }
     }
     (<any>this.opener.trigger)._element = this.element;

@@ -1,3 +1,11 @@
+<a name="4.3.0"></a>
+
+# [4.3.0](https://github.com/isaacplmann/ngx-tour) (2020-08-17)
+
+### Features
+
+- Scroll to active html element on step change
+
 <a name="4.2.0"></a>
 
 # [4.2.0](https://github.com/isaacplmann/ngx-tour) (2020-08-10)

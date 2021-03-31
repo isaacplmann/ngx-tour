@@ -1,3 +1,11 @@
+<a name="4.3.0"></a>
+
+# [4.3.0](https://github.com/isaacplmann/ngx-tour) (2020-08-17)
+
+### Features
+
+- Introduced `isInViewport(htmlElement)` function for detecting if the whole or part of html element is visible
+
 <a name="4.2.0"></a>
 
 # [4.2.0](https://github.com/isaacplmann/ngx-tour) (2020-08-10)

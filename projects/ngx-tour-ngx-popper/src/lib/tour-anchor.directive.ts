@@ -1,8 +1,7 @@
 import { Directive, ElementRef, Host, HostBinding, Input } from '@angular/core';
 import type {OnDestroy, OnInit} from '@angular/core';
 import { PopperController, Placements, Triggers } from 'ngx-popper';
-import { TourAnchorDirective } from 'ngx-tour-core';
-import withinviewport from 'withinviewport';
+import {ElementSides, isInViewport, TourAnchorDirective} from 'ngx-tour-core';
 
 import { NgxpTourService } from './ngx-popper-tour.service';
 import { TourStepTemplateService } from './tour-step-template.service';
@@ -44,6 +43,8 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
   }
 
   public showTourStep(step: IStepOption): void {
+    const htmlElement: HTMLElement = this.element.nativeElement;
+
     this.isActive = true;
     this.tourStepTemplate.templateComponent.step = step;
     step.prevBtnTitle = step.prevBtnTitle || 'Prev';
@@ -51,7 +52,7 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     step.endBtnTitle = step.endBtnTitle || 'End';
     
     this.popoverDirective.content = this.tourStepTemplate.template;
-    this.popoverDirective.targetElement = this.element.nativeElement;
+    this.popoverDirective.targetElement = htmlElement;
     this.popoverDirective.placement = step.placement || Placements.Auto;
     this.popoverDirective.showTrigger = Triggers.NONE;
 
@@ -61,7 +62,6 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
       this.popoverDirective.disableAnimation = step.popperSettings.disableAnimation || false;
       this.popoverDirective.disabled = step.popperSettings.disabled || false;
       this.popoverDirective.disableStyle = step.popperSettings.disableStyle || false;
-      this.popoverDirective.forceDetection = step.popperSettings.forceDetection || false;
       this.popoverDirective.hideOnClickOutside = step.popperSettings.hideOnClickOutside || false;
       this.popoverDirective.hideOnScroll = step.popperSettings.hideOnScroll || false;
       this.popoverDirective.hideTimeout = step.popperSettings.hideTimeout || 0;
@@ -85,10 +85,10 @@ export class TourAnchorNgxPopperDirective implements OnInit, OnDestroy, TourAnch
     }
 
     if (!step.preventScrolling) {
-      if (!withinviewport(this.element.nativeElement, { sides: 'bottom' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(false);
-      } else if (!withinviewport(this.element.nativeElement, { sides: 'left top right' })) {
-        (<HTMLElement>this.element.nativeElement).scrollIntoView(true);
+      if (!isInViewport(htmlElement, ElementSides.Bottom)) {
+        htmlElement.scrollIntoView(false);
+      } else if (!isInViewport(htmlElement, ElementSides.Top)) {
+        htmlElement.scrollIntoView(true);
       }
     }
   }
