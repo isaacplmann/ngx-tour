@@ -1,9 +1,4 @@
-# Ng2 Tour
-
-[![Dependency Status](https://david-dm.org/isaacplmann/ng2-tour.svg)](https://david-dm.org/isaacplmann/ngx-tour)
-[![devDependency Status](https://david-dm.org/isaacplmann/ng2-tour/dev-status.svg)](https://david-dm.org/isaacplmann/ngx-tour?type=dev)
-
-* * *
+# Ngx Tour
 
 ## NOTICE: This project is no longer being maintained. :warning:
 
